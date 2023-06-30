@@ -3,7 +3,9 @@ import React from "react";
 const PageNotFound = () => {
     return(
         <div>
-            <h1>Sorry There is No Page with this Content! Please go back to <a href="/home">Home</a></h1>
+            <h1>404</h1>
+            <p>PAGE NOT FOUND</p>
+            <a href="/home">BACK TO HOMEPAGE</a>
         </div>
     )
 }

@@ -1,8 +1,11 @@
+/* Font Links ============================ */
+@import url("https://use.typekit.net/tkn1umx.css");
 *{
     margin: 0;
     padding: 0;
 }
 :root {
+/* secondary colors */
    --primary: #181818;
    --secondary: #f4f4f4;
    --tertiary: #E4E1D4; 
@@ -10,5 +13,8 @@
    --dGrey: #3a3a3a;
    --burg: rgb(85,25,14);
    --light: #F6F2E9;
+   /* main colors that I want  */
+   --rubyR: #BF3B3B;
+   --pinkyP: rgb(255,224,217);
 }
 

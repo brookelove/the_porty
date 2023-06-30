@@ -4,64 +4,28 @@ import { useNavigate } from "react-router";
 
 const Landing = () => {
     let ref = useRef(null);
-    let words = ["passion", "confidencee", "2021", "biology", "2022", "computers"];
+    let words = ["Passion", "Confidence", "2021", "Biology", "2022", "Developer", "Designer",];
     const navigate = useNavigate()
-    const [index, setIndex] = useState(0);
-    const [wordItem, setWordItem] = useState(words[0]);
+    const [displayTyped, setDisplayTyped] = useState("Passion");
+    const [currentWord, setCurrentWord] = useState(0);
 
-    // useEffect(()=> {
-        // const element = ref.current;
-    //     const timerId = setInterval(
-    //         () => {
-    //             setIndex((i) => (i + 1) % words.length)},
-    //         1000
-            
-    //       );
-    //       return () => clearInterval(timerId);
-
-    // },[])
-
-    // useEffect(()=> {
-    //     let wordCount = 0;
-    //     let showWords = setInterval(()=> {
-    //         if (words[wordCount] === undefined) {
-    //             clearInterval(showWords);
-    //             navigate("/home");
-    //         } else {
-    //             setIndex(wordCount);
-    //             wordCount++;
-    //         }
-    //         // for(let i = 0; i < words.length; i++){
-    //         //     setIndex(i);
-    //         // }
-            
-    //     },2000)
-    // })
-    // useEffect(() => {
-    //     setWordItem(words[index]);
-    //   },[words])
     useEffect(() => {
-  
-        const interval = setInterval(() => {
-            if (index === words.length){
-                clearInterval(interval);
-                setIndex(0);
-                navigate("/home");
-            } else {
-                setIndex(index + 1);
-                setWordItem(words[index]);
-                // console.log(index);
-            }
-            
-        }, 1000);
-        
-        // return () => clearInterval(interval);
-    }, [index]);
-    // navigate("/home")
+        function updateWord() {
+          setDisplayTyped(words[currentWord]);
+          if (currentWord < 7) {
+            setCurrentWord(currentWord + 1);
+          } else {
+            setCurrentWord(0);
+            navigate("/home");
+          }
+        }
+        setTimeout(updateWord, 1500);
+      }, [currentWord]);
+
     return (
         <>
-        <h1>Landing</h1>
-        <p ref={ref} id="wordPerMin">{wordItem}</p>
+        {/* <h1>Landing</h1> */}
+        <h1 id="wordPerMin">{displayTyped}</h1>
         </>
     )
 }
