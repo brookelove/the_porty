@@ -17,4 +17,9 @@
    --rubyR: #BF3B3B;
    --pinkyP: rgb(255,224,217);
 }
-
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}

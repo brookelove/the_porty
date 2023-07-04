@@ -1,0 +1,34 @@
+.homeContainer #seaVideo {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.homeContainer ul{
+    margin:5%;
+    color: var(--tertiary);
+    padding: 1%;
+    width: 2%;
+    font: 700;
+    font-size: 20px;
+}
+.homeContainer ul li {
+    margin: 10% 0;
+    text-align: center;
+}
+.homeContainer section {
+    display: flex;
+    padding: 5%;
+    flex-direction: column;
+    align-items: self-end;
+    position: relative;
+    top: 8rem;
+ }
+.homeContainer section a{
+   color: var(--tertiary);
+   font-size: 45px;
+   margin: 0.2% 0
+}
