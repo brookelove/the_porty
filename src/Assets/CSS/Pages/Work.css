@@ -1,0 +1,32 @@
+.workContainer {
+    background-color:var(--dGrey);
+}
+.workContainer .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.workContainer .header .title {
+    display: flex;
+    position: absolute;
+    font-size: 40px;
+    right: 17.2%;
+}
+.workContainer .header .title .left{
+    color: var(--tertiary);
+    padding-right: 1%;
+}
+.workContainer .header .title .right{
+    /* color: var(--tertiary); */
+    padding-left: 1%;
+}
+.workContainer #seaVideoWork{
+    width: 45%;
+    border-radius: 20px;
+    margin-top:2rem;
+}
+.workContainer .projectContainer{
+    width: 100%;
+    /* remvove this from the top */
+    padding-top:20rem;
+}
