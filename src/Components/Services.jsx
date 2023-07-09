@@ -1,7 +1,9 @@
 import React from "react";
+import "../Assets/CSS/Components/Service.css"
+
 const Service = () => {
     return (
-        <div>
+        <div className="serviceContainer">
             <h1>Service</h1>
             <table>
                 <thead>

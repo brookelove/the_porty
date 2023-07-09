@@ -1,5 +1,5 @@
 .workContainer {
-    background-color:var(--dGrey);
+    /* background-color:rgb(244,238,227); */
 }
 .workContainer .header{
     display: flex;
@@ -17,7 +17,7 @@
     padding-right: 1%;
 }
 .workContainer .header .title .right{
-    /* color: var(--tertiary); */
+    /* color: rgb(50,29,17); */
     padding-left: 1%;
 }
 .workContainer #seaVideoWork{
@@ -27,6 +27,12 @@
 }
 .workContainer .projectContainer{
     width: 100%;
-    /* remvove this from the top */
+    /* remvove/ make this less, this from the top */
     padding-top:20rem;
+}
+.workContainer .projectContainer section a img{
+    width: 25%;
+}
+.workContainer .projectContainer section a button{
+    background-color: none;
 }

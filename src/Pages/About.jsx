@@ -1,11 +1,19 @@
 import React from "react";
-import Service from "../Components/Services";
+import Contact from "../Components/Contact";
+import Navbar from "../Components/Navbar";
+import Resume from "../Components/Resume";
 
 const About = () => {
     return (
         <>
-        <h1>About</h1>
-        <Service/>
+        <Navbar/>
+        <header>
+            <h1>BROOKE</h1>
+            <img></img>
+            <h1>LOVE</h1>
+        </header>
+        <Resume/>
+        <Contact/>
         </>
     )
 }

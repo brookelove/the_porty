@@ -1,0 +1,8 @@
+
+.serviceContainer tr {
+    transition: all ease-in-out 0.25s;
+}
+.serviceContainer tr:hover {
+    background-color: var(--font);
+    color: var(--bckgrd);
+}
