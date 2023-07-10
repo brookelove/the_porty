@@ -29,7 +29,9 @@ const Process = () => {
                 <h3>What's Next</h3>
                 <p>You're sites up! I will still be there for your future support and please dont hesitate to contact if you need help!</p>
             </section>
-            <button>CONTACT ME</button>
+            <button className="button button--shape">
+                <span>CONTACT ME</span>
+            </button>
         </>
     )
 }
