@@ -1,0 +1,8 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+.dot {
+    list-style-type: disc;
+    color: red;
+}
