@@ -5,14 +5,15 @@ const Navbar = () => {
        const currPage = window.location.href;
        const aboutAEl = document.getElementById("aboutA");
        const aboutLiEl = document.getElementById("aboutLi");
-       const priceAEl = document.getElementById("priceA");
+
        const priceLiEl = document.getElementById("priceLi");
+
        const workAEl = document.getElementById("workA");
        const workLiEl = document.getElementById("workLi");
+
        const homeAEl = document.getElementById("homeA");
        const homeLiEl = document.getElementById("homeLi");
-        // const ulEl = document.getElementById(ul)
-        // console.log(ulEl.children())
+
         if(currPage === aboutAEl.href) {
             console.log("about")
             aboutLiEl.classList.add("dot");
@@ -44,9 +45,7 @@ const Navbar = () => {
             workLiEl.classList.remove("dot");
             homeLiEl.classList.remove("dot");
         }
-        
     });
-    
     return(
         <div className="navbarContainer">
         <ul>
