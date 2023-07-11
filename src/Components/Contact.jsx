@@ -3,7 +3,7 @@ import "../Assets/CSS/Components/Contact.css";
 
 const Contact = () => {
     return (
-        <div className="contactContainer">
+        <div className="contactContainer" id="contactContainer">
                 <h1>REACH OUT OR CONTACT ME ON SOCIAL MEDIA</h1>
             <section className="contactFormContainer">
                 <form>
@@ -14,7 +14,7 @@ const Contact = () => {
                     <label for="email">EMAIL</label>
                     <input type="email" name="email"></input>
                     <label for="subject">TALK ABOUT</label>
-                    <select name="subject" id="cars">
+                    <select name="subject" id="subject">
                         <option value="Other">OTHER</option>
                         <option value="landing">LANDING PAGE</option>
                         <option value="Multi-page">MULTI-PAGE</option>

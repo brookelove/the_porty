@@ -8,7 +8,7 @@ import prjOne from "../Assets/Images/1.png";
 import prjTwo from "../Assets/Images/2.png";
 const Work = () => {
     return (
-        <div className="workContainer">
+        <div className="workContainer parallax">
             <Navbar/>
             <section className="header">
                 <video playsInline autoPlay muted loop id="seaVideoWork">

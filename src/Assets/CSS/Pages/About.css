@@ -1,0 +1,23 @@
+.aboutContainer header{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.aboutContainer header .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.aboutContainer header .middle {
+    display: flex;
+}
+.aboutContainer header .middle section {
+    z-index: 200;
+}
+.aboutContainer header .middle img {
+    height: 300px;
+    width: 350px;
+}
+.aboutContainer header .right {
+    max-width: 10%;
+}

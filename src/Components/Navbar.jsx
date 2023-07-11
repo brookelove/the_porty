@@ -20,7 +20,7 @@ const Navbar = () => {
             priceLiEl.classList.remove("dot");
             workLiEl.classList.remove("dot");
             homeLiEl.classList.remove("dot");
-        } else if (currPage.includes("prices")){
+        } else if (currPage.includes("#prices")){
             console.log("price")
             aboutLiEl.classList.remove("dot");
             priceLiEl.classList.add("dot");
@@ -48,11 +48,24 @@ const Navbar = () => {
     });
     return(
         <div className="navbarContainer">
+            <a>send a request</a>
         <ul>
-            <li id="aboutLi"><a id="aboutA" href="/about">About</a></li>
-            <li id="priceLi"><a id="priceA" href="#prices">Prices</a></li>
-            <li id="workLi"><a id="workA" href="/work">Projects</a></li>
-            <li id="homeLi"><a id="homeA" href="/home">Home</a></li>
+            <li id="aboutLi">
+                <a id="aboutA" href="/about">About</a>
+                <p>01</p>
+                </li>
+            <li id="priceLi">
+                <a id="priceA" href="/work#prices">Prices</a>
+                <p>02</p>
+            </li>
+            <li id="workLi">
+                <a id="workA" href="/work">Projects</a>
+                <p>03</p>
+            </li>
+            <li id="homeLi">
+                <a id="homeA" href="/home">Home</a>
+                <p>04</p>
+            </li>
         </ul>
         </div>
     )

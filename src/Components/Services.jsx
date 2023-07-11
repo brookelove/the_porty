@@ -3,7 +3,7 @@ import "../Assets/CSS/Components/Service.css"
 
 const Service = () => {
     return (
-        <div className="serviceContainer">
+        <div className="serviceContainer" id="prices">
             <h1>Service</h1>
             <table>
                 <thead>

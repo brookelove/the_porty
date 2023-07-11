@@ -32,6 +32,9 @@
     letter-spacing: 2px;
     margin-bottom: 10%;
 }
+.contactContainer form button{
+  margin-left: 32%;
+}
 .contactContainer form .button--shape {
 	color:var(--bckgrd);
 }
@@ -40,7 +43,7 @@
 	background: var(--bckgrd);
 }
 .contactContainer form .button--shape::after {
-    border: 1px solid whitesmoke;
+    border: 1px solid var(--bckgrd);
 }
 .contactContainer .line {
     width: 1px;

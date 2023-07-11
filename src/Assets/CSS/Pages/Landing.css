@@ -21,6 +21,7 @@
    --font:rgb(50,29,17);
    --secBkgrd: rgb(17,13,9);
 }
+
 body {
     background-color: var(--bckgrd);
     color: var(--font);
@@ -30,6 +31,13 @@ a {
 }
 li {
     list-style-type: none;
+}
+.parallax {
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .button {
 	pointer-events: auto;
