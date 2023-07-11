@@ -1,6 +1,6 @@
 .navbarContainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .dot {
     list-style-type: disc;
