@@ -23,10 +23,10 @@ const Landing = () => {
       }, [currentWord]);
 
     return (
-        <>
+        <div className= "wordsContainer">
         {/* <h1>Landing</h1> */}
         <h1 id="wordPerMin">{displayTyped}</h1>
-        </>
+        </div>
     )
 }
 

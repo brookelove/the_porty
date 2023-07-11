@@ -246,3 +246,12 @@ li {
 .button--shape:hover span {
 	transform: translate3d(0,-10px,0);
 }
+.wordsContainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.wordsContainer h1 {
+     
+}

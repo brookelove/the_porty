@@ -3,3 +3,20 @@
     background-color: var(--secBkgrd);
     color: var(--bckgrd);
 }
+.contactContainer form {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactContainer form input {
+    background-color: var(--bckgrnd);
+    border-right: 0;
+    border-top: 0;
+    border-left:0;
+    border-bottom: 5%;
+    border-style: var(-bckgrnd);
+    margin: 10px 0;
+    width: 300px;
+    font-size: 20px;
+}
