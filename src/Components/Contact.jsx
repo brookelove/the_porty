@@ -4,7 +4,9 @@ import "../Assets/CSS/Components/Contact.css";
 const Contact = () => {
     return (
         <div className="contactContainer" id="contactContainer">
-                <h1>REACH OUT OR CONTACT ME ON SOCIAL MEDIA</h1>
+            <section className="scrollContainer">
+                <h1 className="scrollText rotate">LET'S CONNECT</h1>
+            </section>
             <section className="contactFormContainer">
                 <form>
                     <label for="name">NAME</label>
@@ -31,9 +33,7 @@ const Contact = () => {
            
             <span className="line"></span>
             <div className="contactLinks">
-                {/* <p>brookelovedevelops@gmail.com</p>
-                <p>instagram: @brookelove</p>
-                <p>linkedin: @brookelove</p> */}
+                <h2>SOCIALS</h2>
                 <a mailto="brookelovedevelops@gmail.com">EMAIL</a>
                 <a>TIKTOK</a>
                 <a>LINKDIN</a>

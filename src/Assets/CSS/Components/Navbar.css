@@ -1,10 +1,7 @@
 .navbarContainer {
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
-=======
     padding: 3%;
->>>>>>> c3a3a280b5eda0875b85a820defe75096f61cede
 }
 .navbarContainer .sendContact{
     text-decoration: underline dotted;

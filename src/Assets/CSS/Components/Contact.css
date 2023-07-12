@@ -3,13 +3,35 @@
     background-color: var(--secBkgrd);
     color: var(--bckgrd);
     padding:3%;
+    display:flex;
+    justify-content: space-evenly;
 }
+.contactContainer .scrollContainer{
+    position: absolute;
+    left: -25%;
+    overflow:hidden;
+    transform: rotate(270deg);
+    font-size: 180%;
+    width: 66%;
+}
+.contactContainer .scrollText {
+    letter-spacing:9px;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+}
+
 .contactContainer h1 {
     margin-bottom: 30px;
     font-size: 320%;
 }
 .contactContainer .contactFormContainer {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -17,6 +39,9 @@
     display:flex;
     flex-direction: column;
     align-items: start;
+}
+.contactContainer form label{
+    letter-spacing: 4px;
 }
 .contactContainer form input, .contactContainer form select{
     background-color: var(--bckgrnd);
@@ -50,15 +75,42 @@
     height: 580px;
     background-color: var(--bckgrd);
 }
+.contactContainer h2 {
+    color:var(--font);
+    text-decoration: underline dotted;
+}
 .contactContainer .contactLinks {
     display: flex;
     flex-direction: column;
-    height:100%;
+    max-height:fit-content;
     align-items: end;
     position: relative; 
-    top: 180px;
-    left: 260px;
+    top: 35%;
+    left: 15%;
 }
 .contactContainer .contactLinks a{
     font-size: 275%;
 }
+@-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+  
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }

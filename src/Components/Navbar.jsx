@@ -48,7 +48,7 @@ const Navbar = () => {
     });
     return(
         <div className="navbarContainer">
-            <a className="sendContact">send a request</a>
+            <a className="sendContact">let's connect</a>
         <ul>
             <li id="aboutLi">
                 <a id="aboutA" href="/about">About</a>

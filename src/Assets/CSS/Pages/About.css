@@ -10,6 +10,7 @@
 }
 .aboutContainer header .middle {
     display: flex;
+    font-size: 120%;
 }
 .aboutContainer header .middle section {
     z-index: 200;
@@ -21,9 +22,15 @@
 .aboutContainer header .middle .name {
     left: 25%;
 }
+.aboutContainer header .middle .name .subHi{
+    display: flex;
+}
+.aboutContainer header .middle .name .subHi h1 {
+    padding: 0 10px;
+}
 .aboutContainer header .middle .title {
     left: 55%;
-    bottom: -50%;
+    bottom: 40%;
 }
 .aboutContainer header .middle img {
     height: 300px;

@@ -2,6 +2,7 @@ import React from "react";
 import Contact from "../Components/Contact";
 import Navbar from "../Components/Navbar";
 import Resume from "../Components/Resume";
+import Tools from "../Components/Tools";
 import "../Assets/CSS/Pages/About.css"
 
 const About = () => {
@@ -16,7 +17,10 @@ const About = () => {
             <div className="middle">
                 <section className="name">
                     <h1>HEY,</h1>
-                    <h1>I'M BROOKE</h1>
+                    <section className="subHi">
+                    <h1>I'M </h1>
+                    <h1>BROOKE</h1>
+                    </section>
                 </section>
                 <img className="brooke"></img>
                 <section className="title">
@@ -28,6 +32,10 @@ const About = () => {
                 <p className="shortInfo">I'm a Full-stack Software developer who loves creating products that are creative, intuitive, and an experience</p>
             </div>
         </header>
+        <main>
+
+        </main>
+        <Tools/>
         <Resume/>
         <Contact/>
         </div>
