@@ -1,6 +1,10 @@
 .navbarContainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 3%;
+}
+.navbarContainer a {
+    text-decoration: underline dotted;
 }
 .dot {
     list-style-type: disc;
