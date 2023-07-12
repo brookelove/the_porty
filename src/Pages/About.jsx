@@ -19,8 +19,9 @@ const About = () => {
                     <h1>I'M BROOKE</h1>
                 </section>
                 <img className="brooke"></img>
-                <section className="">
-                    <h1>SOFTWARE DEVELOPER</h1>
+                <section className="title">
+                    <h1>SOFTWARE</h1>
+                    <h1>DEVELOPER</h1>
                 </section>
             </div>
             <div className="right">
