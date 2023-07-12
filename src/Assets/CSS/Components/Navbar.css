@@ -1,7 +1,27 @@
 .navbarContainer {
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
+=======
+    padding: 3%;
+>>>>>>> c3a3a280b5eda0875b85a820defe75096f61cede
 }
+.navbarContainer .sendContact{
+    text-decoration: underline dotted;
+}
+.navbarContainer ul {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.navbarContainer ul li p{ 
+    position: relative;
+    left: 45px;
+    top: -30px;
+    font-size: 15%;
+    text-decoration: underline dotted;
+}
+
 .dot {
     list-style-type: disc;
 }

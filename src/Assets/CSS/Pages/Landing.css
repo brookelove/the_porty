@@ -106,6 +106,13 @@ li {
     align-items: center;
     height: 100vh;
 }
-/* .wordsContainer h1 {
-     
-} */
+.wordsContainer h1 {
+     font-size: 800%;
+	 
+}
+.dotted_border {
+	border: 2px dotted var(--font);
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
