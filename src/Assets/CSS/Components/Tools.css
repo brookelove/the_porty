@@ -1,0 +1,15 @@
+.toolsContainer {
+   margin-bottom: 10%
+}
+.toolsContainer .grid {
+    display: grid;
+    grid: auto auto auto / auto auto auto auto auto;
+    align-items: space-evenly;
+    justify-content: space-evenly;
+    /* grid-auto-flow: column; */
+    height: 400px;
+    margin-top: 10%;
+}
+.toolsContainer .grid .item:hover{
+    color: red;
+}

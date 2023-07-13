@@ -16,12 +16,13 @@
 }
 .contactContainer .scrollText {
     letter-spacing:9px;
+    width: fit-content;
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
-    -moz-animation: my-animation 15s linear infinite;
-    -webkit-animation: my-animation 15s linear infinite;
-    animation: my-animation 15s linear infinite;
+    -moz-animation: scroll-animation 9s linear infinite;
+    -webkit-animation: scroll-animation 9s linear infinite;
+    animation: scroll-animation 9s linear infinite;
 }
 
 .contactContainer h1 {
@@ -91,18 +92,16 @@
 .contactContainer .contactLinks a{
     font-size: 275%;
 }
-@-moz-keyframes my-animation {
+/* animation to scroll across screen */
+@-moz-keyframes scroll-animation {
     from { -moz-transform: translateX(100%); }
     to { -moz-transform: translateX(-100%); }
   }
-  
-  /* for Chrome */
-  @-webkit-keyframes my-animation {
+@-webkit-keyframes scroll-animation {
     from { -webkit-transform: translateX(100%); }
     to { -webkit-transform: translateX(-100%); }
-  }
-  
-  @keyframes my-animation {
+  }  
+@keyframes scroll-animation {
     from {
       -moz-transform: translateX(100%);
       -webkit-transform: translateX(100%);
