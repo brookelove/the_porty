@@ -48,7 +48,10 @@ const Navbar = () => {
     });
     return(
         <div className="navbarContainer">
-            <a className="sendContact">let's connect</a>
+            <section>
+                <h6>happy since 1999</h6>
+                <h6>unopologetic since 2023</h6>
+            </section>
         <ul>
             <li id="aboutLi">
                 <a id="aboutA" href="/about">About</a>
@@ -65,6 +68,10 @@ const Navbar = () => {
             <li id="homeLi">
                 <a id="homeA" href="/home">Home</a>
                 <p>04</p>
+            </li>
+            <li id="homeLi">
+            <a className="sendContact" href="#contact">let's connect</a>
+                <p>05</p>
             </li>
         </ul>
         </div>

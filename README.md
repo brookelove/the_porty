@@ -69,8 +69,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+Items Used
+
+---
+-[React Icons](https://react-icons.github.io/react-icons/)
+
 Artists
+
+----
 
 - [Sea Video by Rostislav Uzunov](https://www.pexels.com/video/sea-water-blue-ocean-7513671/)
 
 - [Button Hover Reshape by Codrops](https://github.com/codrops/HoverEffectIdeas)
+
+-[Tooltip Refernces 01](https://codepen.io/a7rarpress/pen/NWOaYoE?editors=1100)
+
+-[Tooltip Reference 02](https://web.dev/building-a-tooltip-component/)

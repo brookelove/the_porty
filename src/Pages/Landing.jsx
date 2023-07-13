@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 
 const Landing = () => {
     let ref = useRef(null);
-    let words = ["Passion", "Confidence", "2021", "Biology", "2022", "Developer", "Designer",];
+    let words = ["Passion", "Confidence", "2021", "Biology", "2022", "Developer", "Designer", "HELLO WORLD.", "HELLO WORLD..", "HELLO WORLD..."];
     const navigate = useNavigate()
     const [displayTyped, setDisplayTyped] = useState("Passion");
     const [currentWord, setCurrentWord] = useState(0);
@@ -12,7 +12,7 @@ const Landing = () => {
     useEffect(() => {
         function updateWord() {
           setDisplayTyped(words[currentWord]);
-          if (currentWord < 7) {
+          if (currentWord < words.length) {
             setCurrentWord(currentWord + 1);
           } else {
             setCurrentWord(0);

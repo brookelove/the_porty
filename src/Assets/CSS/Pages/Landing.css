@@ -106,6 +106,9 @@ li {
     align-items: center;
     height: 100vh;
 }
-/* .wordsContainer h1 {
-     
-} */
+.borderBottom {
+	border: 2px solid var(--font);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}

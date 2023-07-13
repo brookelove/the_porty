@@ -6,16 +6,57 @@
     grid: auto auto auto / auto auto auto auto auto;
     align-items: space-evenly;
     justify-content: space-evenly;
-    /* grid-auto-flow: column; */
     height: 400px;
     margin-top: 10%;
 }
 .toolsContainer .grid .item .reactIcon {
     font-size: 50px;
 }
+.toolsContainer .grid .item {
+    /* /in order to get the too get teh tool tip this has to be relative */
+    position: relative;
+    font-size: 50px;
+    /* color:var(--pinkyP); */
+    
+}
 .toolsContainer .grid .item .inProgress {
-    color: rgb(152, 111, 88);
+    color:rgb(211, 184, 178);
 }
-.toolsContainer .grid .item:hover, .toolsContainer .grid .item .inProgress:hover{
-    color: red;
-}
+
+
+.toolsContainer .tool-tip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: initial;
+    z-index:1;
+    padding: 5px 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--font);
+    color: var(--bckgrd);
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    }
+    .toolsContainer .inProgressTool-tip {
+        background-color:rgb(211, 184, 178);
+        color:var(--font)
+    }
+    
+    .toolsContainer .item:hover .tool-tip {
+        top: -45px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }

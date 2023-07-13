@@ -41,7 +41,7 @@ const Work = () => {
                     </section>
                 </section>
             </div>
-            <Service/>
+            <Service id="prices"/>
             <Process/>
         </div>
     )

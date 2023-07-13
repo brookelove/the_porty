@@ -37,7 +37,7 @@ const About = () => {
         </main>
         <Tools/>
         <Resume/>
-        <Contact/>
+        <Contact id="contact"/>
         </div>
     )
 }

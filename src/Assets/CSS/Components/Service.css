@@ -1,8 +1,26 @@
-
-.serviceContainer tr {
-    transition: all ease-in-out 0.25s;
+.serviceContainer header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 2% 0; */
+    text-align: center;
+    padding: 1% 1.5%;
+    width: 100%;
 }
-.serviceContainer tr:hover {
-    background-color: var(--font);
-    color: var(--bckgrd);
+.serviceContainer header h5{
+ margin-left:20%;
+}
+.serviceContainer table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.serviceContainer table tbody tr {
+    padding: 5%;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--font);
+}
+.serviceContainer table tbody tr td{
+    padding: 2%;
 }

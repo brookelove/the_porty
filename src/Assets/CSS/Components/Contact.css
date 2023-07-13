@@ -1,6 +1,7 @@
 
 .contactContainer {
     background-color: var(--secBkgrd);
+    background-color: var(--font);
     color: var(--bckgrd);
     padding:3%;
     display:flex;
