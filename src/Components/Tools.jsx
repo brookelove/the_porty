@@ -10,34 +10,78 @@ const Tools = () => {
     return(
         <div className="toolsContainer">
             <ul className="grid">
-                <li className="item">
-                <FaReact/>
+                <li className="item"> 
+                <FaReact className="reactIcon"/>
                     <tool-tip role="tooltip" tip-position="top">
                     React.JS
                     </tool-tip>
                     </li>
-                <li className="item"><FaSass/></li>
-                <li className="item"><FaAws/></li>
-                <li className="item"><FaGithub/></li>
-                <li className="item"><FaGitlab/></li>
-                <li className="item"><FaNode/></li>
-                <li className="item"><FaJava/></li>
-                <li className="item"><FaPython/></li>
-                <li className="item"><BiLogoJavascript/></li>
-                <li className="item"><FaCss3Alt/></li>
-                <li className="item"><FaHtml5/></li>
-                <li className="item"><BiLogoJquery/></li>
-                <li className="item"><FaBootstrap/></li>
-                <li className="item"><SiMysql/></li>
-                <li className="item"><SiExpress/></li>
-                <li className="item"><SiHandlebarsdotjs/></li>
-                <li className="item"><SiJest/></li>
-                <li className="item"><SiApollographql/></li>
-                <li className="item"><SiKotlin/></li>
-                <li className="item"><VscJson/></li>
-                <li className="item"><SiNotion/></li>
-                <li className="item"><SiCanva/></li>
-                <li className="item"><FaFigma/></li>
+                <li className="item">
+                    <FaSass className="reactIcon"/>
+                </li>
+                <li className="item" 
+                ><FaAws className="reactIcon inProgress"/>
+                </li>
+                <li className="item">
+                    <FaGithub className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <FaGitlab className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <FaNode className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <FaJava className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <FaPython className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <BiLogoJavascript className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <FaCss3Alt className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <FaHtml5 className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <BiLogoJquery className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <FaBootstrap className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <SiMysql className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <SiExpress className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <SiHandlebarsdotjs className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <SiJest className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <SiApollographql className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <SiKotlin className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <VscJson className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <SiNotion className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <SiCanva className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <FaFigma className="reactIcon"/>
+                </li>
             </ul>
         </div>
     )

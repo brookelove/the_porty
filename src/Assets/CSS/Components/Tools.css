@@ -10,6 +10,12 @@
     height: 400px;
     margin-top: 10%;
 }
-.toolsContainer .grid .item:hover{
+.toolsContainer .grid .item .reactIcon {
+    font-size: 50px;
+}
+.toolsContainer .grid .item .inProgress {
+    color: rgb(152, 111, 88);
+}
+.toolsContainer .grid .item:hover, .toolsContainer .grid .item .inProgress:hover{
     color: red;
 }
