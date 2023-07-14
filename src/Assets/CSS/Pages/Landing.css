@@ -8,7 +8,7 @@
 /* secondary colors */
    --primary: #181818;
    --secondary: #f4f4f4;
-   --tertiary: #E4E1D4; 
+   /* --tertiary: #E4E1D4;  */
    --undertone: #371F0E;
    --dGrey: #3a3a3a;
    --burg: rgb(85,25,14);
@@ -24,7 +24,7 @@
 
 body {
     background-color: var(--bckgrd);
-    color: var(--font);
+    color: var(--rubyR);
 }
 a {
     text-decoration: none;

@@ -1,6 +1,4 @@
-.workContainer {
-    /* background-color:rgb(244,238,227); */
-}
+
 .workContainer .header{
     display: flex;
     justify-content: center;
@@ -10,15 +8,15 @@
     display: flex;
     position: absolute;
     font-size: 40px;
-    right: 17.2%;
+    right: 19.2%;
 }
-.workContainer .header .title .left{
-    color: var(--tertiary);
+.workContainer .header .title .left{   
     padding-right: 1%;
 }
 .workContainer .header .title .right{
     /* color: rgb(50,29,17); */
     padding-left: 1%;
+    color: var(--font);
 }
 .workContainer #seaVideoWork{
     width: 45%;
@@ -26,12 +24,16 @@
     margin-top:2rem;
 }
 .workContainer .projectContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
     /* remvove/ make this less, this from the top */
-    padding-top:20rem;
+    padding: 17% 3% 3% 3%;
+    /* text-align: end; */
 }
-.workContainer .projectContainer section a img{
-    width: 25%;
+.workContainer .projectContainer section img{
+    width: 35%;
 }
 .workContainer .projectContainer section a button{
     background-color: none;

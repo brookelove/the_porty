@@ -29,7 +29,7 @@ const About = () => {
                 </section>
             </div>
             <div className="right">
-                <p className="shortInfo">I'm a Full-stack Software developer who loves creating products that are creative, intuitive, and an experience</p>
+                <p className="shortInfo">I'm a Full-stack Software developer who loves creating products that are creative, intuitive, and an experience.</p>
             </div>
         </header>
         <main>

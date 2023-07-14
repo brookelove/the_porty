@@ -1,9 +1,15 @@
 import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import { Mousewheel, Pagination } from 'swiper/modules';
+import "../Assets/CSS/Components/Process.css";
 
 const Process = () => {
     return(
-        <>
-            <h1>Process</h1>
+        <div className="processContainer">
+            <h1>MY</h1>
+            <h1>PROCESS</h1>
+            <div className="processSteps">
             <section>
                 <h5>01.</h5>
                 <h3>MEET UP</h3>
@@ -29,10 +35,18 @@ const Process = () => {
                 <h3>AFTER</h3>
                 <p>You're sites up! I will still be there for your future support and please dont hesitate to contact if you need help!</p>
             </section>
+            </div>
+            <div className="processLines" >
+                <span id="line01"className="line"></span> 
+                <span id="line02"className="line"></span>
+                <span id="line03"className="line"></span>
+                <span id="line04"className="line"></span>
+                <span id="line05"className="line"></span>
+            </div>
             <button className="button button--shape">
                 <span>CONTACT ME</span>
             </button>
-        </>
+            </div>
     )
 }
 export default Process;

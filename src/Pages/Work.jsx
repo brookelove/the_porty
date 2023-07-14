@@ -22,22 +22,20 @@ const Work = () => {
             <div className="projectContainer">
                 <section>
                     <h3>01</h3>
-                    <a>
                         <img src={prjOne}/>
-                    </a>
                     <section>
-                        <p>TECH:</p>
-                        <p>Multi-page Website</p>
+                        <p>TYPE: Multipage Website</p>
+                        <p>DESCRIPTION: Custom Make up artist website</p>
+                        <p>React, CSS, JavaScript</p>
                     </section>
                 </section>
                 <section>
                     <h3>02</h3>
-                    <a>
                         <img src={prjTwo}/>  
-                    </a>
                     <section>
-                        <p>TECH:</p>
-                        <p>Multi-page Website</p>
+                    <p>TYPE: Multipage Website</p>
+                        <p>DESCRIPTION: Custom Make up artist website</p>
+                        <p>React, CSS, JavaScript </p>
                     </section>
                 </section>
             </div>
