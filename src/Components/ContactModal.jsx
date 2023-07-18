@@ -6,7 +6,9 @@ const ContactModal = ({setIsOpen}) => {
         <div className="contactModalBackGrd">
         <div className="contactModalContainer">
             <div onClick={()=> setIsOpen(false)}><GrFormClose size={30}/></div>
+            <span className="line"></span>
             <h1>CONNECT</h1>
+            <span className="line"></span>
             <form>
                 <label for="name">FIRST NAME</label>
                 <input type="text" name="name"></input>
