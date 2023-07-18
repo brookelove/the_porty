@@ -24,7 +24,7 @@ const Contact = () => {
                         <option value="E-commerce">E-COMMERCE</option>
                         <option value="Questions">QUESTIONS</option>
                     </select>
-                    <label for="email">MESSAGE</label>
+                    <label for="message">MESSAGE</label>
                     <input type="text" name="message"></input>
                     <button className="button button--shape">
                         <span>SEND</span>

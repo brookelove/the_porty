@@ -105,7 +105,9 @@ li {
     justify-content: center;
     align-items: center;
     height: 100vh;
+	font-size: 500%;
 }
+
 .borderBottom {
 	border: 2px solid var(--font);
     border-top: 0;

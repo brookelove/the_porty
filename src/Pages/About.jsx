@@ -1,4 +1,5 @@
 import React from "react";
+import BigIdeas from "../Components/BigIdeas";
 import Contact from "../Components/Contact";
 import Navbar from "../Components/Navbar";
 import Resume from "../Components/Resume";
@@ -9,6 +10,7 @@ const About = () => {
     return (
         <div className="aboutContainer parallax">
         <Navbar/>
+        <BigIdeas/>
         <header>
             <div className="left">
                 <a>LINKEDIN</a>

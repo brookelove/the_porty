@@ -1,6 +1,8 @@
-import React, {useId, useRef, useEffect} from "react";
+import React, {useId, useRef, useEffect, useState} from "react";
 import "../Assets/CSS/Components/Navbar.css"
+import ContactModal from "./ContactModal";
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false)
     useEffect(()=> {
        const currPage = window.location.href;
        const aboutAEl = document.getElementById("aboutA");
@@ -70,10 +72,12 @@ const Navbar = () => {
                 <p>04</p>
             </li>
             <li id="homeLi">
-            <a className="sendContact" href="#contact">let's connect</a>
+            <a className="sendContact" onClick={()=>setIsOpen(true)}
+            href="#contact">let's connect</a>
                 <p>05</p>
             </li>
         </ul>
+        {isOpen && <ContactModal setIsOpen={setIsOpen} />}
         </div>
     )
 }

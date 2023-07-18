@@ -1,0 +1,22 @@
+.bigIdeasContainer {
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
+    margin-top: -9%;
+    padding-bottom: 10%;
+}
+.bigIdeasContainer h1 {
+    width: 50px;
+    font-size: 700%;
+    margin-left: -60%;
+}
+.bigIdeasContainer h4 {
+    width: 10px;
+    /* position: relative; */
+    left: 21%;
+    top:16%;
+    padding-right:10%;
+}
