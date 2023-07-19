@@ -25,9 +25,9 @@ const Home = () => {
                 <a href="/about">
                     <h1>ABOUT</h1>
                 </a>
-                <a href="/about#contactContainer">
+                {/* <a href="/about#contactContainer">
                     <h1>CONTACT</h1>
-                </a>
+                </a> */}
                 <a href="/work"><h1>PROJECTS</h1></a>
             </section>
         </div>

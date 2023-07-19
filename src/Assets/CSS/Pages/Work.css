@@ -30,7 +30,7 @@
     justify-content: space-evenly;
 }
 .workContainer .projectContainer div section img{
-    width: 275px;
+    width: 375px;
     border-radius: 10px;
     box-shadow: -10px 9px 11px 0px rgba(174, 174, 174, 0.888);
     margin-bottom: 10px;
@@ -38,3 +38,32 @@
 .workContainer .projectContainer section a button{
     background-color: none;
 }
+.projectContainer div section .projectInfoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.plusContainer {
+    padding: 0 4%;
+    transition: all ease-in 0.2s;
+}
+.plusContainer:hover, .plusContainer::after {
+    transform: rotate(40deg);
+}
+.plusContainer span{
+    display: block;
+    width: 12px;
+    height:2px;
+    background-color: rgb(113, 108, 107);
+    padding: 0 2%;
+}
+.plusContainer .right{
+    transform: rotate(270deg);
+    position: relative;
+    bottom:2px
+}
+.projInfo {
+    width: 375px;
+}
+
+

@@ -1,14 +1,25 @@
-import React from "react";
+import React, {useRef} from "react";
+import emailjs from '@emailjs/browser';
 import "../Assets/CSS/Components/Contact.css";
 
 const Contact = () => {
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_wjdiaov', 'template_cl9o5tp', form.current, 'uLVCGqKunzZ2MPlPV')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
     return (
         <div className="contactContainer" id="contactContainer">
             <section className="scrollContainer">
                 <h1 className="scrollText rotate">LET'S CONNECT</h1>
             </section>
             <section className="contactFormContainer">
-                <form>
+                <form ref={form}>
                     <label for="name">NAME</label>
                     <input type="text" name="name"></input>
                     <label for="number">PHONE</label>
@@ -26,7 +37,7 @@ const Contact = () => {
                     </select>
                     <label for="message">MESSAGE</label>
                     <input type="text" name="message"></input>
-                    <button className="button button--shape">
+                    <button className="button button--shape" onClick={()=> sendEmail}>
                         <span>SEND</span>
                     </button>
                 </form>
