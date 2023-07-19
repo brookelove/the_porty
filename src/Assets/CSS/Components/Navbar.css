@@ -4,22 +4,28 @@
     justify-content: space-between;
     padding: 3%;
 }
-.navbarContainer .sendContact{
-    text-decoration: underline dotted;
+.navbarContainer .sendContact, .dot{
+    font-style: italic;
 }
 .navbarContainer ul {
     display: flex;
     justify-content: space-around;
     width: 30%;
 }
+.navbarContainer ul li a{
+    color: var(--rubyR);
+    transition: all ease-in 1s;
+}
+.navbarContainer ul li a:hover {
+    color: var(--pinkyP);
+}
+.navbarContainer ul li a::after{
+    color: var(--rubyR);
+    text-decoration: underline dotted;
+}
 .navbarContainer ul li p{ 
     position: relative;
     left: 45px;
     top: -30px;
     font-size: 15%;
-    text-decoration: underline dotted;
-}
-
-.dot {
-    text-decoration: underline dotted;
 }

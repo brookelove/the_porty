@@ -14,7 +14,6 @@
     padding-right: 1%;
 }
 .workContainer .header .title .right{
-    /* color: rgb(50,29,17); */
     padding-left: 1%;
     color: var(--font);
 }
@@ -24,16 +23,17 @@
     margin-top:2rem;
 }
 .workContainer .projectContainer{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    /* remvove/ make this less, this from the top */
     padding: 17% 3% 3% 3%;
-    /* text-align: end; */
 }
-.workContainer .projectContainer section img{
-    width: 35%;
+.workContainer .projectContainer div {
+    display: flex;
+    justify-content: space-evenly;
+}
+.workContainer .projectContainer div section img{
+    width: 275px;
+    border-radius: 10px;
+    box-shadow: -10px 9px 11px 0px rgba(174, 174, 174, 0.888);
+    margin-bottom: 10px;
 }
 .workContainer .projectContainer section a button{
     background-color: none;

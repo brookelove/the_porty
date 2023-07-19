@@ -1,7 +1,7 @@
 import React from "react";
 import { FaReact, FaSass } from "react-icons/fa6";
 import { FaAws, FaGithub, FaGitlab, FaNode, FaJava, FaPython, FaCss3Alt, FaHtml5, FaBootstrap, FaFigma } from "react-icons/fa";
-import { BiLogoJavascript, BiLogoJquery } from "react-icons/bi";
+import { BiLogoJavascript, BiLogoJquery, BiLogoSlack } from "react-icons/bi";
 import { SiMysql, SiExpress, SiHandlebarsdotjs, SiJest, SiApollographql, SiKotlin, SiNotion, SiCanva } from "react-icons/si";
 import { VscJson } from "react-icons/vsc";
 import "../Assets/CSS/Components/Tools.css"
@@ -101,6 +101,10 @@ const Tools = () => {
                 <li className="item">
                     <div className="tool-tip">Figma</div>
                     <FaFigma className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <div className="tool-tip">Figma</div>
+                    <BiLogoSlack className="reactIcon"/>
                 </li>
             </ul>
         </div>

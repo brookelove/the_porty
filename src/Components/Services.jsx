@@ -24,7 +24,7 @@ const Service = () => {
                     <tr>
                         <td>Classic Website</td>
                         <td>~ 3-5 pages</td>
-                        <td>$1500</td>
+                        <td>~ $1500</td>
                     </tr>
                     <tr>
                         <td>E-Commerce</td>

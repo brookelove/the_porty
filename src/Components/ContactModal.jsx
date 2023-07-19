@@ -3,11 +3,11 @@ import "../Assets/CSS/Components/ContactModal.css";
 import { GrFormClose } from "react-icons/gr";
 const ContactModal = ({setIsOpen}) => {
     return (
-        <div className="contactModalBackGrd">
+        <div className="modal">
         <div className="contactModalContainer">
-            <div onClick={()=> setIsOpen(false)}><GrFormClose size={30}/></div>
+            <div onClick={()=> setIsOpen(false)}><GrFormClose size={30} className="closeBTN" /></div>
             <span className="line"></span>
-            <h1>CONNECT</h1>
+            <h1>LET'S CONNECT</h1>
             <span className="line"></span>
             <form>
                 <label for="name">FIRST NAME</label>
@@ -16,6 +16,7 @@ const ContactModal = ({setIsOpen}) => {
                 <input type="text" name="email"></input>
                 <label for="phone">PHONE</label>
                 <input type="text" name="phone"></input>
+                <label for="subject">TALK ABOUT</label>
                 <select name="subject" id="subject">
                         <option value="Other">OTHER</option>
                         <option value="landing">LANDING PAGE</option>
