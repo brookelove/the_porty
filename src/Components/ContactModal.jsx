@@ -1,7 +1,18 @@
-import React from "react";
+import React, {useRef} from "react";
+import emailjs from '@emailjs/browser';
 import "../Assets/CSS/Components/ContactModal.css";
 import { GrFormClose } from "react-icons/gr";
 const ContactModal = ({setIsOpen}) => {
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_wjdiaov', 'template_cl9o5tp', form.current, 'uLVCGqKunzZ2MPlPV')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
     return (
         <div className="modal">
         <div className="contactModalContainer">
@@ -9,7 +20,7 @@ const ContactModal = ({setIsOpen}) => {
             <span className="line"></span>
             <h1>LET'S CONNECT</h1>
             <span className="line"></span>
-            <form>
+            <form ref={form}>
                 <label for="name">FIRST NAME</label>
                 <input type="text" name="name"></input>
                 <label for="email">EMAIL</label>
@@ -27,7 +38,7 @@ const ContactModal = ({setIsOpen}) => {
                     </select>
                     <label for="message">MESSAGE</label>
                     <input type="text" name="message"></input>
-                    <button className="button button--shape">
+                    <button style={{marginTop:"30px", marginLeft:"75px"}}className="button button--shape" onClick={()=> sendEmail}>
                         <span>SEND</span>
                     </button>
             </form>

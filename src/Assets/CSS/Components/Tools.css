@@ -39,6 +39,7 @@
     pointer-events: none;
     border-radius: 4px;
     text-align: center;
+    
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -moz-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -57,6 +58,7 @@
     .toolsContainer .item:hover .tool-tip {
         top: -45px;
         opacity: 1;
+        font-family: operetta-12, serif;
         visibility: visible;
         pointer-events: auto;
     }

@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    font-family: urw-din, sans-serif;
 }
 .aboutContainer header .middle {
     display: flex;
@@ -22,16 +23,30 @@
 }
 .aboutContainer header .middle .name {
     left: 25%;
+    font-weight: 400;
+    font-family: raleway, sans-serif;
 }
 .aboutContainer header .middle .name .subHi{
     display: flex;
+    font-family: ambroise-std, serif;
 }
 .aboutContainer header .middle .name .subHi h1 {
     padding: 0 10px;
+    font-weight: 700;
+    font-style: italic;
+
 }
 .aboutContainer header .middle .title {
-    left: 55%;
-    bottom: -72%;
+    left: 54%;
+    bottom: -58%;
+    font-weight: 400;
+    font-family: raleway, sans-serif;
+    
+}
+.aboutContainer header .middle .title .soft {
+    font-weight: 700;
+    font-style: italic;
+    font-family: ambroise-std, serif;
 }
 .aboutContainer header .middle img {
     height: 300px;
@@ -39,4 +54,6 @@
 }
 .aboutContainer header .right {
     max-width: 10%;
+    font-family: urw-din, sans-serif;
+    
 }

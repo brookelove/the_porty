@@ -19,7 +19,7 @@ const Landing = () => {
             navigate("/home");
           }
         }
-        setTimeout(updateWord, 1500);
+        setTimeout(updateWord, 1000);
       }, [currentWord,displayTyped,navigate]);
 
     return (

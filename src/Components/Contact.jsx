@@ -45,10 +45,10 @@ const Contact = () => {
             <span className="line"></span>
             <div className="contactLinks">
                 <h2>SOCIALS</h2>
-                <a mailto="brookelovedevelops@gmail.com">EMAIL</a>
-                <a>TIKTOK</a>
-                <a>LINKDIN</a>
-                <a>INSTAGRAM</a>
+                <a href="mailto:brookelovedevelops@gmail.com">EMAIL</a>
+                <a href="https://www.tiktok.com/@bytesizedbean" target="_blank" rel="noreferrer">TIKTOK</a>
+                <a href="https://www.linkedin.com/in/brooke-s-love/" target="_blank" rel="noreferrer">LINKDIN</a>
+                <a href="https://www.instagram.com/bytesizedbean/" target="_blank" rel="noreferrer">INSTAGRAM</a>
             </div>
             </section>
         </div>

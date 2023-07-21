@@ -65,7 +65,7 @@ const Work = () => {
                         <section id="proj-1" className={isP1Open ? "projInfo" : "projInfo none"}>
                              <p>Custom Make up artist website</p>
                              <p>React, CSS, JavaScript</p>
-                             <a href="https://effortless-scone-fd5266.netlify.app" target="_blank" rel="noreferrer">website</a>
+                             <a href="https://effortless-scone-fd5266.netlify.app" target="_blank" rel="noreferrer">click me</a>
                         </section>
                     </section>
                     <section>
@@ -89,7 +89,7 @@ const Work = () => {
                         <section id="proj-2" className={isP2Open ? "projInfo" : "projInfo none"}>
                             <p>Custom Make up artist website</p>
                             <p>React, CSS, JavaScript</p>
-                            <a href="https://endearing-longma-9eecbd.netlify.app" target="_blank" rel="noreferrer">website</a>
+                            <a href="https://endearing-longma-9eecbd.netlify.app" target="_blank" rel="noreferrer">click me</a>
                         </section>
                     </section>
                 </div>

@@ -1,25 +1,32 @@
+.serviceContainer {
+    padding: 0 1%;
+}
 .serviceContainer header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* margin: 2% 0; */
+    justify-content: space-evenly;
     text-align: center;
-    padding: 1% 1.5%;
+    padding: 1% 0;
     width: 100%;
 }
 .serviceContainer header h5{
- margin-left:20%;
+    margin-left:20%;
 }
 .serviceContainer table{
     width: 100%;
     text-align: center;
     border-collapse: collapse;
 }
+.serviceContainer table thead th{
+    padding: 1% 0;
+    font-family: ambroise-std, serif;
+}
 .serviceContainer table tbody tr {
     padding: 5%;
     width: 100%;
     border-collapse: collapse;
     border: 1px solid var(--font);
+    font-family: urw-din, sans-serif;
 }
 .serviceContainer table tbody tr td{
     padding: 2%;

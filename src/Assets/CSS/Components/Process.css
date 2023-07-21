@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     margin: 5% 2%;
+    font-family: ambroise-std, serif;
 }
 .processContainer .processSteps{
     display: flex;
@@ -18,10 +19,12 @@
     width: 80%;
     text-align: start;
     padding: 0 3%;
+    font-family: urw-din, sans-serif;
 }
 .processContainer .processSteps section h5{
     text-align: end;
     padding-right: 5%;
+    /* font-family: ambroise-std, serif; */
 }
 .processContainer .processLines{
     display: flex;
@@ -35,7 +38,6 @@
     transform:rotate(90deg);
     width:2px;
     background-color: var(--rubyR);
-    /* margin: 0 10%; */
     margin:0 1.5%;
     margin-bottom:3%;
 }

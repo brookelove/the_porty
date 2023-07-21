@@ -52,7 +52,7 @@
     letter-spacing: 5px;
     margin-left: 10px;
 }
-.contactModalContainer form input, .contactModalBackGrd form select{
+.contactModalContainer form input,.contactModalContainer form select{
     background: var(--bckgrd);
     color: var(--font);
     letter-spacing: 5px;
@@ -62,7 +62,6 @@
     border-right: 0;
     height:35px;
 }
-.contactModalBackGrd form button{
-    margin-top: 10%;
-    margin-left: 85px;
+.contactModalContainerbutton button{
+  margin-top: 20px !important;
 }

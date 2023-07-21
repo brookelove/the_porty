@@ -7,15 +7,19 @@
 .workContainer .header .title {
     display: flex;
     position: absolute;
-    font-size: 40px;
-    right: 19.2%;
+    font-size: 450%;
+    right: 12.2%;
 }
 .workContainer .header .title .left{   
     padding-right: 1%;
+    color: var(--pinkyP);
+    font-family: freight-big-pro, serif;
+    font-style: italic;
 }
 .workContainer .header .title .right{
     padding-left: 1%;
-    color: var(--font);
+    color: var(--rubyR);
+    font-family: urw-din, sans-serif;
 }
 .workContainer #seaVideoWork{
     width: 45%;
@@ -24,6 +28,11 @@
 }
 .workContainer .projectContainer{
     padding: 17% 3% 3% 3%;
+}
+.workContainer .projectContainer h2{
+    font-family: raleway, sans-serif;
+    font-style: italic;
+
 }
 .workContainer .projectContainer div {
     display: flex;
@@ -34,6 +43,12 @@
     border-radius: 10px;
     box-shadow: -10px 9px 11px 0px rgba(174, 174, 174, 0.888);
     margin-bottom: 10px;
+}
+.workContainer .projectContainer div section section{
+    font-family: ambroise-std, serif;
+}
+.workContainer .projectContainer div section a {
+   color:  var(--font);
 }
 .workContainer .projectContainer section a button{
     background-color: none;
@@ -60,7 +75,8 @@
 .plusContainer .right{
     transform: rotate(270deg);
     position: relative;
-    bottom:2px
+    bottom:0px;
+    right: 12px;
 }
 .projInfo {
     width: 375px;

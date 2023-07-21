@@ -13,11 +13,18 @@
     padding: 1%;
     width: 2%;
     font: 700;
-    font-size: 20px;
+    font-size: 30px;
+    background-color: rgba(244, 238, 227, 0.151);
+    font-family: ambroise-firmin-std, serif;
 }
 .homeContainer ul li {
     margin: 10% 0;
     text-align: center;
+}
+.homeContainer ul li a{
+    margin: 10% 0;
+    text-align: center;
+    color: var(--bckgrnd);
 }
 .homeContainer section {
     display: flex;
@@ -25,7 +32,8 @@
     flex-direction: column;
     align-items: self-end;
     position: relative;
-    top: 12.5rem;
+    top: 20rem;
+    font-family: ambroise-firmin-std, serif;
  }
 .homeContainer section a{
    color: var(--tertiary);

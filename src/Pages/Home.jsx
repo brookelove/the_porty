@@ -9,17 +9,17 @@ const Home = () => {
             </video>
             <ul>
                 <li>
-                    <a>LI</a>
+                    <a href="https://www.linkedin.com/in/brooke-s-love/" target="_blank" rel="noreferrer">LI</a>
                 </li>
                 <li>
-                    <a>GH</a>
+                    <a href="https://github.com/brookelove" target="_blank" rel="noreferrer">GH</a>
                 </li> 
                 <li>
-                    <a>IN</a>
+                    <a href="https://www.instagram.com/bytesizedbean/" target="_blank" rel="noreferrer">IN</a>
                 </li>    
-                <li>
+                {/* <li>
                     <a>FB</a>
-                </li>    
+                </li>     */}
             </ul>
             <section className="main">
                 <a href="/about">

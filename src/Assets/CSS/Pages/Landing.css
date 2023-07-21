@@ -95,6 +95,9 @@ li {
 	transition: transform 0.3s ease;
 	mix-blend-mode: difference;
     color: var(--bckgrd);
+	font-family: freight-big-pro, serif;
+	font-weight: 600;
+	font-style: italic;
 }
 
 .button--shape:hover span {
@@ -106,6 +109,7 @@ li {
     align-items: center;
     height: 100vh;
 	font-size: 500%;
+	font-family: ambroise-firmin-std, serif;
 }
 
 .borderBottom {
