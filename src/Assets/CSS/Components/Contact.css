@@ -87,8 +87,8 @@
     max-height:fit-content;
     align-items: flex-end;
     position: relative; 
-    top: 35%;
-    left: 15%;
+    top: 29%;
+    left: 7%;
     font-family: urw-din, sans-serif;
     font-family: freight-big-pro, serif;
 }
@@ -188,25 +188,25 @@
         left:2%;
     }
 }
-@media screen and (min-width:900px) {
+@media screen and (min-width:900px) and (max-width: 1500px) {
     .contactContainer .scrollContainer {
+        left: 64%;
         transform: rotate(0deg);
-        left: 0;
-        width: 100%;
-        font-size: 130%;
+        width: 383px;
     }
      .contactContainer form {
         padding-top: 20%;
         padding-bottom: 30%;
     }
-    .contactContainer form input, .contactContainer form select {
-        width: 290%;
+    .contactContainer .line {
+        position: relative;
+        left: 20%;
     }
-    /* .contactContainer .line {
-        display: none;
-    } */
+    .contactContainer form input, .contactContainer form select {
+        width: 150%;
+    }
     .contactContainer .contactLinks {
-        top: 35%;
-        left:2%;
+        top: 10%;
+        left:12%;
     }
 }
