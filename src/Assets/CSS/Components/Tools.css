@@ -13,17 +13,14 @@
     font-size: 50px;
 }
 .toolsContainer .grid .item {
-    /* /in order to get the too get teh tool tip this has to be relative */
+    /* /in order to get the too get the tool tip this has to be relative */
     position: relative;
     font-size: 50px;
-    /* color:var(--pinkyP); */
     
 }
 .toolsContainer .grid .item .inProgress {
     color:rgb(211, 184, 178);
 }
-
-
 .toolsContainer .tool-tip {
     position: absolute;
     top: 0;
@@ -50,15 +47,31 @@
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     }
-    .toolsContainer .inProgressTool-tip {
-        background-color:rgb(211, 184, 178);
-        color:var(--font)
-    }
+.toolsContainer .inProgressTool-tip {
+    background-color:rgb(211, 184, 178);
+    color:var(--font)
+}
     
-    .toolsContainer .item:hover .tool-tip {
-        top: -45px;
-        opacity: 1;
-        font-family: operetta-12, serif;
-        visibility: visible;
-        pointer-events: auto;
-    }
+.toolsContainer .item:hover .tool-tip {
+    top: -45px;
+    opacity: 1;
+    font-family: operetta-12, serif;
+    visibility: visible;
+    pointer-events: auto;
+}
+@media screen and (min-width: 300px) and (max-width:400px) {
+    .toolsContainer .grid {
+        display: grid;
+        grid: auto auto / auto auto auto;
+        height: 400px;
+        margin-top: 10%;
+    } 
+}
+@media screen and (min-width: 400px) and (max-width:500px) {
+    .toolsContainer .grid {
+        display: grid;
+        grid: auto auto / auto auto auto auto;
+        height: 400px;
+        margin-top: 10%;
+    } 
+}

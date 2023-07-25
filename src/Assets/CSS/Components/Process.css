@@ -24,7 +24,6 @@
 .processContainer .processSteps section h5{
     text-align: end;
     padding-right: 5%;
-    /* font-family: ambroise-std, serif; */
 }
 .processContainer .processLines{
     display: flex;
@@ -44,3 +43,43 @@
 .pink {
     color: var(--pinkyP);
 }
+@media screen and (min-width: 300px) and (max-width:500px) {
+    .processContainer {
+        margin-top: 50px;
+    }
+    .processContainer .processSteps{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (min-width:300px) and (max-width:700px) {
+    .processContainer .processLines {
+        width: 61%;
+        justify-content: space-between;
+    }
+    .processContainer .processSteps{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (min-width:700px) and (max-width:900px) {
+    .processContainer .processLines {
+        width: 61%;
+        justify-content: space-between;
+    }
+    .processContainer .processSteps{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (min-width:900px) {
+    .processContainer .processLines {
+        width: 61%;
+        justify-content: space-between;
+    }
+    .processContainer .processSteps{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

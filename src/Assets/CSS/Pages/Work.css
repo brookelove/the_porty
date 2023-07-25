@@ -48,7 +48,7 @@
     font-family: ambroise-std, serif;
 }
 .workContainer .projectContainer div section a {
-   color:  var(--font);
+   color: var(--font);
 }
 .workContainer .projectContainer section a button{
     background-color: none;
@@ -81,5 +81,102 @@
 .projInfo {
     width: 375px;
 }
-
-
+@media screen and (min-width: 300px) and (max-width:500px) {
+    .workContainer #seaVideoWork{
+        width: 95%;
+    }
+    .workContainer .header .title {
+        display: flex;
+        position: absolute;
+        font-size: 220%;
+        margin-top: 6%;
+        right: 7.2%;
+    }
+    .workContainer .projectContainer div {
+        flex-wrap: wrap;
+    }
+    .workContainer .projectContainer div section img, .projInfo {
+        width: 275px;
+    }
+    .workContainer .projectContainer div section img{
+        margin-top: 10px;
+    }
+    .plusContainer .right{
+        bottom:1px;
+        right:0;
+    }
+}
+@media screen and (min-width: 500px) and (max-width:700px) {
+    .workContainer #seaVideoWork{
+        width: 95%;
+    }
+    .workContainer .header .title {
+        display: flex;
+        position: absolute;
+        font-size: 320%;
+        margin-top: 6%;
+        right: 10.2%;
+    }
+    .workContainer .projectContainer div {
+        flex-wrap: wrap;
+    }
+    .workContainer .projectContainer div section img, .projInfo {
+        width: 400px;
+    }
+    .workContainer .projectContainer div section img{
+        margin-top: 10px;
+    }
+    .plusContainer .right{
+        bottom:1px;
+        right:0;
+    }
+}
+@media screen and (min-width: 500px) and (max-width:700px) {
+    .workContainer #seaVideoWork{
+        width: 95%;
+    }
+    .workContainer .header .title {
+        right: 15.2%;
+    }
+    .workContainer .projectContainer div {
+        flex-wrap: wrap;
+    }
+    .workContainer .projectContainer div section img{
+        margin-top: 40px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .workContainer .projectContainer div section img, .projInfo {
+        width: 350px;
+    }
+}
+@media screen and (min-width: 700px) and (max-width:900px) {
+	.workContainer #seaVideoWork{
+        width: 95%;
+    }
+    .workContainer .projectContainer div {
+        flex-wrap: wrap;
+    }
+    .workContainer .projectContainer div section img{
+        margin-top: 40px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+@media screen and (min-width:900px) {
+	.workContainer #seaVideoWork{
+        width: 95%;
+    }
+    .workContainer .projectContainer div {
+        flex-wrap: wrap;
+    }
+    .workContainer .projectContainer div section img{
+        margin-top: 40px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .plusContainer .right{
+        bottom:2px;
+        right:0.5px;
+    }
+}

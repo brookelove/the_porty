@@ -22,3 +22,47 @@
     padding-right:10%;
     font-family: urw-din, sans-serif;
 }
+@media screen and (min-width: 300px) and (max-width:500px) {
+	.bigIdeasContainer h1 {
+        font-size:400%;
+        margin-right: 40%;
+    }
+    .bigIdeasContainer h4 {
+        font-size: 80%;
+        left: 35%;
+        top:10%;
+    }
+}
+@media screen and (min-width: 500px) and (max-width:700px) {
+	.bigIdeasContainer h1 {
+        font-size:700%;
+        margin-right: 40%;
+    }
+    .bigIdeasContainer h4 {
+        font-size: 80%;
+        left: 40%;
+        top:14%;
+    }
+}
+@media screen and (min-width: 700px) and (max-width:900px) {
+	.bigIdeasContainer h1 {
+        font-size:700%;
+        margin-right: 40%;
+    }
+    .bigIdeasContainer h4 {
+        font-size: 80%;
+        left: 200px;
+        top:14%;
+    }
+}
+@media screen and (min-width:900px) {
+	.bigIdeasContainer h1 {
+        font-size:700%;
+        margin-right:20%;
+    }
+    .bigIdeasContainer h4 {
+        font-size: 80%;
+        left: 200px;
+        top:14%;
+    }
+}

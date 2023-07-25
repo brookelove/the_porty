@@ -40,3 +40,27 @@
    font-size: 45px;
    margin: 0.2% 0
 }
+@media screen and (min-width: 300px) and (max-width:500px) {
+    .homeContainer ul{
+        width: 10%;
+    }
+    .homeContainer section {
+        top: 25rem;
+     }
+}
+@media screen and (min-width: 500px) and (max-width:700px) {
+    .homeContainer ul{
+        width: 10%;
+    }
+    .homeContainer section {
+        top: 25rem;
+     }
+}
+@media screen and (min-width: 700px) and (max-width:900px) {
+    .homeContainer ul{
+        width: 10%;
+    }
+    .homeContainer section {
+        top: 25rem;
+     }
+}

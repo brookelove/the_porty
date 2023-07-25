@@ -31,3 +31,21 @@
 .serviceContainer table tbody tr td{
     padding: 2%;
 }
+@media screen and (min-width: 300px) and (max-width:500px) {
+    .serviceContainer {
+        margin-top: 5%;
+    }
+    .serviceContainer table{
+        width: 95%;
+        margin-left:4%;
+    }
+}
+@media screen and (min-width:500px) and (max-width:700px) {
+    .serviceContainer {
+        margin-top: 10%;
+        padding: 0%;
+    }
+    .serviceContainer table{
+        width: 100%;
+    }
+}
