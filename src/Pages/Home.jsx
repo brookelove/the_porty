@@ -30,8 +30,8 @@ const Home = () => {
                 </a>
                 <a href="/work"><h1>PROJECTS</h1></a>
             </section> */}
-            <h1>🚧 SITE IS CURENTLY UNDER CONSTRUCTION 🚧</h1>
-            <h1>🔧 Hold on for the pretty new pages 🔧</h1>
+            <h1>🚧SITE IS CURENTLY UNDER CONSTRUCTION🚧</h1>
+            <h1>Hold on for the pretty new pages🔧</h1>
             <iframe src="https://giphy.com/embed/fVeAI9dyD5ssIFyOyM" width="480" height="360" frameBorder="8" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/OctoNation-work-construction-fVeAI9dyD5ssIFyOyM"></a></p>
         </div>
     )

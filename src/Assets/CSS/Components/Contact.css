@@ -1,12 +1,13 @@
 .contactContainer {
-    background-color: var(--secBkgrd);
-    background-color: var(--font);
-    color: var(--bckgrd);
+    /* background-color: var(--secBkgrd); */
+    /* background-color: var(--font); */
+    /* color: var(--bckgrd); */
     padding:3%;
     display:flex;
     justify-content: space-evenly;
 }
-.contactContainer .scrollContainer{
+/* move to Home.css=================================== */
+/* .contactContainer .scrollContainer{
     position: absolute;
     left: -25%;
     overflow:hidden;
@@ -24,7 +25,8 @@
     -moz-animation: scroll-animation 9s linear infinite;
     -webkit-animation: scroll-animation 9s linear infinite;
     animation: scroll-animation 9s linear infinite;
-}
+} */
+/* =================================== */
 .contactContainer h1 {
     margin-bottom: 30px;
     font-size: 320%;
@@ -82,7 +84,7 @@
     text-decoration: underline dotted;
 }
 .contactContainer .contactLinks {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     max-height:fit-content;
     align-items: flex-end;
@@ -90,7 +92,7 @@
     top: 29%;
     left: 7%;
     font-family: urw-din, sans-serif;
-    font-family: freight-big-pro, serif;
+    font-family: freight-big-pro, serif; */
 }
 .contactContainer .contactLinks a{
     font-size: 275%;
@@ -99,8 +101,9 @@
 .contactContainer .contactLinks a:hover{
     cursor: pointer;
 }
+/* ===============================LANDING CSS=========================== */
 /* animation to scroll across screen */
-@-moz-keyframes scroll-animation {
+/* @-moz-keyframes scroll-animation {
     from { -moz-transform: translateX(100%); }
     to { -moz-transform: translateX(-100%); }
   }
@@ -119,8 +122,11 @@
       -webkit-transform: translateX(-100%);
       transform: translateX(-100%);
     }
-  }
-  @media screen and (min-width: 300px) and (max-width:500px) {
+  } */
+  /* =================================== */
+
+
+  /* @media screen and (min-width: 300px) and (max-width:500px) {
     .contactContainer .scrollContainer {
         transform: rotate(0deg);
         left: 0;
@@ -209,4 +215,4 @@
         top: 10%;
         left:12%;
     }
-}
+} */

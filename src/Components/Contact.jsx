@@ -15,9 +15,9 @@ const Contact = () => {
       };
     return (
         <div className="contactContainer" id="contactContainer">
-            <section className="scrollContainer">
+            {/* <section className="scrollContainer">
                 <h1 className="scrollText rotate">LET'S CONNECT</h1>
-            </section>
+            </section> */}
             <section className="contactFormContainer">
                 <form ref={form}>
                     <label for="name">NAME</label>
@@ -44,11 +44,17 @@ const Contact = () => {
            
             <span className="line"></span>
             <div className="contactLinks">
-                <h2>SOCIALS</h2>
-                <a href="mailto:brookelovedevelops@gmail.com">EMAIL</a>
-                <a href="https://www.tiktok.com/@bytesizedbean" target="_blank" rel="noreferrer">TIKTOK</a>
-                <a href="https://www.linkedin.com/in/brooke-s-love/" target="_blank" rel="noreferrer">LINKDIN</a>
-                <a href="https://www.instagram.com/bytesizedbean/" target="_blank" rel="noreferrer">INSTAGRAM</a>
+                {/* put and creative drawn image there or something  */}
+            </div>
+            <div>
+                <h1>Thanks For Stopping By, Can't Wait To Chat</h1>
+                <p>by</p>
+                <h3>Savien Brooke Love</h3>
+                <div>
+                    <a>EMAIL</a>
+                    <a>LINKEDIN</a>
+                    <a>GITHUB</a>
+                </div>
             </div>
             </section>
         </div>

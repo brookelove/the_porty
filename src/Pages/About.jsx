@@ -1,7 +1,7 @@
 import React from "react";
 import BigIdeas from "../Components/BigIdeas";
 import Contact from "../Components/Contact";
-import Navbar from "../Components/Navbar";
+import Navbar from "../Components/Header";
 import Resume from "../Components/Resume";
 import Tools from "../Components/Tools";
 import "../Assets/CSS/Pages/About.css"

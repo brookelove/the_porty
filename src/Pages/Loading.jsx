@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import "../Assets/CSS/Pages/Landing.css";
 import { useNavigate } from "react-router";
 
-const Landing = () => {
+const Loading = () => {
     
     const navigate = useNavigate()
     const [displayTyped, setDisplayTyped] = useState("Passion");
@@ -30,4 +30,4 @@ const Landing = () => {
 }
 
 
-export default Landing;
+export default Loading;

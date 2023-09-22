@@ -4,8 +4,9 @@ import "../Assets/CSS/Components/BigIdeas.css"
 const BigIdeas = () => {
     return (
         <div className="bigIdeasContainer">
-            <h4>IN A SMALL TOWN</h4>
-            <h1>SOFTWARE ADVENTURER</h1>
+            <h1>SMALL TOWN FULLSTACK | SOFTWARE DEVELOPER</h1>
+            <p>Creating Fun Innovative Projects</p>
+            <a>LEARN MORE</a>
         </div>
     )
 }

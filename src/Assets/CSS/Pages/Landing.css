@@ -5,6 +5,19 @@
     padding: 0;
 }
 :root {
+/* New Color Scheme */
+--new-primary:#192928; /* dark green */
+--new-secondary:#BFEA88; /* light green */
+--new-point:rgb(26,59,59); /* emrald */
+--new-secondPoint:rgb(65,134,126); /* teal */
+--new-tertiary:rgb(133,41,19);/* dark orange */
+--new-secondTertiary:rgb(164,86,36); /* orange */
+--new-quarterly:#B98663; /* taupe */
+--new-secondQuarterly:#A9846A; /* cafe au lait */
+--footerWords: rgb(235,70,60); /* ruby red*/ 
+--footer:(rgb(35,0,0); /*burgandy */)
+
+/* need to create the change in background */
 /* secondary colors */
    --primary: #181818;
    --secondary: #f4f4f4;
@@ -21,6 +34,30 @@
    --font:rgb(50,29,17);
    --secBkgrd: rgb(17,13,9);
 }
+
+.theme-dark {
+	--dark-text: #292929;
+	--light-text: #F9F8F8;  
+	--dark-background: #192928;
+	--light-background: #586F7C;
+	--accent: #B8DBD9;
+	--button-border: #B8DBD9;
+}
+
+.theme-light {
+	--dark-text: #5E4B56;
+	--light-text: #5E4B56;
+	--dark-background: #DBE7E4;
+	--light-background: #EDDCD2;
+	--accent: #DBE7E4;
+	--button-border: #5E4B56;
+ }
+
+ html, #root {
+	background-color: var(--dark-background);
+	color: var(--dark-text);
+ }
+
 
 body {
     background-color: var(--bckgrd);

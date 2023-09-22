@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Navbar from "../Components/Navbar";
+import Navbar from "../Components/Header";
 import Service from "../Components/Services";
 import Process from "../Components/Process";
 import seaVideo from "../Assets/Video/pexels-rostislav-uzunov-7513671 (2160p).mp4"
