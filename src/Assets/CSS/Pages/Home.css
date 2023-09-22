@@ -1,3 +1,11 @@
+.homeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .homeContainer #seaVideo {
     position: absolute;
     z-index: -1;
@@ -11,7 +19,7 @@
     margin: 2% 5%;
     color: var(--tertiary);
     padding: 1%;
-    width: 2%;
+    width: 15%;
     font: 700;
     font-size: 30px;
     background-color: rgba(244, 238, 227, 0.151);

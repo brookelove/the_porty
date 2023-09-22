@@ -94,8 +94,8 @@ const Work = () => {
                     </section>
                 </div>
             </div>
-            <Service id="prices"/>
-            <Process/>
+            {/* <Service id="prices"/> */}
+            {/* <Process/> */}
         </div>
     )
 }
