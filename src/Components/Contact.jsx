@@ -15,9 +15,6 @@ const Contact = () => {
       };
     return (
         <div className="contactContainer" id="contactContainer">
-            {/* <section className="scrollContainer">
-                <h1 className="scrollText rotate">LET'S CONNECT</h1>
-            </section> */}
             <section className="contactFormContainer">
                 <form ref={form}>
                     <label for="name">NAME</label>

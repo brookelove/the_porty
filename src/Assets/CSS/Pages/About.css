@@ -6,6 +6,7 @@
 }
 .aboutContainer header .left{
     display: flex;
+    margin-top: 13%;
     flex-direction: column;
     justify-content: flex-end;
     font-family: urw-din, sans-serif;
@@ -21,9 +22,9 @@
     position: absolute;
     font-size: 180%;
 }
-.aboutContainer header .middle .name {
-    left: 25%;
-    font-weight: 400;
+.aboutContainer header .middle .name{
+    top: 170px;
+    left: 150px;
     font-family: raleway, sans-serif;
 }
 .aboutContainer header .middle .name .subHi{
@@ -34,11 +35,12 @@
     padding: 0 10px;
     font-weight: 700;
     font-style: italic;
+   
 
 }
 .aboutContainer header .middle .title {
-    left: 54%;
-    bottom: -58%;
+    right: 130px;
+    bottom:200px;
     font-weight: 400;
     font-family: raleway, sans-serif;
     
@@ -56,7 +58,7 @@
     max-width: 10%;
     font-family: urw-din, sans-serif;  
 }
-@media screen and (min-width: 300px) and (max-width:500px) {
+/* @media screen and (min-width: 300px) and (max-width:500px) {
     .aboutContainer header{
         display:block;
     }
@@ -84,8 +86,8 @@
         max-width: 90%;
         text-align: center;
     }
-}
-@media screen and (min-width: 500px) and (max-width:700px) {
+} */
+/* @media screen and (min-width: 500px) and (max-width:700px) {
     .aboutContainer header{
         display:flex;
         flex-direction: column;
@@ -144,4 +146,4 @@
     .aboutContainer header .right {
         max-width: 20%;
     }
-}
+} */

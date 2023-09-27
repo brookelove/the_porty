@@ -8,9 +8,8 @@ import "../Assets/CSS/Pages/About.css"
 
 const About = () => {
     return (
-        <div className="aboutContainer parallax">
+        <div className="aboutContainer">
         <Navbar/>
-        <BigIdeas/>
         <header>
             <div className="left">
                 <a>LINKEDIN</a>
@@ -21,7 +20,7 @@ const About = () => {
                     <h1>HEY,</h1>
                     <section className="subHi">
                     <h1>I'M </h1>
-                    <h1>BROOKE</h1>
+                    <h1>SAVIEN</h1>
                     </section>
                 </section>
                 <img className="brooke"></img>
