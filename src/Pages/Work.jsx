@@ -27,16 +27,23 @@ const Work = () => {
     // }, [isOpen])
     let tags = [];
     let makeTags = ()=> {
-        // for(let i = 0; i < projects.languages.length; i++){
-        //     if()
-        // }
+       
+        projects.map((project)=>{
+            for(let i = 0; i < project.languages.length; i++){
+                let language = project.languages[i]
+            if(!tags.includes(language)){
+                tags.push(language)
+            }
+            } 
+        })
     }
-
+    makeTags()
+    console.log(tags)
     return (
         <div className="workContainer parallax">
             <Navbar/>
             {/* tags */}
-            <div className="tagContainer"></div>
+            <div className="tagContainer">{tags.map((tag)=><a>{tag}</a>)}</div>
             <div className="projectContainer">
             {projects.map((project) =>{
                 return(
