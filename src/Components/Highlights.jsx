@@ -5,7 +5,8 @@ const Highlight = () => {
     return (
         <div className="highlightContainer">
             <section className="timelineContainer">
-                <span className="timeLine"></span>
+                <h3>MY TIMELINE SO FAR</h3>
+                <span className="line"></span>
                 <ul>
                     <li>graduating highschool</li>
                     <li>BS in Biology</li>
@@ -15,16 +16,16 @@ const Highlight = () => {
                 </ul>
             </section>
             <section className="gitHubStats">
+                <div className="graph"></div>
                 {/* adding a graph on the left */}
-                <div>
                     <ul>
                         <li>Total Stars Earned : 2</li>
                         <li>Total Commmits (2023): 202</li>
                         <li>Total PRs: 81</li>
                         <li>Total Issues: 52</li>
                     </ul>
-                    <h3>Most Used Languages</h3>
                     <ul>
+                    <h3>Most Used Languages</h3>
                         <li>Java 48.41%</li>
                         <li>Javascript: 29.90%</li>
                         <li>CSS 9.70%</li>
@@ -32,7 +33,6 @@ const Highlight = () => {
                         <li>HTML 4.53%</li>
                         <li>SCSS 0.70%</li>
                     </ul>
-                </div>
             </section>
         </div>
     )

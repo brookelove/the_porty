@@ -5,6 +5,7 @@ import Navbar from "../Components/Header";
 import Resume from "../Components/Resume";
 import Tools from "../Components/Tools";
 import "../Assets/CSS/Pages/About.css"
+import Highlight from "../Components/Highlights";
 
 const About = () => {
     return (
@@ -50,6 +51,7 @@ const About = () => {
         <main>
             <p></p>
         </main>
+        <Highlight/>
         <Tools/>
         <Resume/>
         <Contact id="contact"/>
