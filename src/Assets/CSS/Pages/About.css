@@ -1,4 +1,7 @@
 .aboutContainer header{
+    top:30%;
+    left:5%;
+    position: absolute;
     display:flex;
     justify-content: space-evenly;
     align-items: center;
@@ -23,7 +26,7 @@
     font-size: 180%;
 }
 .aboutContainer header .middle .name{
-    top: 170px;
+    top: 15%;
     left: 150px;
     font-family: raleway, sans-serif;
 }
@@ -39,8 +42,8 @@
 
 }
 .aboutContainer header .middle .title {
-    right: 130px;
-    bottom:200px;
+    right: 2%;
+    bottom:-30%;
     font-weight: 400;
     font-family: raleway, sans-serif;
     

@@ -76,6 +76,18 @@ li {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.lineContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lineContainer span {
+    display: inline-block;
+    width: 1px;
+    background-color: rgba(111, 111, 111, 0.369);
+    height: 70vh;
+}
 .button {
 	pointer-events: auto;
 	cursor: pointer;

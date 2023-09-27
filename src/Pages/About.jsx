@@ -10,6 +10,20 @@ const About = () => {
     return (
         <div className="aboutContainer">
         <Navbar/>
+        <div className="lineContainer">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         <header>
             <div className="left">
                 <a>LINKEDIN</a>
