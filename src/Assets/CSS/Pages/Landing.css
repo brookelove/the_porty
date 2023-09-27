@@ -62,19 +62,20 @@
 body {
     background-color: var(--bckgrd);
     color: var(--rubyR);
-	/* cursor: none; */
+	cursor: none;
 }
 
 /* cretion of the cursor */
 .cursorDot {
-	width: 5px;
-	height:5px;
+	width: 10px;
+	height:10px;
 	background-color: white;
 }
 .cursorOutline {
 	width: 30px;
 	height:30px;
 	border: 2px solid white;
+	transition: top 0.2s ease, left 0.2s ease;
 }
 .cursorDot,.cursorOutline {
 	position:fixed;

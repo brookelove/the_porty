@@ -3,6 +3,7 @@ import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Loading from "./Pages/Loading";
 import Work from "./Pages/Work";
+import debounce from "lodash.debounce";
 import PageNotFound from "./Pages/PageNotFound";
 import React, { useEffect, useState, useLayoutEffect } from "react";
 import NewHome from "./Components/NewHome";
@@ -13,12 +14,27 @@ function App() {
     x: 0,
     y: 0,
   });
+  const [outlinePosition, setOutlinePosition] = useState({
+    x: 0,
+    y: 0,
+  });
   console.log(mousePosition);
 
   useEffect(() => {
-    const mouseMove = (e) => {
-      console.log(e);
-    };
+    let lagOutline;
+    const mouseMove = debounce((e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+      clearTimeout(lagOutline);
+      lagOutline = setTimeout(() => {
+        setOutlinePosition({
+          x: e.clientX,
+          y: e.clientY,
+        });
+      }, 15);
+    });
 
     window.addEventListener("mousemove", mouseMove);
     keepTheme();
@@ -29,8 +45,22 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <div className="cursorDot" id="cursor-dot"></div>
-      <div className="cursorOutline" id="cursor-outline"></div>
+      <div
+        className="cursorDot"
+        id="cursor-dot"
+        style={{
+          top: `${mousePosition.y}px`,
+          left: `${mousePosition.x}px`,
+        }}
+      ></div>
+      <div
+        className="cursorOutline"
+        id="cursor-outline"
+        style={{
+          top: `${outlinePosition.y}px`,
+          left: `${outlinePosition.x}px`,
+        }}
+      ></div>
       <BrowserRouter>
         <Routes>
           <Route path="/about" element={<About />} />
