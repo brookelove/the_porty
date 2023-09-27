@@ -1,16 +1,16 @@
 
-.workContainer .header{
+/* .workContainer .header{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.workContainer .header .title {
+} */
+/* .workContainer .header .title {
     display: flex;
     position: absolute;
     font-size: 450%;
     right: 12.2%;
-}
-.workContainer .header .title .left{   
+} */
+/* .workContainer .header .title .left{   
     padding-right: 1%;
     color: var(--pinkyP);
     font-family: freight-big-pro, serif;
@@ -25,26 +25,31 @@
     width: 45%;
     border-radius: 20px;
     margin-top:2rem;
-}
+} */
 .workContainer .projectContainer{
-    padding: 17% 3% 3% 3%;
+    /* padding: 17% 3% 3% 3%; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 3%;
 }
 .workContainer .projectContainer h2{
     font-family: raleway, sans-serif;
     font-style: italic;
 
 }
-.workContainer .projectContainer div {
-    display: flex;
-    justify-content: space-evenly;
-}
-.workContainer .projectContainer div section img{
+/* .workContainer .projectContainer div { */
+
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+/* } */
+/* .workContainer .projectContainer div section img{
     width: 375px;
     border-radius: 10px;
     box-shadow: -10px 9px 11px 0px rgba(174, 174, 174, 0.888);
     margin-bottom: 10px;
-}
-.workContainer .projectContainer div section section{
+} */
+/* .workContainer .projectContainer div section section{
     font-family: ambroise-std, serif;
 }
 .workContainer .projectContainer div section a {
@@ -80,8 +85,8 @@
 }
 .projInfo {
     width: 375px;
-}
-@media screen and (min-width: 300px) and (max-width:500px) {
+} */
+/* @media screen and (min-width: 300px) and (max-width:500px) {
     .workContainer #seaVideoWork{
         width: 95%;
     }
@@ -179,4 +184,4 @@
         bottom:2px;
         right:0.5px;
     }
-}
+} */

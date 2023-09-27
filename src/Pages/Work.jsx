@@ -1,15 +1,12 @@
 import React, {useState} from "react";
 import Navbar from "../Components/Header";
-import Service from "../Components/Services";
-import Process from "../Components/Process";
-import seaVideo from "../Assets/Video/pexels-rostislav-uzunov-7513671 (2160p).mp4"
 import "../Assets/CSS/Pages/Work.css";
-import prjOne from "../Assets/Images/1.png";
-import prjTwo from "../Assets/Images/2.png";
+import projects  from "../utils/data/projects";
+
 
 const Work = () => {
-    const [isP1Open, setP1IsOpen] = useState(false);
-    const [isP2Open, setP2IsOpen] = useState(false);
+    // const [isP1Open, setP1IsOpen] = useState(false);
+    // const [isP2Open, setP2IsOpen] = useState(false);
     // useEffect(()=> {
     //     var allBtn = document.querySelectorAll(".plusContainer");
     //     for (let i = 0; i < allBtn.length; i++){
@@ -28,21 +25,32 @@ const Work = () => {
     //     }
 
     // }, [isOpen])
+    let tags = [];
+    let makeTags = ()=> {
+        // for(let i = 0; i < projects.languages.length; i++){
+        //     if()
+        // }
+    }
 
     return (
         <div className="workContainer parallax">
             <Navbar/>
-            <section className="header">
-                <video playsInline autoPlay muted loop id="seaVideoWork">
-                    <source src={seaVideo}></source>
-                </video>
-                <div className="title">
-                    <h1 className="left">PROJ</h1>
-                    <h1 className="right">ECTS</h1>
-                </div>
-            </section>
+            {/* tags */}
+            <div className="tagContainer"></div>
             <div className="projectContainer">
-                <h2>RECENTLY ADDED</h2>
+            {projects.map((project) =>{
+                return(
+                    <div>
+                        <img src={project.media} alt={project.name} />
+                        <h2>{project.name}</h2>
+                        <ul>
+                        {project.languages.map((language)=> <li>{language}</li>)}
+                        </ul>
+                    </div>
+                )
+            })}
+            </div>
+            {/* <div className="projectContainer">
                 <div>
                     <section>
                             <img src={prjOne} alt="computer with the website blush strokes beauty on it"/>
@@ -93,7 +101,7 @@ const Work = () => {
                         </section>
                     </section>
                 </div>
-            </div>
+            </div> */}
             {/* <Service id="prices"/> */}
             {/* <Process/> */}
         </div>

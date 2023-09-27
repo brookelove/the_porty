@@ -8,17 +8,6 @@
 .newHomeContainer {
     height:100vh;
 }
-.newHomeContainer .lineContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-.newHomeContainer .lineContainer span {
-    display: inline-block;
-    width: 1px;
-    background-color: rgba(111, 111, 111, 0.369);
-    height: 70vh;
-}
 .newHomeContainer main {
     display: flex;
     height: 70vh;
