@@ -1,42 +1,45 @@
-
-/* .workContainer .header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-/* .workContainer .header .title {
-    display: flex;
-    position: absolute;
-    font-size: 450%;
-    right: 12.2%;
-} */
-/* .workContainer .header .title .left{   
-    padding-right: 1%;
-    color: var(--pinkyP);
-    font-family: freight-big-pro, serif;
-    font-style: italic;
+.workContainer {
+    height: 100vh;
 }
-.workContainer .header .title .right{
-    padding-left: 1%;
-    color: var(--rubyR);
-    font-family: urw-din, sans-serif;
-}
-.workContainer #seaVideoWork{
-    width: 45%;
-    border-radius: 20px;
-    margin-top:2rem;
-} */
 .workContainer .projectContainer{
-    /* padding: 17% 3% 3% 3%; */
+
     display: flex;
+    width: 100%;
+    align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 3%;
+    /* Added */
+    transition: filter 0.3s ease-in-out;
+  /* filter: blur(4px); */
+  filter:none;
+}
+.workContainer:hover .projectContainer{
+    filter: blur(4px);
+  }
+.workContainer .projectContainer div {
+    width: 20%;
+    margin: 1em;
+    transition: filter 0.3s ease-in-out;
+    filter: none; 
+}
+.workContainer:hover .projectContainer div{
+    filter:blur(4px)
+    /* filter:none */
+}
+.workContainer .projectContainer:hover {
+    filter: none;
+  }
+  
+.workContainer .projectContainer div:hover {
+    /* filter:blur(4px) */
+    filter:none
+}
+.workContainer .projectContainer div img {
+    width: 100%;
 }
 .workContainer .projectContainer h2{
     font-family: raleway, sans-serif;
     font-style: italic;
-
 }
 /* .workContainer .projectContainer div { */
 

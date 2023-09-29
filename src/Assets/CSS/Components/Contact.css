@@ -5,6 +5,8 @@
     padding:3%;
     display:flex;
     justify-content: space-evenly;
+    background-color: var(--light-background);
+    color: var(--light-text);
 }
 /* move to Home.css=================================== */
 /* .contactContainer .scrollContainer{

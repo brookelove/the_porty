@@ -9,6 +9,8 @@ import React, { useEffect, useState, useLayoutEffect } from "react";
 import NewHome from "./Components/NewHome";
 
 import { keepTheme } from "./utils/themes";
+import Contact from "./Components/Contact";
+import Header from "./Components/Header";
 function App() {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -41,7 +43,6 @@ function App() {
     return () => {
       window.removeEventListener("mousemove", mouseMove);
     };
-    // });
   }, []);
   return (
     <div className="App">
@@ -61,6 +62,7 @@ function App() {
           left: `${outlinePosition.x}px`,
         }}
       ></div>
+      <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/about" element={<About />} />
@@ -71,6 +73,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
+      <Contact />
     </div>
   );
 }

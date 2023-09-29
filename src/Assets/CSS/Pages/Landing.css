@@ -15,41 +15,41 @@
 --new-quarterly:#B98663; /* taupe */
 --new-secondQuarterly:#A9846A; /* cafe au lait */
 --footerWords: rgb(235,70,60); /* ruby red*/ 
---footer:(rgb(35,0,0); /*burgandy */)
+--footer:rgb(35,0,0); /*burgandy */
 
 /* need to create the change in background */
 /* secondary colors */
-   --primary: #181818;
+   /* --primary: #181818;
    --secondary: #f4f4f4;
    /* --tertiary: #E4E1D4;  */
-   --undertone: #371F0E;
+   /*--undertone: #371F0E;
    --dGrey: #3a3a3a;
    --burg: rgb(85,25,14);
-   --light: #F6F2E9;
+   --light: #F6F2E9;*/
    /* main colors that I want  */
-   --rubyR: #BF3B3B;
+ /*  --rubyR: #BF3B3B;
    --pinkyP: rgb(255,224,217);
    /* background colors */
-   --bckgrd: rgb(244,238,227);
+  /* --bckgrd: rgb(244,238,227);
    --font:rgb(50,29,17);
-   --secBkgrd: rgb(17,13,9);
+   --secBkgrd: rgb(17,13,9); */
 }
 
 .theme-dark {
-	--dark-text: #292929;
-	--light-text: #F9F8F8;  
+	--dark-text: #BFEA88;
+	--light-text: rgb(235,70,60);  
 	--dark-background: #192928;
-	--light-background: #586F7C;
-	--accent: #B8DBD9;
+	--light-background: rgb(35,0,0);
+	--accent: rgb(164,86,36);
 	--button-border: #B8DBD9;
 }
 
 .theme-light {
 	--dark-text: #5E4B56;
-	--light-text: #5E4B56;
-	--dark-background: #DBE7E4;
-	--light-background: #EDDCD2;
-	--accent: #DBE7E4;
+	--light-text: rgb(26,59,59);
+	--dark-background: #BFEA88;
+	--light-background: rgb(164,86,36);
+	--accent: rgb(65,134,126);
 	--button-border: #5E4B56;
  }
 

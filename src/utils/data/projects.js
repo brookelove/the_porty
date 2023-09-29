@@ -1,11 +1,11 @@
 // import sylverE from ;
-
+const sylverEff = require("../../");
 const projects = [
   {
     name: "Fantasy Fisticuffs",
     type: "Game",
     languages: ["HTML", "CSS", "JS"],
-    media: "../Assets/Images/2.png",
+    media: require("../../Assets/Images/2.png"),
     blurb: "",
     links: [],
   },
@@ -13,7 +13,7 @@ const projects = [
     name: "Science Department",
     type: "Organization",
     languages: ["Java"],
-    media: "../Assets/Images/2.png",
+    media: require("../../Assets/Images/2.png"),
     blurb: "",
     links: [],
   },
@@ -21,7 +21,7 @@ const projects = [
     name: "Makeup Store",
     type: "E-commerce",
     languages: ["React", "CSS", "JavaScript"],
-    media: "../Assets/Images/2.png",
+    media: require("../../Assets/Images/2.png"),
     blurb: "",
     links: [],
   },
@@ -29,7 +29,7 @@ const projects = [
     name: "The Sylver Effect",
     type: "Portfolio",
     languages: ["React", "CSS", "JavaScript"],
-    media: "../Assets/Images/2.png",
+    media: require("../../Assets/Images/2.png"),
     blurb: "",
     links: ["https://endearing-longma-9eecbd.netlify.app"],
   },
