@@ -24,7 +24,7 @@
 	--dark-background: #192928;
 	--light-background: rgb(35,0,0);
 	--accent: rgb(164,86,36);
-	--button-border: #B8DBD9;
+	--bright-accent: #B8DBD9;
 }
 
 .theme-light {
@@ -33,31 +33,24 @@
 	--dark-background: #BFEA88;
 	--light-background: rgb(164,86,36);
 	--accent: rgb(65,134,126);
-	--button-border: #5E4B56;
+	--bright-accent: rgb(109, 209, 197);
  }
 
  html, #root {
 	background-color: var(--dark-background);
 	color: var(--dark-text);
- }
-
-
-body {
-    background-color: var(--bckgrd);
-    color: var(--rubyR);
 	cursor: none;
-}
-
+ }
 /* cretion of the cursor */
 .cursorDot {
 	width: 10px;
 	height:10px;
-	background-color: white;
+	background-color: var(--dark-text);
 }
 .cursorOutline {
 	width: 30px;
 	height:30px;
-	border: 2px solid white;
+	border: 2px solid var(--dark-text);
 	transition: top 0.2s ease, left 0.2s ease;
 }
 .cursorDot,.cursorOutline {
@@ -94,70 +87,6 @@ li {
     background-color: rgba(111, 111, 111, 0.369);
     height: 70vh;
 }
-/* .button {
-	pointer-events: auto;
-	cursor: pointer;
-	border: none;
-	margin: 0;
-	position: relative;
-}
-
-.button::before,
-.button::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-.button--shape {
-	font-weight: 700;
-	width: 175px;
-	height: 120px;
-	color: var(--bckgrd);
-	background: none;
-}
-
-.button--shape::before {
-	content: '';
-	background: var(--font);
-	clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
-	transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), -webkit-clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55), background 0.5s ease;
-}
-
-.button--shape:hover::before {
-	background: var(--font);
-	clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
-}
-.button--shape::after {
-	content: '';
-	height: 86%;
-	width: 100%;
-	top: 7%;
-	border-radius: 70% 39% 50% 47%;
-	border: 1px solid var(--secBkgrd);
-	transform: rotate(-40deg);
-	z-index: -1;
-	transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
-}
-
-.button--shape:hover::after {
-	transform: translate3d(0,-30px,0);
-}
-
-.button--shape span {
-	display: block;
-	transition: transform 0.3s ease;
-	mix-blend-mode: difference;
-    color: var(--bckgrd);
-	font-family: freight-big-pro, serif;
-	font-weight: 600;
-	font-style: italic;
-}
-
-.button--shape:hover span {
-	transform: translate3d(0,-10px,0);
-} */
 .wordsContainer {
     display:flex;
     justify-content: center;
@@ -176,6 +105,16 @@ li {
 .none {
 	display: none;
 }
+/* button {
+	background-color: var(--dark-background);
+	color: var(--dark-text);
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-color: var(--dark-background);
+	border-style: solid;
+	
+} */
 /*animation to scroll across screen */
 @-moz-keyframes scroll-animation {
     from { -moz-transform: translateX(100%); }
