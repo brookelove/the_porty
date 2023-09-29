@@ -2,12 +2,9 @@ import React, {useState} from "react";
 // import Navbar from "../Components/Header";
 import "../Assets/CSS/Pages/Work.css";
 import projects  from "../utils/data/projects";
-// import sylverEffect from "../Assets/Images/2.png"
 
 
 const Work = () => {
-    const [containerHovered, setContainerHovered] = useState(false);
-  
     return (
       <div className="workContainer parallax">
         <div className="tagContainer">{/* ... tags */}</div>

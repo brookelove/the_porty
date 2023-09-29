@@ -16,23 +16,6 @@
 --new-secondQuarterly:#A9846A; /* cafe au lait */
 --footerWords: rgb(235,70,60); /* ruby red*/ 
 --footer:rgb(35,0,0); /*burgandy */
-
-/* need to create the change in background */
-/* secondary colors */
-   /* --primary: #181818;
-   --secondary: #f4f4f4;
-   /* --tertiary: #E4E1D4;  */
-   /*--undertone: #371F0E;
-   --dGrey: #3a3a3a;
-   --burg: rgb(85,25,14);
-   --light: #F6F2E9;*/
-   /* main colors that I want  */
- /*  --rubyR: #BF3B3B;
-   --pinkyP: rgb(255,224,217);
-   /* background colors */
-  /* --bckgrd: rgb(244,238,227);
-   --font:rgb(50,29,17);
-   --secBkgrd: rgb(17,13,9); */
 }
 
 .theme-dark {
@@ -111,7 +94,7 @@ li {
     background-color: rgba(111, 111, 111, 0.369);
     height: 70vh;
 }
-.button {
+/* .button {
 	pointer-events: auto;
 	cursor: pointer;
 	border: none;
@@ -174,7 +157,7 @@ li {
 
 .button--shape:hover span {
 	transform: translate3d(0,-10px,0);
-}
+} */
 .wordsContainer {
     display:flex;
     justify-content: center;
@@ -193,7 +176,27 @@ li {
 .none {
 	display: none;
 }
-
+/*animation to scroll across screen */
+@-moz-keyframes scroll-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+@-webkit-keyframes scroll-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }  
+@keyframes scroll-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
 @media screen and (min-width: 300px) and (max-width:500px) {
 	.wordsContainer {
 		font-size:200%;

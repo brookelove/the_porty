@@ -1,5 +1,5 @@
 import React from "react";
-import BigIdeas from "../Components/BigIdeas";
+// import BigIdeas from "../Components/BigIdeas";
 import Contact from "../Components/Contact";
 import Navbar from "../Components/Header";
 import Resume from "../Components/Resume";
@@ -10,7 +10,7 @@ import Highlight from "../Components/Highlights";
 const About = () => {
     return (
         <div className="aboutContainer">
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className="lineContainer">
                 <span></span>
                 <span></span>
@@ -54,7 +54,7 @@ const About = () => {
         <Highlight/>
         <Tools/>
         <Resume/>
-        <Contact id="contact"/>
+        {/* <Contact id="contact"/> */}
         </div>
     )
 }

@@ -35,7 +35,7 @@ const Contact = () => {
                     <label for="message">MESSAGE</label>
                     <input type="text" name="message"></input>
                     <button className="button button--shape" onClick={()=> sendEmail}>
-                        <span>SEND</span>
+                        SEND
                     </button>
                 </form>
            
@@ -43,7 +43,7 @@ const Contact = () => {
             <div className="contactLinks">
                 {/* put and creative drawn image there or something  */}
             </div>
-            <div>
+            <div className="thankSection">
                 <h1>Thanks For Stopping By, Can't Wait To Chat</h1>
                 <p>by</p>
                 <h3>Savien Brooke Love</h3>

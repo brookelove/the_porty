@@ -24,7 +24,43 @@
     letter-spacing: 10px;
 }
 .newHomeContainer main h5{
-    font-size: 110%;
+    /* font-size: 110%; */
+    width: 100vw;
+}
+.newHomeContainer .scrollContainer{
+    position: absolute;
+    top:85%;
+    overflow:hidden;
+    width: 100vw;
+}
+.newHomeContainer .scrollText {
+    letter-spacing:9px;
+    width: fit-content;
+    font-family: freight-big-pro, serif;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-animation 15s linear infinite;
+    -webkit-animation: scroll-animation 15s linear infinite;
+    animation: scroll-animation 15s linear infinite;
+}
+.bigIdeasContainer {
+    height:100vh;
+    text-align: center;
+}
+
+.bigIdeasContainer h1{
+    font-size: 650%;
+    width: 100vw;
+    letter-spacing: 13px;
+}
+.bigIdeasContainer p {
+    font-size: 150%;
+    margin-bottom: 1%;
+}
+.bigIdeasContainer a {
+    text-decoration: underline;
+    /* text-underline-offset: 2%; */
 }
 
 
