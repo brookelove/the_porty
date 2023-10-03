@@ -1,21 +1,23 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import "../Assets/CSS/Components/Header.css"
 import ContactModal from "./ContactModal";
 import { setTheme } from "../utils/themes";
 
 const Header = () => {
+    const stickyRef = useRef(null);
     const [toggle, setToggle] = useState('dark');
-    const [sticky,setSticky]=React.useState(false);
+    const [sticky,setSticky]=useState(false);
+    const [offset,setOffset]=useState(0);
+    const [isOpen, setIsOpen] = useState(false);
     let theme = localStorage.getItem('theme');
 
     const handleScroll=() => {
-        const offset=window.scrollY;
-        if(offset > 200 ){
-          setSticky(true);
-        }
-        else{
-          setSticky(false);
-        }
+        const scrollPosition=window.scrollY;
+        if (scrollPosition > offset) {
+            setSticky(true);
+          } else {
+            setSticky(false);
+          }
       }
 
     const handleOnClick = () => {
@@ -28,7 +30,14 @@ const Header = () => {
         }
     }
 
-    const [isOpen, setIsOpen] = useState(false);
+   
+
+    useEffect(()=> {
+        if(!stickyRef.current){
+            return
+        }
+        setOffset(stickyRef.current.offsetTop)
+    },[stickyRef,setOffset])
     useEffect(()=> {
        const currPage = window.location.href;
        const aboutAEl = document.getElementById("aboutA");
@@ -76,12 +85,12 @@ const Header = () => {
         }
         // console.log(window.offset)
         // creating sticky navbar here!!!
-        
+        window.addEventListener('scroll',handleScroll)
 
     }, [theme])
     
     return(
-        <div className="navbarContainer">
+        <navbar className={`navbarContainer ${sticky ? "scrolled frosted" : ""}`}>
             <section className="weatherInfo">
                 {/* <h6>happy since 1999</h6>
                 <h6>unopologetic since 2023</h6> */}
@@ -128,7 +137,7 @@ const Header = () => {
             </li>
         </ul>
         {isOpen && <ContactModal setIsOpen={setIsOpen} />}
-        </div>
+        </navbar>
     )
 }
 export default Header;

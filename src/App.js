@@ -20,7 +20,6 @@ function App() {
     x: 0,
     y: 0,
   });
-  console.log(mousePosition);
 
   useEffect(() => {
     let lagOutline;

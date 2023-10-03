@@ -24,14 +24,12 @@
 }
 .workContainer:hover .projectContainer div{
     filter:blur(4px)
-    /* filter:none */
 }
 .workContainer .projectContainer:hover {
     filter: none;
   }
   
 .workContainer .projectContainer div:hover {
-    /* filter:blur(4px) */
     filter:none
 }
 .workContainer .projectContainer div img {

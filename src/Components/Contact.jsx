@@ -38,8 +38,6 @@ const Contact = () => {
                         SEND
                     </button>
                 </form>
-           
-            <span className="line"></span>
             <div className="contactLinks">
                 {/* put and creative drawn image there or something  */}
             </div>
