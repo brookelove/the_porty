@@ -2,6 +2,7 @@ import React, {useEffect, useState, useRef} from "react";
 import "../Assets/CSS/Components/Header.css"
 import ContactModal from "./ContactModal";
 import { setTheme } from "../utils/themes";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const stickyRef = useRef(null);
@@ -40,41 +41,23 @@ const Header = () => {
     },[stickyRef,setOffset])
     useEffect(()=> {
        const currPage = window.location.href;
-       const aboutAEl = document.getElementById("aboutA");
-       const aboutLiEl = document.getElementById("aboutLi");
+       const pageLinks = {
+        "/home": { id: "homeLi", class: "dot" },
+        "/about": { id: "aboutLi", class: "dot" },
+        "/work": { id: "workLi", class: "dot" },
+    };
 
-       const workAEl = document.getElementById("workA");
-       const workLiEl = document.getElementById("workLi");
-
-       const homeAEl = document.getElementById("homeA");
-       const homeLiEl = document.getElementById("homeLi");
-
-        if(currPage === aboutAEl.href) {
-            console.log("about")
-            aboutLiEl.classList.add("dot");
-            workLiEl.classList.remove("dot");
-            homeLiEl.classList.remove("dot");
-        } else if (currPage.includes("#prices")){
-            console.log("price")
-            aboutLiEl.classList.remove("dot");
-            workLiEl.classList.remove("dot");
-            homeLiEl.classList.remove("dot");
-        } else if (currPage === workAEl.href){
-            console.log("work");
-            aboutLiEl.classList.remove("dot");
-            workLiEl.classList.add("dot");
-            homeLiEl.classList.remove("dot");
-        } else if (currPage === homeAEl.href){
-            console.log("home")
-            aboutLiEl.classList.remove("dot");
-            workLiEl.classList.remove("dot");
-            homeLiEl.classList.add("dot");
-        } else {
-            console.log("remove all extra dots")
-            aboutLiEl.classList.remove("dot");
-            workLiEl.classList.remove("dot");
-            homeLiEl.classList.remove("dot");
+    for (const path in pageLinks) {
+        const linkData = pageLinks[path];
+        const linkElement = document.getElementById(linkData?.id);
+        if (linkElement) {
+            if (currPage.includes(path)) {
+                linkElement.classList.add(linkData.class);
+            } else {
+                linkElement.classList.remove(linkData.class);
+            }
         }
+    }
     });
 
     useEffect(() => {
@@ -83,8 +66,6 @@ const Header = () => {
         } else if (localStorage.getItem('theme') === 'theme-light') {
             setToggle('light')
         }
-        // console.log(window.offset)
-        // creating sticky navbar here!!!
         window.addEventListener('scroll',handleScroll)
 
     }, [theme])
@@ -136,6 +117,7 @@ const Header = () => {
                 <p>04</p>
             </li>
         </ul>
+        <span></span>
         {isOpen && <ContactModal setIsOpen={setIsOpen} />}
         </navbar>
     )

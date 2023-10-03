@@ -39,9 +39,14 @@
     width: 50%
 }
 .highlightContainer .gitHubStats {
+    background-color: var(--highlight-text);
     /* display: flex; */
+    border-radius:20px;
     justify-content: space-evenly;
-    width: 100%;
+    align-items: center;
+    width: 65%;
+    padding: 5%;
+    box-shadow: 0px 10px 15px 10px rgba(0 ,0 ,0 ,0.15);
 }
 .highlightContainer .gitHubStats div{
     width:200px;

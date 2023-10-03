@@ -4,11 +4,12 @@
     justify-content: space-between;
     padding: 1.5%;
     background-color: var(--dark-background);
-	color: var(--light-text);
+	color: var(--highlight-text);
     backdrop-filter: blur(10px);
     overflow: hidden;
     width: 97vw;
 }
+
 .sticky {
     position: fixed;
     top: 0;
@@ -26,23 +27,48 @@
 .navbarContainer .weatherInfo div{
     border: solid var(--light-background) 2px;
     padding: 2%;
-    border-radius: 10%;
-}
-.navbarContainer .sendContact, .dot{
-    font-style: italic;
+    border-radius: 10%; 
+}   
+
+.dot{
+    color: var(--light-text);
+    text-decoration: line-through;
 }
 .navbarContainer ul {
     display: flex;
     width: 25%;
     justify-content: space-evenly;
+    position: relative;
+    left: -27%;
 }
-.navbarContainer ul li a:hover {
-    color: var(--pinkyP);
+.navbarContainer ul li a{
+    color: var(--highlight-text);
+    /* transition: all ease-in 0.01s; */
+    position: relative; /* Add relative positioning */
+    overflow: hidden; /* Hide the pseudo-element initially */
+}
+.navbarContainer ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 46%;
+    left: 0; /* Start from the left */
+    width: 0; /* Initially, the line-through is invisible */
+    height: 1px; /* Adjust the thickness as needed */
+    background-color: var(--light-text);
+    transition: width 0.3s ease-in-out; /* Adjust the animation speed as needed */
+}
+.navbarContainer ul li a:hover::before {
+    width: 100%; /* Expand the line-through to 100% on hover */
+}
+/* .navbarContainer ul li a:hover{
+    color: var(--light-text);
+text-decoration: line-through;
 }
 .navbarContainer ul li a::after{
-    color: var(--rubyR);
-    text-decoration: underline dotted;
-}
+    color: var(--light-text);
+text-decoration: line-through;
+} */
+
 .navbarContainer ul li p{ 
     position: relative;
     left: -20px;
@@ -53,21 +79,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    /* width: 100vw; */
 }
 .frosted {
-    /* -webkit-backdrop-filter: blur(8px);  /* Safari 9+ */
-    /* backdrop-filter: blur(8px); Chrome and Opera */
-    /* box-shadow: 0px 10px 15px 10px rgb(0 0 0 / 15%); */
-    /* background-color: rgb(228 228 228 / 15%);  */ 
-    /* background: rgba(58,58,58,0.5333);
-    box-shadow: 0,4px,30 rgba(0,0,0,0.1); */
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px); 
     box-shadow: 0px 10px 15px 10px rgba(0 ,0 ,0 ,0.15);
     background-color: rgba(228 ,228 ,228 ,0.10);
-
-
 }
 /* @media screen and (min-width: 300px) and (max-width:500px) {
     .navbarContainer ul {

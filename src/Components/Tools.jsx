@@ -1,4 +1,5 @@
 import React from "react";
+import resume from "../Assets/Images/SL_Resume_PDF.pdf"
 import { FaReact, FaSass } from "react-icons/fa6";
 import { FaAws, FaGithub, FaGitlab, FaNode, FaJava, FaPython, FaCss3Alt, FaHtml5, FaBootstrap, FaFigma } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoJquery, BiLogoSlack } from "react-icons/bi";
@@ -107,6 +108,13 @@ const Tools = () => {
                     <BiLogoSlack className="reactIcon"/>
                 </li>
             </ul>
+            <div className="resumeContainer">
+            <a href={resume} target="_blank" rel="noreferrer">
+            <button className="button button--shape">
+                <span>CREDENTIALS</span>
+            </button>
+            </a>
+        </div>
         </div>
     )
 }

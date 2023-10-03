@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Loading from "./Pages/Loading";
@@ -62,7 +62,7 @@ function App() {
         }}
       ></div>
       <Header />
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/loading" element={<Loading />} />
@@ -71,7 +71,7 @@ function App() {
           <Route path="/work" element={<Work />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
       <Contact />
     </div>
   );

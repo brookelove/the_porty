@@ -25,6 +25,7 @@
 	--light-background: rgb(35,0,0);
 	--accent: rgb(164,86,36);
 	--bright-accent: #B8DBD9;
+	--highlight-text:rgb(133,41,19);
 }
 
 .theme-light {
@@ -34,6 +35,7 @@
 	--light-background: rgb(164,86,36);
 	--accent: rgb(65,134,126);
 	--bright-accent: rgb(109, 209, 197);
+	--highlight-text:#B98663;
  }
 
  html, #root {
@@ -105,16 +107,20 @@ li {
 .none {
 	display: none;
 }
-/* button {
-	background-color: var(--dark-background);
-	color: var(--dark-text);
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
-	border-color: var(--dark-background);
-	border-style: solid;
-	
-} */
+button {
+    width: 100%;
+    padding: 5%;
+    font-weight: 600;
+    letter-spacing: 20px;
+    border: 1.5px solid var(--light-text);
+    background-color: var(--light-text);
+    color: var(--light-background);
+    transition:all 0.3s ease-in
+}
+button:hover {
+    background-color: var(--light-background);
+    color: var(--light-text);
+}
 /*animation to scroll across screen */
 @-moz-keyframes scroll-animation {
     from { -moz-transform: translateX(100%); }
