@@ -111,14 +111,14 @@ const Header = () => {
                 <p>03</p>
             </li>
             
-            <li id="homeLi">
+            {/* <li id="homeLi">
             <a className="sendContact" onClick={()=>setIsOpen(true)}
             href="#contact">let's connect</a>
                 <p>04</p>
-            </li>
+            </li> */}
         </ul>
         <span></span>
-        {isOpen && <ContactModal setIsOpen={setIsOpen} />}
+        {/* {isOpen && <ContactModal setIsOpen={setIsOpen} />} */}
         </navbar>
     )
 }

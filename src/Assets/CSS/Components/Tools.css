@@ -1,28 +1,35 @@
 .toolsContainer {
 text-align: center;
-   margin-bottom: 10%
+   margin-bottom: 10%;
+   padding: 0 10% ;
+  
 }
 .toolsContainer .grid {
     display: grid;
     grid: auto auto auto / auto auto auto auto auto;
     align-items: space-evenly;
     justify-content: space-evenly;
-    height: 400px;
     margin-top: 10%;
+    padding: 3%;
+    background-color: var(--popout);
+    border-radius: 60px;
 }
 .toolsContainer .grid .item .reactIcon {
     font-size: 50px;
+    /* border: 1px solid black; */
 }
 .toolsContainer .grid .item {
     /* /in order to get the too get the tool tip this has to be relative */
     position: relative;
     font-size: 50px;
-    
+    margin:36%;
+  
 }
 .toolsContainer .grid .item .inProgress {
-    color:rgb(211, 184, 178);
+    color:var(--bright-accent);
 }
 .toolsContainer .tool-tip {
+  
     position: absolute;
     top: 0;
     font-size: 14px;
@@ -31,7 +38,7 @@ text-align: center;
     z-index:1;
     padding: 5px 8px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    background-color: var(--font);
+    background-color: var(--frosted);
     color: var(--bckgrd);
     opacity: 0;
     pointer-events: none;
@@ -49,8 +56,8 @@ text-align: center;
     -o-border-radius: 4px;
     }
 .toolsContainer .inProgressTool-tip {
-    background-color:rgb(211, 184, 178);
-    color:var(--font)
+    background-color: var(--frosted);
+    color:var(--bright-accent)
 }
     
 .toolsContainer .item:hover .tool-tip {
@@ -59,23 +66,6 @@ text-align: center;
     font-family: operetta-12, serif;
     visibility: visible;
     pointer-events: auto;
-}
-.toolsContainer button {
-    margin-top: 10%;
-    width: 40%;
-    padding: 2%;
-    font-weight: 600;
-    letter-spacing: 20px;
-    border: 1.5px solid var(--dark-background);
-    background-color: var(--dark-text);
-    color: var(--light-background);
-    transition:all 0.3s ease-in;
-    /* border-radius: 30px; */
-}
-.toolsContainer button:hover {
-    background-color: var(--dark-background);
-    color: var(--dark-text);
-    border: 1.5px solid var(--dark-text);
 }
 
 

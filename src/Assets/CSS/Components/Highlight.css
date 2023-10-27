@@ -40,8 +40,7 @@
 }
 .highlightContainer .gitHubStats {
     background-color: var(--highlight-text);
-    /* display: flex; */
-    border-radius:20px;
+    border-radius:45px;
     justify-content: space-evenly;
     align-items: center;
     width: 65%;

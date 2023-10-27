@@ -56,12 +56,25 @@
 }
 .bigIdeasContainer p {
     font-size: 150%;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 .bigIdeasContainer a {
-    text-decoration: underline;
+    margin-top: 12%;
+    width: 100%;
+    padding: 2%;
+    font-weight: 600;
+    letter-spacing: 20px;
+    border: 1.5px solid var(--dark-background);
+    background-color: var(--dark-text);
+    color: var(--dark-background);
+    transition:all 0.3s ease-in;
+    border-radius: 50px;
 }
-
+.bigIdeasContainer a:hover{
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+    border: 1.5px solid var(--dark-text);
+}
 
 /* .homeContainer ul{
     margin: 2% 5%;

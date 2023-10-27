@@ -5,9 +5,6 @@ const Service = () => {
     return (
         <div className="serviceContainer" id="prices">
             <header className="borderBottom">
-                {/* <h3>services</h3>
-                <h5>*options can be personally request*</h5>
-                <h3>some of my popular requests</h3> */}
             </header>
             <table>
                 <thead>

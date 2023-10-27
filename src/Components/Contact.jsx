@@ -43,7 +43,6 @@ const Contact = () => {
             </div>
             <div className="thankSection">
                 <h1>Thanks For Stopping By, Can't Wait To Chat</h1>
-                <p>by</p>
                 <h3>Savien Brooke Love</h3>
                 <div>
                     <a>EMAIL</a>

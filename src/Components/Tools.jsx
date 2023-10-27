@@ -3,14 +3,15 @@ import resume from "../Assets/Images/SL_Resume_PDF.pdf"
 import { FaReact, FaSass } from "react-icons/fa6";
 import { FaAws, FaGithub, FaGitlab, FaNode, FaJava, FaPython, FaCss3Alt, FaHtml5, FaBootstrap, FaFigma } from "react-icons/fa";
 import { BiLogoJavascript, BiLogoJquery, BiLogoSlack } from "react-icons/bi";
-import { SiMysql, SiExpress, SiHandlebarsdotjs, SiJest, SiApollographql, SiKotlin, SiNotion, SiCanva } from "react-icons/si";
+import { SiMysql, SiExpress, SiHandlebarsdotjs, SiJest, SiApollographql, SiKotlin, SiNotion, SiCanva, SiNginx, SiDocker} from "react-icons/si";
 import { VscJson } from "react-icons/vsc";
 import "../Assets/CSS/Components/Tools.css"
 
 const Tools = () => {
     return(
         <div className="toolsContainer">
-            <ul className="grid">
+            <h1><i>TOOL BOX</i></h1>
+            <ul className="grid floating">
                 <li className="item"> 
                 <FaReact className="reactIcon"/>
                     <div className="tool-tip">React.js</div>
@@ -107,11 +108,19 @@ const Tools = () => {
                     <div className="tool-tip">Figma</div>
                     <BiLogoSlack className="reactIcon"/>
                 </li>
+                <li className="item">
+                    <div className="tool-tip">Nginx</div>
+                    <SiNginx className="reactIcon"/>
+                </li>
+                <li className="item">
+                    <div className="tool-tip">Docker</div>
+                    <SiDocker className="reactIcon"/>
+                </li>
             </ul>
             <div className="resumeContainer">
             <a href={resume} target="_blank" rel="noreferrer">
-            <button className="button button--shape">
-                <span>CREDENTIALS</span>
+            <button className="button">
+                RESUME
             </button>
             </a>
         </div>

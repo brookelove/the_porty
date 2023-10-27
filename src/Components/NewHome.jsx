@@ -34,10 +34,13 @@ const NewHome = () => {
                 <p>Creating Fun Innovative Projects</p>
             <Link to="/work">LEARN MORE</Link>
             </div>
-            <div>
+            <div className="blurbContainer">
+            <section className="miniBlurb">
                 {/* mini blurb about me and a link to the about me */}
+                <p>Hi Im Savien,</p>
+                <p>A passionate <b>software developer</b> based in Georgia. I am a currently working on <b>contract</b> projects and  a <b>Tutor/TA</b>for a Fullstack Developer bootcamp. I create momeorable projects that are fun and user friendly.</p>
+            </section>
             </div>
-            {/* <Contact/> */}
         </div>
     )
 }

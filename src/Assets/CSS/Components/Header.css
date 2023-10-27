@@ -4,7 +4,7 @@
     justify-content: space-between;
     padding: 1.5%;
     background-color: var(--dark-background);
-	color: var(--highlight-text);
+	color: var(--light-text);
     backdrop-filter: blur(10px);
     overflow: hidden;
     width: 97vw;
@@ -27,12 +27,13 @@
 .navbarContainer .weatherInfo div{
     border: solid var(--light-background) 2px;
     padding: 2%;
-    border-radius: 10%; 
+    border-radius: 30px;
+    padding: 2% 10%; 
 }   
 
 .dot{
-    color: var(--light-text);
     text-decoration: line-through;
+    text-decoration-color: var(--highlight-text);
 }
 .navbarContainer ul {
     display: flex;
@@ -42,7 +43,7 @@
     left: -27%;
 }
 .navbarContainer ul li a{
-    color: var(--highlight-text);
+    color: var(--light-text);
     /* transition: all ease-in 0.01s; */
     position: relative; /* Add relative positioning */
     overflow: hidden; /* Hide the pseudo-element initially */
@@ -53,21 +54,13 @@
     bottom: 46%;
     left: 0; /* Start from the left */
     width: 0; /* Initially, the line-through is invisible */
-    height: 1px; /* Adjust the thickness as needed */
+    height: 2px; /* Adjust the thickness as needed */
     background-color: var(--light-text);
-    transition: width 0.3s ease-in-out; /* Adjust the animation speed as needed */
+    transition: width 0.3s ease-in-out; 
 }
 .navbarContainer ul li a:hover::before {
-    width: 100%; /* Expand the line-through to 100% on hover */
+    width: 100%; 
 }
-/* .navbarContainer ul li a:hover{
-    color: var(--light-text);
-text-decoration: line-through;
-}
-.navbarContainer ul li a::after{
-    color: var(--light-text);
-text-decoration: line-through;
-} */
 
 .navbarContainer ul li p{ 
     position: relative;
@@ -81,6 +74,7 @@ text-decoration: line-through;
     left: 0;
 }
 .frosted {
+    z-index:100;
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px); 
     box-shadow: 0px 10px 15px 10px rgba(0 ,0 ,0 ,0.15);

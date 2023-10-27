@@ -5,7 +5,7 @@ import Loading from "./Pages/Loading";
 import Work from "./Pages/Work";
 import debounce from "lodash.debounce";
 import PageNotFound from "./Pages/PageNotFound";
-import React, { useEffect, useState, useLayoutEffect } from "react";
+import React, { useEffect, useState } from "react";
 import NewHome from "./Components/NewHome";
 
 import { keepTheme } from "./utils/themes";

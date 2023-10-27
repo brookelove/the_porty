@@ -1,52 +1,86 @@
 .workContainer {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .workContainer .projectContainer{
-
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     /* Added */
     transition: filter 0.3s ease-in-out;
   /* filter: blur(4px); */
-  filter:none;
+  /* filter:none; */
 }
-.workContainer:hover .projectContainer{
+/* .workContainer:hover .projectContainer{
     filter: blur(4px);
-  }
-.workContainer .projectContainer div {
-    width: 250px;
+  } */
+.workContainer .projectContainer .projectCard {
+    width: 20%;
     margin: 1em;
-    transition: filter 0.3s ease-in-out;
-    filter: none; 
+    transition: filter 2s linear;
+    /* height: min-content; */
+    height: 300px;
+    /* filter: none;  */
 }
-.workContainer:hover .projectContainer div{
-    filter:blur(4px)
+.workContainer .projectContainer .projectQuickView {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    top:-322px;
+    right: 6%;
+    height:280px;
+    opacity: 0; 
+    transition: filter 0.7s linear;
 }
-.workContainer .projectContainer:hover {
-    filter: none;
-  }
-  
+.workContainer .projectContainer .projectCard:hover .projectQuickView {
+    opacity: 1; 
+}
+
 .workContainer .projectContainer div:hover {
-    filter:none
+    filter: none;
 }
+
 .workContainer .projectContainer div img {
     width: 100%;
+    border-radius: 30px;
 }
 .workContainer .projectContainer h2{
+    max-width: max-content;
+    text-align: right;
+    border-radius: 20px;
+    padding:2% 4%;
     font-family: raleway, sans-serif;
     font-style: italic;
+    background-color:var(--popout);
 }
 .workContainer .projectContainer ul{
     display: flex;
-
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 7 0px; 
+    /* padding-left: 40px; */
 }
 .workContainer .projectContainer ul li{
-    margin: 0.1em
-    
+    margin: 0.1em;
+    padding:2% 4%;
+    border-radius: 20px;
+    background-color:var(--popout);
+    position: relative;
+    left:2%;
 }
+
+
+/* .workContainer button {
+    text-align: center;
+} */
 /* .workContainer .projectContainer div { */
 
     /* display: flex; */

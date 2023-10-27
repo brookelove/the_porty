@@ -12,19 +12,27 @@ const Work = () => {
           className="projectContainer"
         >
           {projects.map((project, index) => (
-            <div
+            <div className="projectCard"
               key={index}
             >
               <img src={project.media} alt={project.name} />
+              <div className="projectQuickView">
               <h2>{project.name}</h2>
+              
               <ul>
                 {project.languages.map((language) => (
                   <li key={language}>{language}</li>
                 ))}
               </ul>
+              </div>
             </div>
           ))}
         </div>
+        {/* <div> */}
+        <button>
+          <a>GITHUB</a>
+        </button>
+        {/* </div> */}
       </div>
     );
   };

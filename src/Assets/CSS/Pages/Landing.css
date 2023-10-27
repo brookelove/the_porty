@@ -16,6 +16,7 @@
 --new-secondQuarterly:#A9846A; /* cafe au lait */
 --footerWords: rgb(235,70,60); /* ruby red*/ 
 --footer:rgb(35,0,0); /*burgandy */
+--frosted:rgba(228 ,228 ,228 ,0.10);
 }
 
 .theme-dark {
@@ -26,17 +27,23 @@
 	--accent: rgb(164,86,36);
 	--bright-accent: #B8DBD9;
 	--highlight-text:rgb(133,41,19);
+    --popout: #1e3231;
+    
 }
 
 .theme-light {
-	--dark-text: #5E4B56;
-	--light-text: rgb(26,59,59);
-	--dark-background: #BFEA88;
-	--light-background: rgb(164,86,36);
-	--accent: rgb(65,134,126);
-	--bright-accent: rgb(109, 209, 197);
-	--highlight-text:#B98663;
+	--dark-text:rgb(22, 22, 22);
+	--light-text: #DFC8F7;
+	--dark-background: whitesmoke;
+	--light-background: #C8F491;
+	--accent: #5E4B56;
+	--bright-accent: #31315E;
+	--highlight-text:#B64B39;
+    --popout: rgb(255,255,255);
  }
+.floating {
+    box-shadow: 0px 10px 15px 10px rgba(0 ,0 ,0 ,0.15);
+}
 
  html, #root {
 	background-color: var(--dark-background);
@@ -61,7 +68,7 @@
 	left: 0;
 	transform: translate(-50%,-50%);
 	border-radius: 50%;
-	z-index: 1;
+	z-index: 101;
 	pointer-events:none
 }
 a {
@@ -104,23 +111,41 @@ li {
     border-left: 0;
     border-right: 0;
 }
+.blurbContainer {
+    display: flex;
+    justify-content: center;
+}
+.miniBlurb {
+    background-color: var(--popout);
+    padding: 2.5%;
+    border-radius: 30px;
+    max-width: 80%;
+    text-align: start;
+    font-size:260%;
+    line-height: 150%;
+}
 .none {
 	display: none;
 }
 button {
-    width: 100%;
-    padding: 5%;
+    margin-top: 10%;
+    width: 40%;
+    padding: 2%;
     font-weight: 600;
     letter-spacing: 20px;
-    border: 1.5px solid var(--light-text);
-    background-color: var(--light-text);
-    color: var(--light-background);
-    transition:all 0.3s ease-in
+    border: 1.5px solid var(--dark-background);
+    background-color: var(--dark-text);
+    color: var(--dark-background);
+    transition:all 0.3s ease-in;
+    border-radius: 50px;
 }
+
 button:hover {
-    background-color: var(--light-background);
-    color: var(--light-text);
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+    border: 1.5px solid var(--dark-text);
 }
+
 /*animation to scroll across screen */
 @-moz-keyframes scroll-animation {
     from { -moz-transform: translateX(100%); }

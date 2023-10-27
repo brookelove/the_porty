@@ -5,30 +5,9 @@
     padding:3%;
     display:flex;
     justify-content: space-evenly;
-    background-color: var(--light-background);
-    color: var(--light-text);
+    /* background-color: var(--light-background);
+    color: var(--light-text); */
 }
-/* move to Home.css=================================== */
-/* .contactContainer .scrollContainer{
-    position: absolute;
-    left: -25%;
-    overflow:hidden;
-    transform: rotate(270deg);
-    font-size: 180%;
-    width: 66%;
-}
-.contactContainer .scrollText {
-    letter-spacing:9px;
-    width: fit-content;
-    font-family: freight-big-pro, serif;
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-    -moz-animation: scroll-animation 9s linear infinite;
-    -webkit-animation: scroll-animation 9s linear infinite;
-    animation: scroll-animation 9s linear infinite;
-} */
-/* =================================== */
 .contactContainer h1 {
     margin-bottom: 30px;
     font-size: 320%;
@@ -39,18 +18,24 @@
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
+    
 }
 .contactContainer form {
     display:flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 7%
+    margin-bottom: 7%;
+    background-color: var(--light-background);
+    padding: 10%;
+    border-radius: 50px;
 }
 .contactContainer form label{
     letter-spacing: 4px;
 }
 .contactContainer form input, .contactContainer form select{
-    background-color: var(--bckgrnd);
+    background-color: var(--popout);
+    padding: 2%;
+    border-radius: 25px;
     border-right: 0;
     border-top: 0;
     border-left:0;
@@ -64,40 +49,20 @@
     letter-spacing: 2px;
     margin-bottom: 10%;
 }
-/* 
-.contactContainer .line {
-    width: 1px;
-    height: 580px;
-    background-color: var(--bckgrd);
-} */
 .contactContainer button {
     width: 100%;
     padding: 5%;
-    font-weight: 600;
-    letter-spacing: 20px;
     border: 1.5px solid var(--light-text);
     background-color: var(--light-text);
-    color: var(--light-background);
-    transition:all 0.3s ease-in
+    color: var(--dark-text);
 }
 .contactContainer button:hover {
     background-color: var(--light-background);
-    color: var(--light-text);
+    border: 1.5px solid var(--light-text);
 }
 .contactContainer h2 {
     color:var(--font);
     text-decoration: underline dotted;
-}
-.contactContainer .contactLinks {
-    /* display: flex;
-    flex-direction: column;
-    max-height:fit-content;
-    align-items: flex-end;
-    position: relative; 
-    top: 29%;
-    left: 7%;
-    font-family: urw-din, sans-serif;
-    font-family: freight-big-pro, serif; */
 }
 .contactContainer .contactLinks a{
     font-size: 275%;
@@ -105,6 +70,12 @@
 }
 .contactContainer .contactLinks a:hover{
     cursor: pointer;
+}
+.thankSection {
+    background-color: var(--popout);
+    padding: 5%;
+    border-radius: 40px;
+
 }
 .thankSection div{
     display: flex;
