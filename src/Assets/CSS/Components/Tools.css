@@ -2,7 +2,16 @@
 text-align: center;
    margin-bottom: 10%;
    padding: 0 10% ;
+   position: relative;
   
+}
+.toolsContainer h1 {
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    font-size: 500%;
+    font-style: oblique;
+    transform: rotate(270deg);
 }
 .toolsContainer .grid {
     display: grid;
@@ -19,7 +28,6 @@ text-align: center;
     /* border: 1px solid black; */
 }
 .toolsContainer .grid .item {
-    /* /in order to get the too get the tool tip this has to be relative */
     position: relative;
     font-size: 50px;
     margin:36%;

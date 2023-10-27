@@ -4,36 +4,60 @@ import "../Assets/CSS/Components/Highlight.css"
 const Highlight = () => {
     return (
         <div className="highlightContainer">
-            <section className="timelineContainer">
-                <h3>MY TIMELINE SO FAR</h3>
-                <span className="line"></span>
-                <ul>
-                    <li>graduating highschool</li>
-                    <li>BS in Biology</li>
-                    <li>3 Month Fullstack Develoment Bootcamp</li>
-                    <li>MS in Software Developemnt</li>
-                    <li>Contract with Citadel Cyber</li>
-                </ul>
-            </section>
-            <section className="gitHubStats">
-                <div className="graph"></div>
-                {/* adding a graph on the left */}
-                    <ul>
-                        <li>Total Stars Earned : 2</li>
-                        <li>Total Commmits (2023): 202</li>
-                        <li>Total PRs: 81</li>
-                        <li>Total Issues: 52</li>
-                    </ul>
-                    <ul>
-                    <h3>Most Used Languages</h3>
-                        <li>Java 48.41%</li>
-                        <li>Javascript: 29.90%</li>
-                        <li>CSS 9.70%</li>
-                        <li>Python 6.76%</li>
-                        <li>HTML 4.53%</li>
-                        <li>SCSS 0.70%</li>
-                    </ul>
-            </section>
+              <div class="cardTop">
+      </div>      
+        <div class="timeline">
+         
+          <h3>Timeline So Far</h3>
+          <div class="box">
+            
+            <div class="container">
+              
+              <div class="lines">
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+                <div class="line"></div>
+              </div>
+              
+              <div class="cards">
+                <div class="card">
+                  
+                  <h4>2017</h4>
+                  <p>Graduated Highschool</p>
+                </div>
+                <div class="card mid">
+                  <h4>2021</h4>
+                  <p>BS in Biology At Washington State University</p>
+                </div>
+                <div class="card">
+                  <h4>2022</h4>
+                  <p>3-Month Fullstack Develoment</p>
+                </div>
+                 <div class="card">
+                  <h4>2022</h4>
+                  <p>Becoming a FSF Bootcamp TA Edx</p>
+                </div>
+                  <div class="card">
+                  <h4>2022</h4>
+                  <p>Started MS in Software Developemnt At Boston Uni</p>
+                </div>
+                <div class="card">
+                  <h4>2023</h4>
+                  <p>Working at Citadel Cyber</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "../Assets/CSS/Pages/Home.css"
-import seaVideo from "../Assets/Video/pexels-rostislav-uzunov-7513671 (2160p).mp4"
+// import seaVideo from "../Assets/Video/pexels-rostislav-uzunov-7513671 (2160p).mp4"
 const Home = () => {
     return (
         <div className="homeContainer">

@@ -1,6 +1,7 @@
 .navbarContainer {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     justify-content: space-between;
     padding: 1.5%;
     background-color: var(--dark-background);
@@ -9,6 +10,49 @@
     overflow: hidden;
     width: 97vw;
 }
+.container--toggle input[type="checkbox"] {
+    display: none;
+  }
+  .container--toggle input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font: 14px/20px "Open Sans", Arial, sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  .container--toggle input[type="checkbox"]:hover + label:before { 
+    border: 1px solid #343a3f;
+    box-shadow: 2px 1px 0 #343a3f;
+  }
+  .container--toggle input[type="checkbox"] + label:last-child {
+    margin-bottom: 0;
+  }
+  .container--toggle input[type="checkbox"] + label:before {
+    content: "";
+    display: block;
+    width: 1.4em;
+    height: 1.4em;
+    border: 1px solid #343a3f;
+    border-radius: 0.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+    transition: all 0.2s, background 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: -2px -1px 0 #343a3f;
+    background: #f3f3f3;
+  }
+  .container--toggle input[type="checkbox"]:checked + label:before {
+    border: 2px solid #fff;
+    border-radius: 0.3em;
+    background: #50565a;
+    box-shadow: 2px 1px 0 #50565a;
+  }
 
 .sticky {
     position: fixed;
@@ -21,7 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 20%;
+    width:35%;
     height: 100%;
 }
 .navbarContainer .weatherInfo div{
@@ -29,6 +73,9 @@
     padding: 2%;
     border-radius: 30px;
     padding: 2% 10%; 
+}   
+.navbarContainer .weatherInfo h6{
+    font-size: 90% 
 }   
 
 .dot{
@@ -38,23 +85,23 @@
 .navbarContainer ul {
     display: flex;
     width: 25%;
+    /* align-items: center; */
     justify-content: space-evenly;
     position: relative;
-    left: -27%;
+    left: -22%;
 }
 .navbarContainer ul li a{
     color: var(--light-text);
-    /* transition: all ease-in 0.01s; */
-    position: relative; /* Add relative positioning */
-    overflow: hidden; /* Hide the pseudo-element initially */
+    position: relative;
+    overflow: hidden;
 }
 .navbarContainer ul li a::before {
     content: "";
     position: absolute;
     bottom: 46%;
-    left: 0; /* Start from the left */
-    width: 0; /* Initially, the line-through is invisible */
-    height: 2px; /* Adjust the thickness as needed */
+    left: 0;
+    width: 0;
+    height: 2px;
     background-color: var(--light-text);
     transition: width 0.3s ease-in-out; 
 }

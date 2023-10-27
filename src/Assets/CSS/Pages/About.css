@@ -19,7 +19,7 @@
     font-size: 120%;
 }
 .aboutContainer header .middle section {
-    z-index: 200;
+    z-index: 90;
 }
 .aboutContainer header .middle .name, .aboutContainer header .middle .title {
     position: absolute;

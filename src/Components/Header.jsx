@@ -2,15 +2,19 @@ import React, {useEffect, useState, useRef} from "react";
 import "../Assets/CSS/Components/Header.css"
 import ContactModal from "./ContactModal";
 import { setTheme } from "../utils/themes";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Header = () => {
     const stickyRef = useRef(null);
-    const [toggle, setToggle] = useState('dark');
-    const [sticky,setSticky]=useState(false);
     const [offset,setOffset]=useState(0);
-    const [isOpen, setIsOpen] = useState(false);
+    const [sticky,setSticky]=useState(false);
+    const [date, setDate] = useState(new Date());
+    const [toggle, setToggle] = useState('dark');
+    const [weather, setWeather] = useState(null);
+
     let theme = localStorage.getItem('theme');
+    const APIKEY = process.env.APIKEY;
+    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=Valdosta&appid=${APIKEY}&units=metric`;
 
     const handleScroll=() => {
         const scrollPosition=window.scrollY;
@@ -34,10 +38,14 @@ const Header = () => {
    
 
     useEffect(()=> {
+        var timer = setInterval(()=> setDate(new Date()), 1000);
         if(!stickyRef.current){
             return
         }
         setOffset(stickyRef.current.offsetTop)
+        return function clearTime(){
+            clearInterval(timer)
+        }
     },[stickyRef,setOffset])
     useEffect(()=> {
        const currPage = window.location.href;
@@ -67,21 +75,23 @@ const Header = () => {
             setToggle('light')
         }
         window.addEventListener('scroll',handleScroll)
+        fetch(weatherURL)
+        .then((response) => response.json())
+        .then((data) => setWeather(data))
+        .catch((error) => console.error(error));
 
     }, [theme])
     
     return(
         <navbar className={`navbarContainer ${sticky ? "scrolled frosted" : ""}`}>
             <section className="weatherInfo">
-                {/* <h6>happy since 1999</h6>
-                <h6>unopologetic since 2023</h6> */}
                 <h6>98°F</h6>
                 <h6>☀️</h6>
-                <h6>Valdosta</h6>
-                <h6>11:04PM</h6>
+                <h6>{date.toLocaleDateString()}</h6>
+                <h6>{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</h6>
                 <div>
                     <h6>Current Project</h6>
-                    <a>__________</a>
+                    <a>_____________</a>
                 </div>
             </section>
         <ul>
@@ -110,15 +120,8 @@ const Header = () => {
                 <a id="workA" href="/work">Projects</a>
                 <p>03</p>
             </li>
-            
-            {/* <li id="homeLi">
-            <a className="sendContact" onClick={()=>setIsOpen(true)}
-            href="#contact">let's connect</a>
-                <p>04</p>
-            </li> */}
         </ul>
         <span></span>
-        {/* {isOpen && <ContactModal setIsOpen={setIsOpen} />} */}
         </navbar>
     )
 }

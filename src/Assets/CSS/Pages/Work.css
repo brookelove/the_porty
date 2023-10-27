@@ -10,21 +10,13 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* Added */
     transition: filter 0.3s ease-in-out;
-  /* filter: blur(4px); */
-  /* filter:none; */
 }
-/* .workContainer:hover .projectContainer{
-    filter: blur(4px);
-  } */
 .workContainer .projectContainer .projectCard {
     width: 20%;
     margin: 1em;
-    transition: filter 2s linear;
-    /* height: min-content; */
     height: 300px;
-    /* filter: none;  */
+    transition: filter 2s linear;
 }
 .workContainer .projectContainer .projectQuickView {
     display: flex;
@@ -34,19 +26,26 @@
     align-items: flex-end;
     justify-content: space-between;
     position: relative;
-    top:-322px;
-    right: 6%;
-    height:280px;
-    opacity: 0; 
-    transition: filter 0.7s linear;
-}
-.workContainer .projectContainer .projectCard:hover .projectQuickView {
-    opacity: 1; 
+    top:-102%;
+    right: 1%;
+    height:96%;
+    opacity: 0;
 }
 
-.workContainer .projectContainer div:hover {
-    filter: none;
+.workContainer .projectContainer div:hover .projectQuickView h2 {
+    transform: translateY(8px);
+    transition: transform 0.7s ease-in-out;
+  }
+  
+  .workContainer .projectContainer div:hover .projectQuickView ul {
+    transform: translateY(-8px);
+    transition: transform 0.7s ease-in-out;
+  }
+.workContainer .projectContainer .projectCard:hover .projectQuickView {
+    opacity: 1; 
+    transform: translateY(-5);
 }
+
 
 .workContainer .projectContainer div img {
     width: 100%;

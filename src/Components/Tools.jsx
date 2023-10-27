@@ -10,7 +10,7 @@ import "../Assets/CSS/Components/Tools.css"
 const Tools = () => {
     return(
         <div className="toolsContainer">
-            <h1><i>TOOL BOX</i></h1>
+            <h1>TOOL BOX</h1>
             <ul className="grid floating">
                 <li className="item"> 
                 <FaReact className="reactIcon"/>
