@@ -7,15 +7,15 @@ const projects = [
     languages: ["HTML", "CSS", "JS"],
     media: require("../../Assets/Images/2.png"),
     blurb: "",
-    links: [],
+    links: ["https://exquisite-liger-a0907e.netlify.app"],
   },
   {
-    name: "Science Department",
+    name: "CS Department",
     type: "Organization",
     languages: ["Java"],
     media: require("../../Assets/Images/2.png"),
     blurb: "",
-    links: [],
+    links: [""],
   },
   {
     name: "Makeup Store",

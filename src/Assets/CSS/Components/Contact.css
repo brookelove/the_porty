@@ -1,12 +1,7 @@
 .contactContainer {
-    /* background-color: var(--secBkgrd); */
-    /* background-color: var(--font); */
-    /* color: var(--bckgrd); */
     padding:3%;
     display:flex;
     justify-content: space-evenly;
-    /* background-color: var(--light-background);
-    color: var(--light-text); */
 }
 .contactContainer h1 {
     margin-bottom: 30px;
@@ -52,6 +47,7 @@
 .contactContainer button {
     width: 100%;
     padding: 5%;
+    font-size: 1em;
     border: 1.5px solid var(--light-text);
     background-color: var(--light-text);
     color: var(--dark-text);
@@ -59,6 +55,7 @@
 .contactContainer button:hover {
     background-color: var(--light-background);
     border: 1.5px solid var(--light-text);
+    color: var(--light-text);
 }
 .contactContainer h2 {
     color:var(--font);
@@ -79,8 +76,16 @@
 }
 .thankSection div{
     display: flex;
+    align-items: center;
+    background-color: var(--light-text);
     justify-content: space-between;
+    padding: 10px;
     width: 30%;
+    border-radius: 20px;
+}
+
+.thankSection div a:hover{
+    color: var(--light-background);
 }
 /* ===============================LANDING CSS=========================== */
 /* animation to scroll across screen */

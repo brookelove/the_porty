@@ -28,13 +28,13 @@ const Highlight = () => {
                 <div class="line"></div>
               </div>
               
-              <div class="cards">
+              <div class="card-Container">
                 <div class="card">
                   
                   <h4>2017</h4>
                   <p>Graduated Highschool</p>
                 </div>
-                <div class="card mid">
+                <div class="card">
                   <h4>2021</h4>
                   <p>BS in Biology At Washington State University</p>
                 </div>
@@ -48,7 +48,7 @@ const Highlight = () => {
                 </div>
                   <div class="card">
                   <h4>2022</h4>
-                  <p>Started MS in Software Developemnt At Boston Uni</p>
+                  <p>Started MS in Software Developemnt At Boston University</p>
                 </div>
                 <div class="card">
                   <h4>2023</h4>

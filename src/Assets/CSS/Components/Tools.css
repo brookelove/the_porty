@@ -1,5 +1,5 @@
 .toolsContainer {
-text-align: center;
+    text-align: center;
    margin-bottom: 10%;
    padding: 0 10% ;
    position: relative;
@@ -25,7 +25,6 @@ text-align: center;
 }
 .toolsContainer .grid .item .reactIcon {
     font-size: 50px;
-    /* border: 1px solid black; */
 }
 .toolsContainer .grid .item {
     position: relative;
@@ -37,7 +36,6 @@ text-align: center;
     color:var(--bright-accent);
 }
 .toolsContainer .tool-tip {
-  
     position: absolute;
     top: 0;
     font-size: 14px;

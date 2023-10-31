@@ -8,39 +8,33 @@
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     transition: filter 0.3s ease-in-out;
 }
 .workContainer .projectContainer .projectCard {
     width: 20%;
-    margin: 1em;
+    height: 20%;
     height: 300px;
     transition: filter 2s linear;
+    
 }
 .workContainer .projectContainer .projectQuickView {
     display: flex;
     position: absolute;
     width: 100%;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.447);
+    align-items: center;
+    justify-content: center;
     position: relative;
-    top:-102%;
-    right: 1%;
-    height:96%;
+    height: 300px;
+    top:-107%;
+    height:105%;
     opacity: 0;
 }
 
-.workContainer .projectContainer div:hover .projectQuickView h2 {
-    transform: translateY(8px);
-    transition: transform 0.7s ease-in-out;
-  }
-  
-  .workContainer .projectContainer div:hover .projectQuickView ul {
-    transform: translateY(-8px);
-    transition: transform 0.7s ease-in-out;
-  }
 .workContainer .projectContainer .projectCard:hover .projectQuickView {
     opacity: 1; 
     transform: translateY(-5);
@@ -49,7 +43,8 @@
 
 .workContainer .projectContainer div img {
     width: 100%;
-    border-radius: 30px;
+    border: 1px solid black;
+
 }
 .workContainer .projectContainer h2{
     max-width: max-content;
@@ -58,76 +53,27 @@
     padding:2% 4%;
     font-family: raleway, sans-serif;
     font-style: italic;
-    background-color:var(--popout);
 }
 .workContainer .projectContainer ul{
     display: flex;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
+    /* justify-content: flex-start; */
     padding-left: 7 0px; 
-    /* padding-left: 40px; */
 }
 .workContainer .projectContainer ul li{
     margin: 0.1em;
     padding:2% 4%;
     border-radius: 20px;
-    background-color:var(--popout);
+    background-color: rgba(0, 0, 0, 0.447);
+    /* color: whitesmoke; */
+    text-decoration: underline;
     position: relative;
     left:2%;
 }
 
 
-/* .workContainer button {
-    text-align: center;
-} */
-/* .workContainer .projectContainer div { */
 
-    /* display: flex; */
-    /* justify-content: space-evenly; */
-/* } */
-/* .workContainer .projectContainer div section img{
-    width: 375px;
-    border-radius: 10px;
-    box-shadow: -10px 9px 11px 0px rgba(174, 174, 174, 0.888);
-    margin-bottom: 10px;
-} */
-/* .workContainer .projectContainer div section section{
-    font-family: ambroise-std, serif;
-}
-.workContainer .projectContainer div section a {
-   color: var(--font);
-}
-.workContainer .projectContainer section a button{
-    background-color: none;
-}
-.projectContainer div section .projectInfoContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.plusContainer {
-    padding: 0 4%;
-    transition: all ease-in 0.2s;
-}
-.plusContainer:hover, .plusContainer::after {
-    transform: rotate(40deg);
-}
-.plusContainer span{
-    display: block;
-    width: 12px;
-    height:2px;
-    background-color: rgb(113, 108, 107);
-    padding: 0 2%;
-}
-.plusContainer .right{
-    transform: rotate(270deg);
-    position: relative;
-    bottom:0px;
-    right: 12px;
-}
-.projInfo {
-    width: 375px;
-} */
 /* @media screen and (min-width: 300px) and (max-width:500px) {
     .workContainer #seaVideoWork{
         width: 95%;

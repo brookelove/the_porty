@@ -20,8 +20,8 @@ const Work = () => {
               <h2>{project.name}</h2>
               
               <ul>
-                {project.languages.map((language) => (
-                  <li key={language}>{language}</li>
+                {project.languages.map((language, langIndex) => (
+                  <li key={langIndex}>#{language}</li>
                 ))}
               </ul>
               </div>
