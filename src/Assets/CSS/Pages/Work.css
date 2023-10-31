@@ -4,40 +4,53 @@
     align-items: center;
     justify-content: center;
 }
-.workContainer .projectContainer{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    transition: filter 0.3s ease-in-out;
+
+.workContainer .projectContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    max-width:80%
 }
+
 .workContainer .projectContainer .projectCard {
-    width: 20%;
-    height: 20%;
-    height: 300px;
-    transition: filter 2s linear;
-    
+    border: 1px solid #ccc;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
 }
+
+.workContainer .projectContainer .projectCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.workContainer .projectContainer .projectCard .projectQuickView {
+    display: none;
+    /* Other styles */
+  }
+.workContainer .projectContainer .projectCard:hover .projectQuickView, .workContainer .projectContainer .projectCard .projectQuickView.show  {
+    display: flex;
+
+}
+/* {
+    display: flex;
+} */
+
 .workContainer .projectContainer .projectQuickView {
     display: flex;
-    position: absolute;
-    width: 100%;
     flex-direction: column;
+    text-align: center;
     color: whitesmoke;
     background-color: rgba(0, 0, 0, 0.447);
     align-items: center;
     justify-content: center;
-    position: relative;
-    height: 300px;
-    top:-107%;
-    height:105%;
-    opacity: 0;
-}
-
-.workContainer .projectContainer .projectCard:hover .projectQuickView {
-    opacity: 1; 
-    transform: translateY(-5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left:0;
+    transition: all 0.3s;
 }
 
 
@@ -48,17 +61,16 @@
 }
 .workContainer .projectContainer h2{
     max-width: max-content;
-    text-align: right;
     border-radius: 20px;
     padding:2% 4%;
     font-family: raleway, sans-serif;
     font-style: italic;
+    margin-bottom: 2%;
 }
 .workContainer .projectContainer ul{
     display: flex;
     width: 100%;
     justify-content: center;
-    /* justify-content: flex-start; */
     padding-left: 7 0px; 
 }
 .workContainer .projectContainer ul li{
@@ -66,7 +78,6 @@
     padding:2% 4%;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.447);
-    /* color: whitesmoke; */
     text-decoration: underline;
     position: relative;
     left:2%;
