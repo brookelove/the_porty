@@ -14,7 +14,7 @@ const Project = () => {
                 <header>
                     <section className="header">
                         <h1>{name}</h1>
-                        <h5> | {type}</h5>
+                        <h5>| {type}</h5>
                     </section>
                     <h6>Languages</h6>
                     <ul className="languages">
@@ -25,7 +25,7 @@ const Project = () => {
                      <h6>Description</h6>
                     <p className="blurb">{blurb}</p>
                 </header>
-                <video controls loop>
+                <video autoPlay loop muted>
                     <source src={video} type="video/mp4"/>
                 </video>
             </section>
@@ -36,8 +36,8 @@ const Project = () => {
                 ))}
             </ul>
             <aside className="websiteContainer">
-                <a href={links.website}>WEBSITE</a>
-                <a href={links.gitFront}>CODE</a>
+                <a href={links.website} target="_blank">WEBSITE</a>
+                <a href={links.gitFront} target="_blank">CODE</a>
             </aside>
         </div>
     );
