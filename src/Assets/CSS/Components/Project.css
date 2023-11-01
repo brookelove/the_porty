@@ -1,0 +1,77 @@
+.projectContainer section{
+    padding:1.5%;
+    display: flex;
+    justify-content: space-between;
+}
+.projectContainer section header .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.projectContainer section header section h1 {
+    font-size: 5em;
+    font-style: italic;
+}
+.projectContainer section header section h5 {
+    font-size: 2.5em;
+    margin-left: 0.5em;
+}
+.projectContainer section header h6 {
+    margin:2% 0;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+}
+.projectContainer section video {
+    width:80%;
+    height:auto;
+}
+.projectContainer header > ul:first-of-type {
+    display: flex;
+    padding: 3%;
+    justify-content: space-evenly;
+    background-color: var(--accent);
+    width: 20%;
+    border-radius: 4%;
+}
+.projectContainer header > ul:first-of-type li {
+    background-color: var(--light-text);
+    padding: 5%;
+    text-align: center;
+    min-width: 40px;
+    border-radius: 5%;
+}
+.projectContainer header .blurb {
+    width:70%;
+    offset: 30px;
+}
+.projectContainer .imageList {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.projectContainer .imageList li {
+   margin: 2.5% 0;
+}
+.imageList li:first-of-type img{
+    width:55%;
+    margin: 0 auto;
+    display: block;
+}
+.websiteContainer {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.websiteContainer a {
+    background-color: var(--light-text);
+    padding: 1% 3%;
+    border-radius: 30px;
+    color:var(--accent);
+    border: 1px solid var(--accent);
+    transition: all ease-in 0.3s;
+}
+.websiteContainer a:hover{
+    background-color: var(--accent);
+    color:var(--light-text);
+}

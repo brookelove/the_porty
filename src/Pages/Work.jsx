@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-// import Navbar from "../Components/Header";
 import "../Assets/CSS/Pages/Work.css";
 import projects  from "../utils/data/projects";
+import { Link } from "react-router-dom";
 
 
 const Work = () => {
@@ -12,6 +12,7 @@ const Work = () => {
           className="projectContainer"
         >
           {projects.map((project, index) => (
+             <Link to={`/project/${index}`} key={index}>
             <div className="projectCard"
               key={index}
               onMouseEnter={() => setHoveredProject(index)}
@@ -30,9 +31,9 @@ const Work = () => {
               </ul>
               </div>
             </div>
+            </Link>
           ))}
         </div>
-        {/* <div> */}
         <button>
           <a>GITHUB</a>
         </button>

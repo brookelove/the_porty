@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
-// import BigIdeas from "./BigIdeas";
 import Contact from "./Contact";
 import Header from "./Header";
 
 const NewHome = () => {
     return (
         <div>
-            {/* <Header/> */}
             <section className="newHomeContainer">
             <div className="lineContainer">
                 <span></span>

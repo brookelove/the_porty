@@ -1,5 +1,4 @@
 import React from "react";
-// import BigIdeas from "../Components/BigIdeas";
 import Contact from "../Components/Contact";
 import Navbar from "../Components/Header";
 import Tools from "../Components/Tools";
@@ -52,7 +51,6 @@ const About = () => {
         </main>
         <Highlight/>
         <Tools/>
-        {/* <Contact id="contact"/> */}
         </div>
     )
 }

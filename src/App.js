@@ -7,7 +7,7 @@ import debounce from "lodash.debounce";
 import PageNotFound from "./Pages/PageNotFound";
 import React, { useEffect, useState } from "react";
 import NewHome from "./Components/NewHome";
-
+import Project from "./Components/Project";
 import { keepTheme } from "./utils/themes";
 import Contact from "./Components/Contact";
 import Header from "./Components/Header";
@@ -69,6 +69,7 @@ function App() {
           <Route path="/home" element={<NewHome />} />
           <Route path="/" element={<Home />} />
           <Route path="/work" element={<Work />} />
+          <Route path="/project/:index" element={<Project />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
