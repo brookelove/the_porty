@@ -27,14 +27,14 @@
 }
 .projectContainer header > ul:first-of-type {
     display: flex;
-    padding: 3%;
+    padding: 2% 0;
     justify-content: space-evenly;
-    background-color: var(--accent);
-    width: 20%;
-    border-radius: 4%;
+    width: 45%;
+    border-radius: 20px;
 }
 .projectContainer header > ul:first-of-type li {
     background-color: var(--light-text);
+    color: var(--accent);
     padding: 5%;
     text-align: center;
     min-width: 40px;
