@@ -1,6 +1,9 @@
 import React, {useRef} from "react";
 import emailjs from '@emailjs/browser';
 import "../Assets/CSS/Components/Contact.css";
+import Desk from "../Assets/Images/Desk.png";
+import lightChat from "../Assets/Images/LightChat.gif";
+import darkChat from "../Assets/Images/DarkChat.gif";
 
 const Contact = () => {
     const form = useRef();
@@ -13,9 +16,18 @@ const Contact = () => {
               console.log(error.text);
           });
       };
+      const whichChat = () => {
+        const theme = localStorage.getItem("theme");
+        if(theme.includes("light")) {
+            return lightChat
+        } else {
+            return darkChat
+        }
+      }
     return (
         <div className="contactContainer" id="contactContainer">
             <section className="contactFormContainer">
+                <section className="formImgSection">
                 <form ref={form}>
                     <label for="name">NAME</label>
                     <input type="text" name="name"></input>
@@ -38,17 +50,20 @@ const Contact = () => {
                         SEND
                     </button>
                 </form>
+                <img src={whichChat()} alt="3d animation of lets chat on a phone with a call button" className="letsChatGif"/>
+                </section>
             <div className="contactLinks">
-                {/* put and creative drawn image there or something  */}
             </div>
             <div className="thankSection">
                 <h1>Thanks For Stopping By, Can't Wait To Chat</h1>
-                <h3>Savien Brooke Love</h3>
+                <section>
                 <div>
                     <a>EMAIL</a>
                     <a>LINKEDIN</a>
                     <a>GITHUB</a>
                 </div>
+            <img src={Desk} alt="3d picture of desk" className="deskImage"/>
+            </section>
             </div>
             </section>
         </div>

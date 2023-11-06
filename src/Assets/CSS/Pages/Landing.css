@@ -117,7 +117,7 @@ li {
 }
 .miniBlurb {
     background-color: var(--popout);
-    padding: 2.5%;
+    padding: 4.5%;
     border-radius: 30px;
     max-width: 80%;
     text-align: start;
@@ -171,6 +171,9 @@ button:hover {
 	.wordsContainer {
 		font-size:200%;
 	}
+    .miniBlurb {
+        font-size: 150%;
+    }
 	
 }
 @media screen and (min-width: 500px) and (max-width:700px) {

@@ -85,13 +85,13 @@ const Header = () => {
     return(
         <navbar className={`navbarContainer ${sticky ? "scrolled frosted" : ""}`}>
             <section className="weatherInfo">
-                <h6>98°F</h6>
-                <h6>☀️</h6>
+                {/* <h6>98°F</h6>
+                <h6>☀️</h6> */}
                 <h6>{date.toLocaleDateString()}</h6>
                 <h6>{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</h6>
                 <div>
                     <h6>Current Project</h6>
-                    <a>_____________</a>
+                    <a><u>Fantasy Fisticuffs</u></a>
                 </div>
             </section>
         <ul>

@@ -7,6 +7,12 @@
 }
 .newHomeContainer {
     height:100vh;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+}
+.newHomeContainer .isometricRoom {
+    width: 60%;
 }
 .newHomeContainer main {
     display: flex;
@@ -17,19 +23,24 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.newHomeContainer main section{
+    display: flex;
+    align-items: end;
+    justify-content: start;
+}
 .newHomeContainer main h1{
     font-size: 500%;
     width: 50%;
-    padding: 5%;
+    padding: 2%;
     letter-spacing: 10px;
 }
+
 .newHomeContainer main h5{
-    /* font-size: 110%; */
     width: 100vw;
 }
 .newHomeContainer .scrollContainer{
     position: absolute;
-    top:85%;
+    top:100%;
     overflow:hidden;
     width: 100vw;
 }
@@ -50,9 +61,10 @@
 }
 
 .bigIdeasContainer h1{
-    font-size: 650%;
+    font-size: 550%;
     width: 100vw;
     letter-spacing: 13px;
+    margin:5% 0;
 }
 .bigIdeasContainer p {
     font-size: 150%;
@@ -76,48 +88,26 @@
     border: 1.5px solid var(--dark-text);
 }
 
-/* .homeContainer ul{
-    margin: 2% 5%;
-    color: var(--tertiary);
-    padding: 1%;
-    width: 15%;
-    font: 700;
-    font-size: 30px;
-    background-color: rgba(244, 238, 227, 0.151);
-    font-family: ambroise-firmin-std, serif;
-}
-.homeContainer ul li {
-    margin: 10% 0;
-    text-align: center;
-}
-.homeContainer ul li a{
-    margin: 10% 0;
-    text-align: center;
-    color: var(--bckgrnd);
-}
-.homeContainer section {
-    display: flex;
-    padding: 5%;
-    flex-direction: column;
-    align-items: self-end;
-    position: relative;
-    top: 20rem;
-    font-family: ambroise-firmin-std, serif;
- }
-.homeContainer section a{
-   color: var(--tertiary);
-   font-size: 45px;
-   margin: 0.2% 0
-}
+
 @media screen and (min-width: 300px) and (max-width:500px) {
-    .homeContainer ul{
-        width: 10%;
+    .newHomeContainer main h1{
+       font-size: 200%;
+       padding-top: 40%;
     }
-    .homeContainer section {
-        top: 25rem;
-     }
+    .bigIdeasContainer {
+        height: 70vh;
+    }
+    .bigIdeasContainer h1 {
+        font-size: 200%;
+    }
+    .bigIdeasContainer a {
+        font-weight: 100;
+    }
+    /* .miniBlurb {
+        font-size: 80%;
+    } */
 }
-@media screen and (min-width: 500px) and (max-width:700px) {
+/* @media screen and (min-width: 500px) and (max-width:700px) {
     .homeContainer ul{
         width: 10%;
     }

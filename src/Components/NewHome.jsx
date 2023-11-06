@@ -1,36 +1,24 @@
 import { Link } from "react-router-dom";
-import Contact from "./Contact";
-import Header from "./Header";
-
+import Isometric from "../Assets/Images/TempIsoRoom.png";
 const NewHome = () => {
     return (
         <div>
             <section className="newHomeContainer">
-            <div className="lineContainer">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+                <img src={Isometric} className="isometricRoom" alt="isometric 3d room of a coding room "/>
             <main>
-            <h1>BYTE WHISPERER</h1>
+            <section>
+            <h1>SMALL TOWN SOFTWARE DEVELOPER</h1>
+            </section>
             <div className="scrollContainer">
-            <h5 className="scrollText">* happy since 1999 * unopologetic since 2023 * Creative, Fun, Organzied * TA | Developer</h5>
+            <h5 className="scrollText"> * happy since 1999 * Creative, Fun, Organzied * TA | Developer *</h5>
             </div>
             </main>
             </section>
             <div className="bigIdeasContainer">
-                <h1>SMALL TOWN FULLSTACK | SOFTWARE DEVELOPER</h1>
-                <p>Creating Fun Innovative Projects</p>
-            <Link to="/work">LEARN MORE</Link>
+                <h1>Creativity Is Intigence Having Fun</h1>
+                <p>- A. Einstein</p>
+            <Link to="/work" className="linkToLearn">LEARN MORE</Link>
             </div>
             <div className="blurbContainer">
             <section className="miniBlurb">

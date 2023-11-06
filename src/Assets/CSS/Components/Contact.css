@@ -15,14 +15,23 @@
     align-items: center;
     
 }
+.contactFormContainer .formImgSection {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--light-background);
+    margin-bottom: 4%;;
+}
+.contactFormContainer .letsChatGif {
+    width:50%;
+}
 .contactContainer form {
     display:flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 7%;
-    background-color: var(--light-background);
-    padding: 10%;
-    border-radius: 50px;
+    padding: 10% 0% 0% 10% ;
+    
 }
 .contactContainer form label{
     letter-spacing: 4px;
@@ -68,10 +77,11 @@
 .contactContainer .contactLinks a:hover{
     cursor: pointer;
 }
+
 .thankSection {
     background-color: var(--popout);
     padding: 5%;
-    border-radius: 40px;
+    border-radius: 40px 40px 0 40px;
 
 }
 .thankSection div{
@@ -83,56 +93,32 @@
     width: 30%;
     border-radius: 20px;
 }
-
+.thankSection section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.thankSection .deskImage {
+    width:35%;
+}
 .thankSection div a:hover{
     color: var(--light-background);
 }
-/* ===============================LANDING CSS=========================== */
-/* animation to scroll across screen */
-/* @-moz-keyframes scroll-animation {
-    from { -moz-transform: translateX(100%); }
-    to { -moz-transform: translateX(-100%); }
-  }
-@-webkit-keyframes scroll-animation {
-    from { -webkit-transform: translateX(100%); }
-    to { -webkit-transform: translateX(-100%); }
-  }  
-@keyframes scroll-animation {
-    from {
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-    to {
-      -moz-transform: translateX(-100%);
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%);
-    }
-  } */
-  /* =================================== */
 
-
-  /* @media screen and (min-width: 300px) and (max-width:500px) {
-    .contactContainer .scrollContainer {
-        transform: rotate(0deg);
-        left: 0;
-        width: 100%;
-        font-size: 130%;
-    }
-    .contactContainer form {
-        padding-top: 70%;
+  @media screen and (min-width: 300px) and (max-width:500px) {
+    .contactFormContainer .formImgSection {
+        flex-wrap: wrap;
     }
     .contactContainer form input, .contactContainer form select {
-        width: 300px;
+        width: 90%;
     }
-    .contactContainer form button{
-        margin-left: 22%;
-      }
-    .contactContainer .contactLinks {
-        top: 10%;
-        left: 5%;
+    .thankSection div {
+        flex-direction: column;
     }
-}
+    .contactContainer h1 {
+        font-size: 170%;
+    }
+}/* 
 @media screen and (min-width: 500px) and (max-width:700px) {
     .contactContainer .scrollContainer {
         transform: rotate(0deg);
