@@ -107,10 +107,10 @@
 
   @media screen and (min-width: 300px) and (max-width:500px) {
     .contactFormContainer .formImgSection {
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
     }
-    .contactContainer form input, .contactContainer form select {
-        width: 90%;
+    .contactContainer form input, .contactContainer form select,.contactContainer button {
+        width: 105%;
     }
     .thankSection div {
         flex-direction: column;
@@ -118,7 +118,16 @@
     .contactContainer h1 {
         font-size: 170%;
     }
-}/* 
+    .contactFormContainer .letsChatGif {
+        width:100%;
+    }
+}
+@media screen and (min-width: 700px) and (max-width:900px) {
+    .contactContainer form input, .contactContainer form select,.contactContainer button {
+        width: 120%;
+    }
+}
+/* 
 @media screen and (min-width: 500px) and (max-width:700px) {
     .contactContainer .scrollContainer {
         transform: rotate(0deg);

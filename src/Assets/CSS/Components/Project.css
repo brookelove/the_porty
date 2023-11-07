@@ -61,7 +61,6 @@
 .websiteContainer {
     display: flex;
     justify-content: space-evenly;
-
 }
 .websiteContainer a {
     background-color: var(--light-text);
@@ -74,4 +73,29 @@
 .websiteContainer a:hover{
     background-color: var(--accent);
     color:var(--light-text);
+}
+
+@media screen and (min-width: 300px) and (max-width:500px) {
+    .projectContainer section{
+       flex-direction: column-reverse;
+    }
+    /* .projectContainer section header .header {
+        flex-direction: column;
+    } */
+    .projectContainer section header section h5 {
+        font-size: 1em;
+    }
+    .projectContainer section video {
+        margin-top:10% ;
+        width: 100%;
+    }
+    .projectContainer header > ul:first-of-type {
+        width:100%;
+    }
+    .projectContainer header .blurb {
+        width:100%;
+    }
+    .projectContainer .imageList li img{
+       width: 300px;
+      }
 }

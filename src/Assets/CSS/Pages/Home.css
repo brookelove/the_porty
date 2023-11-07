@@ -57,6 +57,7 @@
 }
 .bigIdeasContainer {
     height:100vh;
+    /* margin:20%; */
     text-align: center;
 }
 
@@ -90,12 +91,18 @@
 
 
 @media screen and (min-width: 300px) and (max-width:500px) {
+    .newHomeContainer {
+        height: 82vh;
+      }
+    .newHomeContainer main {
+        height: 50vh;
+      }
     .newHomeContainer main h1{
-       font-size: 200%;
+       font-size: 300%;
        padding-top: 40%;
     }
     .bigIdeasContainer {
-        height: 70vh;
+        height: 35vh;
     }
     .bigIdeasContainer h1 {
         font-size: 200%;
@@ -103,23 +110,15 @@
     .bigIdeasContainer a {
         font-weight: 100;
     }
-    /* .miniBlurb {
-        font-size: 80%;
-    } */
-}
-/* @media screen and (min-width: 500px) and (max-width:700px) {
-    .homeContainer ul{
-        width: 10%;
-    }
-    .homeContainer section {
-        top: 25rem;
-     }
 }
 @media screen and (min-width: 700px) and (max-width:900px) {
-    .homeContainer ul{
-        width: 10%;
+    .newHomeContainer main {
+        height: 37vh;
     }
-    .homeContainer section {
-        top: 25rem;
-     }
-} */
+    .newHomeContainer {
+        height: 60vh;
+    }
+    .bigIdeasContainer {
+        height: 50vh;
+    }
+}

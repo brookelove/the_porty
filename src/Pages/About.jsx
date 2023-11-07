@@ -1,6 +1,4 @@
 import React from "react";
-import Contact from "../Components/Contact";
-import Navbar from "../Components/Header";
 import Tools from "../Components/Tools";
 import "../Assets/CSS/Pages/About.css"
 import Highlight from "../Components/Highlights";
@@ -8,7 +6,6 @@ import Highlight from "../Components/Highlights";
 const About = () => {
     return (
         <div className="aboutContainer">
-        {/* <Navbar/> */}
         <div className="lineContainer">
                 <span></span>
                 <span></span>
@@ -26,7 +23,6 @@ const About = () => {
         <header>
             <div className="left">
                 <a>LINKEDIN</a>
-                <a>INSTAGRAM</a>
             </div>
             <div className="middle">
                 <section className="name">
@@ -54,5 +50,4 @@ const About = () => {
         </div>
     )
 }
-
 export default About;

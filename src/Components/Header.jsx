@@ -1,8 +1,6 @@
 import React, {useEffect, useState, useRef} from "react";
 import "../Assets/CSS/Components/Header.css"
-import ContactModal from "./ContactModal";
 import { setTheme } from "../utils/themes";
-// import { Link } from "react-router-dom";
 
 const Header = () => {
     const stickyRef = useRef(null);
@@ -10,11 +8,13 @@ const Header = () => {
     const [sticky,setSticky]=useState(false);
     const [date, setDate] = useState(new Date());
     const [toggle, setToggle] = useState('dark');
-    const [weather, setWeather] = useState(null);
+    const [showLinks, setShowLinks] = useState(false);
+
+    const handleHamburgerClick = () => {
+        setShowLinks(!showLinks); // Toggle the link visibility
+    };
 
     let theme = localStorage.getItem('theme');
-    const APIKEY = process.env.APIKEY;
-    const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=Valdosta&appid=${APIKEY}&units=metric`;
 
     const handleScroll=() => {
         const scrollPosition=window.scrollY;
@@ -35,7 +35,6 @@ const Header = () => {
         }
     }
 
-   
 
     useEffect(()=> {
         var timer = setInterval(()=> setDate(new Date()), 1000);
@@ -75,28 +74,28 @@ const Header = () => {
             setToggle('light')
         }
         window.addEventListener('scroll',handleScroll)
-        fetch(weatherURL)
-        .then((response) => response.json())
-        .then((data) => setWeather(data))
-        .catch((error) => console.error(error));
 
     }, [theme])
     
     return(
         <navbar className={`navbarContainer ${sticky ? "scrolled frosted" : ""}`}>
+             {showLinks ? null : (
             <section className="weatherInfo">
-                {/* <h6>98°F</h6>
-                <h6>☀️</h6> */}
                 <h6>{date.toLocaleDateString()}</h6>
                 <h6>{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</h6>
                 <div>
                     <h6>Current Project</h6>
                     <a><u>Fantasy Fisticuffs</u></a>
                 </div>
-            </section>
-        <ul>
-            <li>
-            <div className="container--toggle">
+            </section> 
+             )}
+            <div className="hamburger-menu" onClick={handleHamburgerClick}>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+        </div>   
+         <section className="leftside">
+         <div className="container--toggle">
             {
                 toggle === "light" ?
                 <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked />
@@ -107,21 +106,22 @@ const Header = () => {
                 <span className="toggle--label-background"></span>
             </label>
         </div>
-            </li>
-            <li id="homeLi">
+        <ul className={showLinks ? "show" : ""}>
+            <li id="homeLi" >
                 <a id="homeA" href="/home">Home</a>
-                <p>01</p>
+                {/* <p>01</p> */}
             </li>
             <li id="aboutLi">
                 <a id="aboutA" href="/about">About</a>
-                <p>02</p>
+                {/* <p>02</p> */}
                 </li>
             <li id="workLi">
                 <a id="workA" href="/work">Projects</a>
-                <p>03</p>
+                {/* <p>03</p> */}
             </li>
         </ul>
-        <span></span>
+        
+        </section>
         </navbar>
     )
 }
