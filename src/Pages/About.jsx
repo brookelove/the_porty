@@ -1,6 +1,8 @@
 import React from "react";
+import hiMe from "../Assets/Images/hiMe.png";
+import heartMe from "../Assets/Images/heartme.png";
 import Tools from "../Components/Tools";
-import "../Assets/CSS/Pages/About.css"
+import "../Assets/CSS/Pages/About.css";
 import Highlight from "../Components/Highlights";
 
 const About = () => {
@@ -32,7 +34,10 @@ const About = () => {
                     <h1>SAVIEN</h1>
                     </section>
                 </section>
-                <img className="brooke"></img>
+                <img src={hiMe}
+                // onMouseOver={handleHover}
+                // onMouseOut={handleUnhover}
+                className="brooke"></img>
                 <section className="title">
                     <h1 className="soft">SOFTWARE</h1>
                     <h1>DEVELOPER</h1>

@@ -18,7 +18,7 @@ const Contact = () => {
       };
       const whichChat = () => {
         const theme = localStorage.getItem("theme");
-        if(theme.includes("light")) {
+        if(theme && theme.includes && theme.includes("light")) {
             return lightChat
         } else {
             return darkChat
