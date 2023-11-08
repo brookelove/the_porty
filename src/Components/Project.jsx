@@ -36,8 +36,13 @@ const Project = () => {
                 ))}
             </ul>
             <aside className="websiteContainer">
-                <a href={links.website} target="_blank">WEBSITE</a>
-                <a href={links.gitFront} target="_blank">CODE</a>
+                <a href={links.live} target="_blank">WEBSITE</a>
+                <a href={links.gitFront} target="_blank">FRONTEND</a>
+                {links.gitBack ? (
+                    <a href={links.gitBack}>BACKEND</a>
+                ) : (
+                    null
+                )}
             </aside>
         </div>
     );

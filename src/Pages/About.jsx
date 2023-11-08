@@ -35,8 +35,6 @@ const About = () => {
                     </section>
                 </section>
                 <img src={hiMe}
-                // onMouseOver={handleHover}
-                // onMouseOut={handleUnhover}
                 className="brooke"></img>
                 <section className="title">
                     <h1 className="soft">SOFTWARE</h1>
