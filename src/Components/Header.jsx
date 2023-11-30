@@ -11,7 +11,7 @@ const Header = () => {
     const [showLinks, setShowLinks] = useState(false);
 
     const handleHamburgerClick = () => {
-        setShowLinks(!showLinks); // Toggle the link visibility
+        setShowLinks(!showLinks);
     };
 
     let theme = localStorage.getItem('theme');
@@ -108,16 +108,13 @@ const Header = () => {
         </div>
         <ul className={showLinks ? "show" : ""}>
             <li id="homeLi" >
-                <a id="homeA" href="/home">Home</a>
-                {/* <p>01</p> */}
+                <a id="homeA" href="/">Home</a>
             </li>
             <li id="aboutLi">
                 <a id="aboutA" href="/about">About</a>
-                {/* <p>02</p> */}
                 </li>
             <li id="workLi">
                 <a id="workA" href="/work">Projects</a>
-                {/* <p>03</p> */}
             </li>
         </ul>
         

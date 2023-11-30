@@ -36,6 +36,8 @@ const About = () => {
                 </section>
                 <img src={hiMe}
                 className="brooke"></img>
+                <img src={heartMe}
+                className="heartMe" ></img>
                 <section className="title">
                     <h1 className="soft">SOFTWARE</h1>
                     <h1>DEVELOPER</h1>

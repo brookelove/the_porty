@@ -30,13 +30,25 @@
     left: 150px;
     font-family: raleway, sans-serif;
 }
-.aboutContainer img.brooke{
+.aboutContainer img.brooke {
     width: 100%;
-    transition: transform 0.10s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
 }
-.aboutContainer img.brooke:hover {
-    content: url('../../Images/heartme.png');
+.aboutContainer img.heartMe {
+    position: absolute;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
 }
+.aboutContainer:hover img.brooke {
+    opacity: 0;
+}
+
+.aboutContainer:hover img.heartMe {
+    opacity: 1;
+}
+
 .aboutContainer header .middle .name .subHi{
     display: flex;
     font-family: ambroise-std, serif;

@@ -66,8 +66,7 @@ function App() {
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/loading" element={<Loading />} />
-          <Route path="/home" element={<NewHome />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<NewHome />} />
           <Route path="/work" element={<Work />} />
           <Route path="/project/:index" element={<Project />} />
           <Route path="*" element={<PageNotFound />} />
