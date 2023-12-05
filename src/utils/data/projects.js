@@ -78,20 +78,25 @@ const projects = [
       gitBack: "",
     },
   },
-  // {
-  //   name: "The Sylver Effect",
-  //   type: "Portfolio",
-  //   languages: ["React", "PostGres"],
-  //   media: require("../../Assets/Images/3.png"),
-  //   blurb: "",
-  //   submedia: [
-  //     require("../../Assets/Images/FF/01.png"),
-  //     require("../../Assets/Images/FF/02.png"),
-  //     require("../../Assets/Images/FF/03.png"),
-  //     require("../../Assets/Images/FF/04.png"),
-  //   ],
-  //   links: ["https://endearing-longma-9eecbd.netlify.app"],
-  // },
+  {
+    name: "Offline Scan Webapp",
+    type: "Login Database",
+    languages: ["React", "NoSQL", "AWS", "Docker", "PassportJS"],
+    media: require("../../Assets/Images/OfflineScan/1.png"),
+    blurb:
+      "Offline WEbScan app is an application to give to employees to show what data is in what house! It allows useres to interacting with the api in order to update user information",
+    submedia: [
+      require("../../Assets/Images/OfflineScan/2.png"),
+      require("../../Assets/Images/OfflineScan/3.png"),
+      require("../../Assets/Images/OfflineScan/4.png"),
+    ],
+    video: require("../../Assets/Images/OfflineScan/citadel-cyber.mp4"),
+    links: {
+      live: "https://www.canva.com/design/DAF1yyx1u-U/IXylHHMDs-wpVuAYukk1FA/watch?utm_content=DAF1yyx1u-U&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+      gitFront: "https://github.com/brookelove/offfline-scan-webapp-v2",
+      gitBack: "https://github.com/brookelove/offline-scan-webapp-backend",
+    },
+  },
 ];
 
 module.exports = projects;

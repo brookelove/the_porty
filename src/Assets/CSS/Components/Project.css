@@ -27,9 +27,11 @@
 }
 .projectContainer header > ul:first-of-type {
     display: flex;
-    padding: 2% 0;
+    padding: 2% 0 0 4%;
     justify-content: space-evenly;
     width: 45%;
+    align-items: start;
+    flex-wrap: wrap;
     border-radius: 20px;
 }
 .projectContainer header > ul:first-of-type li {
@@ -39,6 +41,7 @@
     text-align: center;
     min-width: 40px;
     border-radius: 5%;
+    margin:2%;
 }
 .projectContainer header .blurb {
     width:70%;
