@@ -20,19 +20,19 @@
 }
 
 .theme-dark {
-	--dark-text: #BFEA88;
-	--light-text: rgb(235,70,60);  
-	--dark-background: #192928;
-	--light-background: rgb(35,0,0);
+	--dark-text: #e4a097;
+	--light-text: #d4c7c6;  
+	--dark-background: #272727;
+	--light-background: #d2846b;
 	--accent: rgb(164,86,36);
-	--bright-accent: #B8DBD9;
-	--highlight-text:rgb(133,41,19);
-    --popout: #2e4d4b;
+	--bright-accent: #bbc8cb;
+	--highlight-text:#e4a097;
+    --popout: #2390b9;
     
 }
 
 .theme-light {
-	--dark-text:rgb(22, 22, 22);
+	--dark-text:#6e93cc;
 	--light-text: #DFC8F7;
 	--dark-background: whitesmoke;
 	--light-background: #C8F491;
