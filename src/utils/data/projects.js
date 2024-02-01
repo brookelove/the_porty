@@ -78,24 +78,24 @@ const projects = [
       gitBack: "",
     },
   },
-  // {
-  //   name: "Evergreen Body Mod",
-  //   type: "Website",
-  //   languages: ["React", "CSS", "JavaScript"],
-  //   media: require("../../Assets/Images/5.png"),
-  //   blurb:
-  //     "Evergreen Body Mod is the place to go for the most comforting place to express yourself  through piercings",
-  //   submedia: [
-  //     require("../../Assets/Images/Evergreen/1.png"),
-  //     require("../../Assets/Images/Evergreen/2.png"),
-  //     require("../../Assets/Images/Evergreen/3.png"),
-  //   ],
-  //   video: require("../../Assets/Images/evergreen.mp4"),
-  //   links: {
-  //     live: "https://effortless-pothos-753abd.netlify.app",
-  //     gitFront: "https://github.com/brookelove/evergreen-body-mod",
-  //   },
-  // },
+  {
+    name: "Evergreen Body Mod",
+    type: "Website",
+    languages: ["React", "CSS", "JavaScript"],
+    media: require("../../Assets/Images/5.png"),
+    blurb:
+      "Evergreen Body Mod is the place to go for the most comforting place to express yourself  through piercings",
+    submedia: [
+      require("../../Assets/Images/Evergreen/1.png"),
+      require("../../Assets/Images/Evergreen/2.png"),
+      require("../../Assets/Images/Evergreen/3.png"),
+    ],
+    video: require("../../Assets/Images/Evergreen/evergreen.mp4"),
+    links: {
+      live: "https://effortless-pothos-753abd.netlify.app",
+      gitFront: "https://github.com/brookelove/evergreen-body-mod",
+    },
+  },
   {
     name: "Find The Words",
     type: "Game",
