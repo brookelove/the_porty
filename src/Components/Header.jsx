@@ -52,6 +52,7 @@ const Header = () => {
         "/home": { id: "homeLi", class: "dot" },
         "/about": { id: "aboutLi", class: "dot" },
         "/work": { id: "workLi", class: "dot" },
+        "/contact": { id: "contactLi", class: "dot" },
     };
 
     for (const path in pageLinks) {
@@ -93,6 +94,7 @@ const Header = () => {
                 <div className="line"></div>
                 <div className="line"></div>
                 <div className="line"></div>
+                <div className="line"></div>
         </div>   
          <section className="leftside">
          <div className="container--toggle">
@@ -108,12 +110,19 @@ const Header = () => {
         </div>
         <ul className={showLinks ? "show" : ""}>
             <li id="homeLi" >
+                <h3>🏠</h3>
                 <a id="homeA" href="/">Home</a>
             </li>
             <li id="aboutLi">
+                <h3>🎙️</h3>
                 <a id="aboutA" href="/about">About</a>
                 </li>
+            <li id="contactLi">
+                <h3>☎️</h3>
+                <a id="contactA" href="/contact">Contact</a>
+            </li>
             <li id="workLi">
+                <h3>⚒️</h3>
                 <a id="workA" href="/work">Projects</a>
             </li>
         </ul>

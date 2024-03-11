@@ -1,0 +1,35 @@
+footer {
+    margin: 3%;
+    padding:4%;
+    width: 85% !important;
+    border-radius: 20px;
+}
+footer h1 {
+    font-size: 500%;
+    margin-bottom: 5%;
+    color: var(--light-background);
+}
+footer .email {
+    font-size: 140%;
+    color: var(--light-text);
+}
+footer .email:hover {
+    cursor: pointer;
+    color: var(--accent);
+}
+footer section {
+    display:flex;
+    justify-content: space-between;
+}
+footer section div h4 {
+    text-align: end;
+    margin-bottom: 10%;
+}
+footer section div ul{
+    text-align: end;
+    margin: 2%;
+}
+footer section div ul li{
+    margin-left: 4%;
+    margin-right: 4%;
+}

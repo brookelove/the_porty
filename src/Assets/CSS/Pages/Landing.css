@@ -25,7 +25,7 @@
 	--dark-background: #030006;
 	--light-background: #c6cdce;
 	--accent: #ea9820;
-	--bright-accent: #f1e625;
+	--bright-accent: #ee6a92;
 	--highlight-text:#7ac3f4;
     --popout: #0725a0;
     
@@ -40,7 +40,17 @@
 	--bright-accent: #31315E;
 	--highlight-text:#B64B39;
     --popout: rgb(255,255,255);
- }
+}
+.theme-pink {
+    --dark-text:#594A4A;
+	--light-text: #eadfd1;
+	--light-background: whitesmoke;
+	--dark-background: #F39188;
+	--accent: #F16052;
+	--bright-accent: #F39;
+	--highlight-text:#F2D0D0;
+    --popout: rgb(255,255,255);
+}
 .floating {
     box-shadow: 0px 10px 15px 10px rgba(0 ,0 ,0 ,0.15);
 }
@@ -145,6 +155,22 @@ button:hover {
     color: var(--dark-text);
     border: 1.5px solid var(--dark-text);
 }
+.d-center {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+.d-c-center {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+  .d-even {
+    display:flex;
+      align-items: center;
+      justify-content: space-evenly;
+  }
 
 /*animation to scroll across screen */
 @-moz-keyframes scroll-animation {

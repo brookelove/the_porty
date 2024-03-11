@@ -52,6 +52,25 @@ const About = () => {
         </main>
         <Highlight/>
         <Tools/>
+        <section>
+            <h1>ORGANIZED PROCESS</h1>
+            <ol>
+                <li>
+                    <h4>INFO</h4>
+                    <p>Gather information for upcoming projects.What needs to be completed, what is completed.</p>
+                </li>
+                <li>
+                    <h4>PLAN</h4>
+                    <p>Plan out what needs to be created, wireframes, color schemes, and more.</p>
+                </li>
+                <li><h4>PLAY</h4><p>This is where we code!</p></li>
+                <li><h4>DELIVER</h4><p></p></li>
+            </ol>
+        </section>
+        <section>
+            <h1>3 YEARS OF EXPERIENCE WORKING WITH PROJECTS</h1>
+            <p>With these years of experience keeping up to date with current items. My journey has lead to develop different types of items to expand my knowledge.</p>
+        </section>
         </div>
     )
 }

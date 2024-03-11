@@ -58,9 +58,9 @@ const Contact = () => {
                 <h1>Thanks For Stopping By, Can't Wait To Chat</h1>
                 <section>
                 <div>
-                    <a>EMAIL</a>
-                    <a>LINKEDIN</a>
-                    <a>GITHUB</a>
+                    <a href="mailto:brookelovedevelops@gmail.com">EMAIL</a>
+                    <a href="https://www.linkedin.com/in/brooke-s-love/">LINKEDIN</a>
+                    <a href="https://github.com/brookelove">GITHUB</a>
                 </div>
             <img src={Desk} alt="3d picture of desk" className="deskImage"/>
             </section>

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./Pages/About";
-import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
 import Loading from "./Pages/Loading";
 import Work from "./Pages/Work";
 import debounce from "lodash.debounce";
@@ -9,8 +9,8 @@ import React, { useEffect, useState } from "react";
 import NewHome from "./Components/NewHome";
 import Project from "./Components/Project";
 import { keepTheme } from "./utils/themes";
-import Contact from "./Components/Contact";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 function App() {
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -65,6 +65,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/loading" element={<Loading />} />
           <Route path="/" element={<NewHome />} />
           <Route path="/work" element={<Work />} />
@@ -72,7 +73,8 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
-      <Contact />
+      {/* <Contact /> */}
+      <Footer />
     </div>
   );
 }

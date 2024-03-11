@@ -8,6 +8,12 @@ const Work = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
     return (
       <div className="workContainer parallax">
+        <div className="d-even tags">
+                <a>ALL</a>
+                <a><p>🎓</p> SCHOOL</a>
+                <a>PERSONAL</a>
+                <a><p>💼</p> WORK</a>
+            </div>
         <div
           className="projectContainer"
         >

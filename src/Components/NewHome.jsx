@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
+import Home from "../Assets/CSS/Pages/Home.css"
 import Isometric from "../Assets/Images/TempIsoRoom.png";
 const NewHome = () => {
     return (
         <div>
             <section className="newHomeContainer">
-
                 <img src={Isometric} className="isometricRoom" alt="isometric 3d room of a coding room "/>
             <main>
             <section>
@@ -16,7 +16,7 @@ const NewHome = () => {
             </main>
             </section>
             <div className="bigIdeasContainer">
-                <h1>Creativity Is Intigence Having Fun</h1>
+                <h1>Creativity Is Intelligence Having Fun</h1>
                 <p>- A. Einstein</p>
             <Link to="/work" className="linkToLearn">LEARN MORE</Link>
             </div>
