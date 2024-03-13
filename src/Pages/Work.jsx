@@ -31,9 +31,9 @@ const Work = () => {
       <div className="workContainer parallax">
         <div className="d-even tags">
                 <a onClick={() => getCategory("all")}>ALL</a>
-                <a onClick={() => getCategory("school")}><p>🎓</p> SCHOOL</a>
+                <a onClick={() => getCategory("school")}>SCHOOL</a>
                 <a onClick={() => getCategory("personal")}>PERSONAL</a>
-                <a onClick={() => getCategory("professional")}><p>💼</p>PROFESSIONAL</a>
+                <a onClick={() => getCategory("professional")}>PROFESSIONAL</a>
             </div>
         <div className="projectContainer">
           {(category.length ? category : projects).map((project, index) => (
@@ -49,15 +49,13 @@ const Work = () => {
               <video autoPlay loop muted>
                     <source src={project.video} type="video/mp4"/>
                 </video>
-              
-              <h2>{project.name}</h2>
-              
-              <ul>
-                {project.languages.map((language, langIndex) => (
-                  <li key={langIndex}>#{language}</li>
-                ))}
-              </ul>
-              {/* </div> */}
+              <footer className="d-between">
+                <div>
+                  <h5>.0{project.id}</h5>
+                  <h4>{project.type}</h4>
+                </div>
+                <h2 className="cap">{project.name}</h2>
+              </footer>
             </div>
             </Link>
           ))}

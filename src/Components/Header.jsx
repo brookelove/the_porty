@@ -84,10 +84,6 @@ const Header = () => {
             <section className="weatherInfo">
                 <h6>{date.toLocaleDateString()}</h6>
                 <h6>{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</h6>
-                <div>
-                    <h6>Current Project</h6>
-                    <a><u>Fantasy Fisticuffs</u></a>
-                </div>
             </section> 
              )}
             <div className="hamburger-menu" onClick={handleHamburgerClick}>
