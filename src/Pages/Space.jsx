@@ -1,0 +1,1 @@
+// this is where all the items will be in the corners of the screen and then when you hover they will move to the center to be clicked on

@@ -51,7 +51,7 @@ const Work = () => {
                 </video>
               <footer className="d-between">
                 <div>
-                  <h5>.0{project.id}</h5>
+                  <h5>0{project.id}</h5>
                   <h4>{project.type}</h4>
                 </div>
                 <h2 className="cap">{project.name}</h2>

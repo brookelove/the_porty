@@ -22,29 +22,31 @@ const About = () => {
                 <span></span>
                 <span></span>
             </div>
-        <header>
+        <header className="d-even">
             <div className="left">
-                <a>LINKEDIN</a>
-            </div>
-            <div className="middle">
-                <section className="name">
+            <section className="name">
                     <h1>HEY,</h1>
                     <section className="subHi">
                     <h1>I'M </h1>
                     <h1>SAVIEN</h1>
                     </section>
                 </section>
+                <a href="https://www.linkedin.com/in/brooke-s-love/">LINKEDIN</a>
+            </div>
+            <div className="middle">
+                
                 <img src={hiMe}
                 className="brooke"></img>
                 <img src={heartMe}
                 className="heartMe" ></img>
+                
+            </div>
+            <div className="right">
+                <p className="shortInfo">I'm a Full-stack Software developer who loves creating products that are creative, intuitive, and an experience.</p>
                 <section className="title">
                     <h1 className="soft">SOFTWARE</h1>
                     <h1>DEVELOPER</h1>
                 </section>
-            </div>
-            <div className="right">
-                <p className="shortInfo">I'm a Full-stack Software developer who loves creating products that are creative, intuitive, and an experience.</p>
             </div>
         </header>
         <main>
@@ -52,8 +54,8 @@ const About = () => {
         </main>
         <Highlight/>
         <Tools/>
-        <section>
-            <h1>ORGANIZED PROCESS</h1>
+        <section className="processSection">
+            <h1>PROCESS</h1>
             <ol>
                 <li>
                     <h4>INFO</h4>

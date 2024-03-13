@@ -11,7 +11,7 @@ const Footer = () => {
 
     return(
         <footer className="frosted">
-            <h1>LET'S CODE</h1>
+            <h1>LET'S HANG OUT</h1>
             <a onClick={handleCopy} className="email">brookelovedevelops@gmail.com</a>
             <p><u>clip to copy</u></p>
             <section>

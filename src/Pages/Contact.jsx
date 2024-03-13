@@ -54,7 +54,7 @@ const Contact = () => {
                 </section>
             <div className="contactLinks">
             </div>
-            <div className="thankSection">
+            {/* <div className="thankSection">
                 <h1>Thanks For Stopping By, Can't Wait To Chat</h1>
                 <section>
                 <div>
@@ -64,7 +64,7 @@ const Contact = () => {
                 </div>
             <img src={Desk} alt="3d picture of desk" className="deskImage"/>
             </section>
-            </div>
+            </div> */}
             </section>
         </div>
     )

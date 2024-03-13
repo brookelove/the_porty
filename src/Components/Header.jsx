@@ -84,6 +84,9 @@ const Header = () => {
             <section className="weatherInfo">
                 <h6>{date.toLocaleDateString()}</h6>
                 <h6>{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</h6>
+                <a>🦩</a>
+            <a>🐕‍🦺</a>
+            <a>🐈</a>
             </section> 
              )}
             <div className="hamburger-menu" onClick={handleHamburgerClick}>
@@ -91,7 +94,7 @@ const Header = () => {
                 <div className="line"></div>
                 <div className="line"></div>
                 <div className="line"></div>
-        </div>   
+            </div>   
          <section className="leftside">
          <div className="container--toggle">
             {
@@ -106,19 +109,15 @@ const Header = () => {
         </div>
         <ul className={showLinks ? "show" : ""}>
             <li id="homeLi" >
-                <h3>🏠</h3>
                 <a id="homeA" href="/">Home</a>
             </li>
             <li id="aboutLi">
-                <h3>🎙️</h3>
                 <a id="aboutA" href="/about">About</a>
                 </li>
             <li id="contactLi">
-                <h3>☎️</h3>
                 <a id="contactA" href="/contact">Contact</a>
             </li>
             <li id="workLi">
-                <h3>⚒️</h3>
                 <a id="workA" href="/work">Projects</a>
             </li>
         </ul>

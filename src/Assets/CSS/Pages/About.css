@@ -1,11 +1,10 @@
+.aboutContainer {
+    position: relative;
+}
 .aboutContainer header{
-    top:25%;
-    left:10%;
     position: absolute;
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-    /* margin-bottom:15%; */
+    top:50px;
+    left: 0;
 }
 .aboutContainer header .left{
     display: flex;
@@ -14,6 +13,11 @@
     justify-content: flex-end;
     font-family: urw-din, sans-serif;
 }
+.aboutContainer header .left .name {
+    font-size: 180%;
+    position: relative;
+    bottom: 70px;
+}
 .aboutContainer header .middle {
     display: flex;
     font-size: 120%;
@@ -21,19 +25,17 @@
 .aboutContainer header .middle section {
     z-index: 90;
 }
-.aboutContainer header .middle .name, .aboutContainer header .middle .title {
+ .aboutContainer header .middle .title {
     position: absolute;
-    font-size: 180%;
+    
 }
 .aboutContainer header .middle .name{
     top: 15%;
     left: 150px;
     font-family: raleway, sans-serif;
 }
-.aboutContainer img.brooke {
-    width: 100%;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 1;
+.aboutContainer img {
+    border-radius: 200px;
 }
 .aboutContainer img.heartMe {
     position: absolute;
@@ -57,24 +59,29 @@
     font-weight: 700;
     font-style: italic;
 }
-.aboutContainer header .middle .title {
-    right: 2%;
-    bottom:-30%;
+.aboutContainer .right .title {
+    position: relative;
+    top: 65px;
     font-weight: 400;
     font-family: raleway, sans-serif;
 }
-.aboutContainer header .middle .title .soft {
+.aboutContainer header .right .title .soft {
     font-weight: 700;
     font-style: italic;
     font-family: ambroise-std, serif;
 }
 .aboutContainer header .middle img {
-    height: 300px;
-    width: 350px;
+    height: 400px;
+    width: auto;
 }
 .aboutContainer header .right {
     max-width: 10%;
     font-family: urw-din, sans-serif;  
+}
+.aboutContainer .processSection h1 {
+    text-align: end;
+    padding: 2%;
+    font-size: 500%;
 }
 @media screen and (min-width: 300px) and (max-width:500px){
     .aboutContainer header {

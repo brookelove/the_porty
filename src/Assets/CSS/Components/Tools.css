@@ -3,12 +3,11 @@
    margin-bottom: 10%;
    padding: 0 10% ;
    position: relative;
-  
 }
 .toolsContainer h1 {
     position: absolute;
-    left: 5%;
-    top: 30%;
+    left: 10px;
+    top: 280px;
     font-size: 500%;
     font-style: oblique;
     transform: rotate(270deg);
