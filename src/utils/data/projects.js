@@ -1,7 +1,10 @@
 const projects = [
   {
+    id: 0,
     name: "Fantasy Fisticuffs",
+    category: "personal",
     type: "Game",
+    isFeatured: true,
     languages: ["HTML", "CSS", "JS"],
     media: require("../../Assets/Images/2.png"),
     blurb:
@@ -19,8 +22,11 @@ const projects = [
     },
   },
   {
+    id: 1,
     name: "FRESH GLOW",
+    category: "professional",
     type: "E-commerce",
+    isFeatured: false,
     languages: ["React", "CSS", "JavaScript"],
     media: require("../../Assets/Images/1.png"),
     blurb:
@@ -39,8 +45,11 @@ const projects = [
     },
   },
   {
+    id: 2,
     name: "Computer Science Department",
+    category: "school",
     type: "Organization",
+    isFeatured: false,
     languages: ["Java"],
     media: require("../../Assets/Images/4.png"),
     blurb:
@@ -59,8 +68,11 @@ const projects = [
     },
   },
   {
+    id: 3,
     name: "The Sylver Effect",
+    category: "professional",
     type: "Portfolio",
+    isFeatured: false,
     languages: ["React", "CSS", "JavaScript"],
     media: require("../../Assets/Images/3.png"),
     blurb:
@@ -79,8 +91,11 @@ const projects = [
     },
   },
   {
+    id: 4,
     name: "Evergreen Body Mod",
+    category: "professional",
     type: "Website",
+    isFeatured: true,
     languages: ["React", "CSS", "JavaScript"],
     media: require("../../Assets/Images/5.png"),
     blurb:
@@ -97,8 +112,11 @@ const projects = [
     },
   },
   {
+    id: 5,
     name: "Find The Words",
+    category: "school",
     type: "Game",
+    isFeatured: false,
     languages: ["Vue", "CSS", "JavaScript", "HTML"],
     media: require("../../Assets/Images/6.png"),
     blurb:
@@ -115,8 +133,11 @@ const projects = [
     },
   },
   {
+    id: 6,
     name: "Offline Scan Webapp",
+    category: "professional",
     type: "Login Database",
+    isFeatured: true,
     languages: ["React", "NoSQL", "AWS", "Docker", "PassportJS"],
     media: require("../../Assets/Images/OfflineScan/1.png"),
     blurb:

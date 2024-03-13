@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Home from "../Assets/CSS/Pages/Home.css"
+import Featured from "../Components/Featured";
 import Isometric from "../Assets/Images/TempIsoRoom.png";
 const NewHome = () => {
     return (
@@ -27,6 +28,7 @@ const NewHome = () => {
                 <p>A passionate <b>software developer</b> based in Georgia. I am a currently working on <b>contract</b> projects and  a <b>Tutor/TA</b>for a Fullstack Developer bootcamp. I create momeorable projects that are fun and user friendly.</p>
             </section>
             </div>
+            <Featured/>
         </div>
     )
 }

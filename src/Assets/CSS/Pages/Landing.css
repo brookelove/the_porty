@@ -166,11 +166,22 @@ button:hover {
     flex-direction: column;
     justify-content: center;
 }
-  .d-even {
+.d-even {
     display:flex;
       align-items: center;
       justify-content: space-evenly;
-  }
+}
+.d-between {
+    display:flex;
+      align-items: center;
+      justify-content: space-between;
+}
+.loadingContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*animation to scroll across screen */
 @-moz-keyframes scroll-animation {

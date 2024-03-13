@@ -2,30 +2,27 @@ import React, {useEffect, useState} from "react";
 import "../Assets/CSS/Pages/Landing.css";
 import { useNavigate } from "react-router";
 
-const Loading = () => {
+const Loading = ({children}) => {
+    const [isLoading, setIsLoading] = useState(true);
     
-    const navigate = useNavigate()
-    const [displayTyped, setDisplayTyped] = useState("Passion");
-    const [currentWord, setCurrentWord] = useState(0);
-
-    useEffect(() => {
-      let words = ["Passion", "Confidence", "2021", "Biology", "2022", "Developer", "Designer", "HELLO WORLD.", "HELLO WORLD..", "HELLO WORLD..."];
-        function updateWord() {
-          setDisplayTyped(words[currentWord]);
-          if (currentWord < words.length) {
-            setCurrentWord(currentWord + 1);
-          } else {
-            setCurrentWord(0);
-            navigate("/home");
-          }
-        }
-        setTimeout(updateWord, 1000);
-      }, [currentWord,displayTyped,navigate]);
+    useEffect(()=> {
+      const timeout = setTimeout(() => {
+        setIsLoading(false); // Set loading to false after 2 seconds (simulated loading time)
+      }, 2000);
+      return () => clearTimeout(timeout);
+    },[])
 
     return (
-        <div className= "wordsContainer">
-          <h1 className="dotted_border" id="wordPerMin">{displayTyped}</h1>
+      <div>
+      {isLoading ? (
+        <div className="loadingContainer">Loading...</div>
+      ) : (
+        <div>
+          {/* Render children when isLoading is false */}
+          {children}
         </div>
+      )}
+    </div>
     )
 }
 
