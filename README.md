@@ -24,6 +24,11 @@ This website runs on pure creativity and a pinch of technology:
 
 Thanks for stopping by and delving into the wonders of my portfolio website! If you have any questions, whimsical musings, or just want to say hi, don't hesitate to [send a magical message](mailto:brookelovedevelops.com).
 
+Related Videos
+
+---
+-[Stacking Cards](https://www.youtube.com/watch?v=OY-TySdgXPY)
+
 
 Items Used
 

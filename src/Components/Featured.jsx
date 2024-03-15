@@ -5,37 +5,45 @@ import { Link } from "react-router-dom";
 
 const Featured = () => {
     const [isFeatured, setIsFeatured] = useState([]);
-    const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+    const [isHeaderSticky, setIsHeaderSticky] = useState(false);
 
 
     useEffect(()=> {
         setIsFeatured(projects.filter(project => project.isFeatured))
+        console.log(window.scrollY)
+        const handleScroll = () => {
+            if (window.scrollY >= 2150 ) { //this is where I want it to stop at && window.scrollY < 4320  and continue scrolling
+                
+              setIsHeaderSticky(true);
+            } else {
+              setIsHeaderSticky(false);
+            }
+          };
 
-        // // this is for the first image
-        // if(window.scrollY >= 2100) {
-        //     setIsHeaderFixed(true); 
-        // } else if(window.scrollY >= 3500){
-        //     // second image
-
-        // } else if (window.scrollY >= 4100) {
-        //     // third image
-        // } else {
-        //     // remove the other versions and let it go back to normal
-        // }
-        // // the thing that is sliding up is the project and not the word
+          if (window.scrollY >= 3900) {
+            setIsHeaderSticky(false); // Stop the sticky header
+          }
+      
+          window.addEventListener("scroll", handleScroll);
+      
+          return () => {
+            window.removeEventListener("scroll", handleScroll);
+          };
     }, [])
     console.log(window.scrollY)
     return(
         <div className="featuredContainer">
              <div className="stacking-container">
-            <header className="parallax_wrapper">
-                {/* background layer */}
-                <h1 className="scrollText">FEAT</h1>
-                <div className="parallax"></div>
-                {/* <img className="parallax"/> */}
-                <h1 className="scrollText">URED</h1>
-            </header>
+             <header className={`parallax_wrapper ${isHeaderSticky ? "stickyFeat" : ""}`}>
+    {/* background layer */}
+    <h1 className="scrollText">FEAT</h1>
+    <div className="parallax"></div>
+    {/* <img className="parallax"/> */}
+    <h1 className="scrollText">URED</h1>
+</header>
+
             <main className="d-c-center" >
+            
                 {isFeatured.map(project => {
                     return (
                         <div key={project.id} className="projectContainer">
@@ -51,7 +59,7 @@ const Featured = () => {
             })}
             </main>
             </div>
-            {/* might need a outroscreen */}
+
         </div>
     )
 }

@@ -5,7 +5,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20%;
+    margin-top: 35vh;
     height: 100vh;
 }
 .featuredContainer header h1{
@@ -13,12 +13,29 @@
     margin: 3%;
     font-size: 1200%;
 }
+
+.featuredContainer .stickyFeat {
+    position: fixed;
+    top: -30%;
+    left: 0;
+    width: 100%;
+  }
+
 .featuredContainer main .projectContainer{
+    padding-top: 18vh; 
     margin: 2%;
-    width: 60%;
+    width: 35%;
     position:sticky;
     top: 0;
-
+}
+.featuredContainer main .projectContainer:nth-child(1) {
+   margin-top: 100vh;
+}
+.featuredContainer main .projectContainer:nth-child(2) {
+    padding-top: 23vh;
+}
+.featuredContainer main .projectContainer:nth-child(3) {
+    padding-top: 34vh;
 }
 .featuredContainer main div img{
     width: 100%;
