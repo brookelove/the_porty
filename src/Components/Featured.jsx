@@ -2,21 +2,30 @@ import React, {useEffect, useState} from "react";
 import "../Assets/CSS/Components/Featured.css"
 import projects  from "../utils/data/projects";
 import { Link } from "react-router-dom";
+import FightingCat from "../Assets/Images/Cats/1.png"
 
 const Featured = () => {
     const [isFeatured, setIsFeatured] = useState([]);
     const [isHeaderSticky, setIsHeaderSticky] = useState(false);
-
+    const [headerClass, setHeaderClass] = useState("");
+    const [isEndStack, setIsEndStack] = useState(false);
 
     useEffect(()=> {
         setIsFeatured(projects.filter(project => project.isFeatured))
         console.log(window.scrollY)
         const handleScroll = () => {
-            if (window.scrollY >= 2150 ) { //this is where I want it to stop at && window.scrollY < 4320  and continue scrolling
-                
-              setIsHeaderSticky(true);
+            if(window.scrollY >= 2150 && window.scrollY <= 4329) {
+                setIsHeaderSticky(true);
+                setIsEndStack(false); 
+                setHeaderClass("stickyFeat")
+            } else if (window.scrollY >= 4330){
+                setIsHeaderSticky(true);
+                setIsEndStack(true);
+                setHeaderClass("finishedStack")
             } else {
-              setIsHeaderSticky(false);
+                setIsHeaderSticky(false); 
+                setIsEndStack(false);
+                setHeaderClass("")
             }
           };
 
@@ -34,15 +43,15 @@ const Featured = () => {
     return(
         <div className="featuredContainer">
              <div className="stacking-container">
-             <header className={`parallax_wrapper ${isHeaderSticky ? "stickyFeat" : ""}`}>
-    {/* background layer */}
-    <h1 className="scrollText">FEAT</h1>
-    <div className="parallax"></div>
-    {/* <img className="parallax"/> */}
-    <h1 className="scrollText">URED</h1>
-</header>
+             <header className={`parallax_wrapper ${headerClass}`}>
+                {/* background layer */}
+                <h1 className="scrollText left">FEAT</h1>
+                <div className="parallax"></div>
+                <img src={`${FightingCat}`}/>
+                 <h1 className="scrollText right">URED</h1>
+            </header>
 
-            <main className="d-c-center" >
+            <main className={`d-c-center ${isEndStack ? "endStack" : ""}`} >
             
                 {isFeatured.map(project => {
                     return (
