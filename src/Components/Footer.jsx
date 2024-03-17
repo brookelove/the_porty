@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useRef} from "react";
-import "../Assets/CSS/Components/Footer.css"
+import "../Assets/CSS/Components/Footer.css";
+import HangingCat from "../Assets/Images/Cats/2.png";
 
 const Footer = () => {
     const [copied, setCopied] = useState(false);
@@ -17,9 +18,10 @@ const Footer = () => {
             <section>
                 <div>
                     <img/>
-                    <p>© 2024 - BROOKE ❤️-HOWARD</p>
+                    <p className="copyright">© 2024 - BROOKE ❤️-HOWARD</p>
                 </div>
                 <div>
+                    <img src={`${HangingCat}`} alt="hanging cat"/>
                     <h4><u>SOCIALS</u></h4>
                     <ul className="d-even">
                         <li><a href="https://github.com/brookelove">GITHUB</a></li>

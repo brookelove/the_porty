@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import "../Assets/CSS/Components/Featured.css"
 import projects  from "../utils/data/projects";
 import { Link } from "react-router-dom";
+import debounce from "lodash.debounce";
 import FightingCat from "../Assets/Images/Cats/1.png"
 
 const Featured = () => {
@@ -13,7 +14,7 @@ const Featured = () => {
     useEffect(()=> {
         setIsFeatured(projects.filter(project => project.isFeatured))
         console.log(window.scrollY)
-        const handleScroll = () => {
+        const handleScroll = debounce(() => {
             if(window.scrollY >= 2150 && window.scrollY <= 4329) {
                 setIsHeaderSticky(true);
                 setIsEndStack(false); 
@@ -27,7 +28,7 @@ const Featured = () => {
                 setIsEndStack(false);
                 setHeaderClass("")
             }
-          };
+          },100);
 
           if (window.scrollY >= 3900) {
             setIsHeaderSticky(false); // Stop the sticky header
@@ -46,8 +47,7 @@ const Featured = () => {
              <header className={`parallax_wrapper ${headerClass}`}>
                 {/* background layer */}
                 <h1 className="scrollText left">FEAT</h1>
-                <div className="parallax"></div>
-                <img src={`${FightingCat}`}/>
+                <img src={`${FightingCat}`} alt="fighting cat"/>
                  <h1 className="scrollText right">URED</h1>
             </header>
 

@@ -1,6 +1,7 @@
 footer {
     margin: 3%;
     padding:4%;
+    height: 40vh;
     width: 85% !important;
     border-radius: 20px;
 }
@@ -21,9 +22,20 @@ footer section {
     display:flex;
     justify-content: space-between;
 }
+footer img {
+    position: absolute;
+    top: -3vw;
+    left: 50vw;
+}
 footer section div h4 {
     text-align: end;
     margin-bottom: 10%;
+}
+footer .copyright {
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    font-weight: 600;
 }
 footer section div ul{
     text-align: end;
