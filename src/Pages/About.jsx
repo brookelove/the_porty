@@ -21,10 +21,6 @@ const About = () => {
         }
 
         window.addEventListener("scroll", (e)=> transform(stickyDiv));
-
-        return () => {
-            // window.removeEventListener("scroll", handleScroll);
-        };
     },[])
     
     return (
@@ -100,7 +96,7 @@ const About = () => {
                 </div>
             </div>
         </section>
-        <section>
+        <section className="endBlurb">
             <h1>3 YEARS OF EXPERIENCE WORKING WITH PROJECTS</h1>
             <p>With these years of experience keeping up to date with current items. My journey has lead to develop different types of items to expand my knowledge.</p>
         </section>

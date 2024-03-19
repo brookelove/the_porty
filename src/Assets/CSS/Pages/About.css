@@ -105,6 +105,19 @@
     align-items: center;
     padding: 0 5vw;
 }
+.aboutContainer .endBlurb {
+    text-align: start;
+    margin: 0% 5vw;
+    width: 30%;
+    padding: 8vw 0;
+}
+.aboutContainer .endBlurb h1 {
+    font-size: 300%;
+}
+.aboutContainer .endBlurb p {
+    font-size: 120%;
+}
+
 
 .aboutContainer .processSection .item h4{
     font-size: 300%;

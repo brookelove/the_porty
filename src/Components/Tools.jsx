@@ -10,8 +10,8 @@ import "../Assets/CSS/Components/Tools.css"
 const Tools = () => {
     return(
         <div className="toolsContainer">
-            <h1>TOOL BOX</h1>
-            <ul className="grid floating">
+            <h1>SKILLS</h1>
+            <ul className="">
                 <li className="item"> 
                 <FaReact className="reactIcon"/>
                     <div className="tool-tip">React.js</div>

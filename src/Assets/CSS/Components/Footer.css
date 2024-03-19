@@ -25,7 +25,8 @@ footer section {
 footer img {
     position: absolute;
     top: -3vw;
-    left: 50vw;
+    left: 65vw;
+    width: 30%;
 }
 footer section div h4 {
     text-align: end;
