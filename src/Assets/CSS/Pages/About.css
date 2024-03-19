@@ -79,10 +79,40 @@
     font-family: urw-din, sans-serif;  
 }
 .aboutContainer .processSection h1 {
-    text-align: end;
+    text-align: center;
     padding: 2%;
     font-size: 500%;
 }
+
+.aboutContainer .processSection .sticky_parent {
+    height: 500vh; /*creates the sticky scroll for the parent*/
+}
+
+.aboutContainer .processSection .sticky{
+    overflow: hidden;
+    position: sticky;
+    top:0;
+    height: 100vh;
+}
+.aboutContainer .processSection .scroll_section{
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 500vw; /* same number as the  sticky_parent height*/
+    will-change: transform;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+
+.aboutContainer .processSection .item h4{
+    font-size: 300%;
+  }
+.aboutContainer .processSection .item p{
+      font-size: 150%;
+      width: 50%;
+    }
 @media screen and (min-width: 300px) and (max-width:500px){
     .aboutContainer header {
         top:10%;

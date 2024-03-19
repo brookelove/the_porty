@@ -27,7 +27,8 @@ Thanks for stopping by and delving into the wonders of my portfolio website! If 
 Related Videos
 
 ---
--[Stacking Cards](https://www.youtube.com/watch?v=OY-TySdgXPY)
+-[Stacking Cards by Taha Shashtari](https://www.youtube.com/watch?v=OY-TySdgXPY)
+-[Hybrid Scroll by Conor Bailey](https://www.youtube.com/watch?v=yXnK8ND76z8)
 
 
 Items Used
