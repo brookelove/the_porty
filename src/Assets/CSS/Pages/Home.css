@@ -12,7 +12,11 @@
     justify-content: end;
 }
 .newHomeContainer .isometricRoom {
+    margin-top: 1rem;
     width: 60%;
+    position: absolute;
+    top: 10%;
+    left: 40%;
 }
 .newHomeContainer main {
     display: flex;
@@ -47,6 +51,10 @@
 .newHomeContainer .scrollText {
     letter-spacing:9px;
     width: fit-content;
+    padding:0.5% 1%;
+    border-radius: 10px;
+    background-color: var(--bright-accent);
+    backdrop-filter: blur(10px);
     font-family: freight-big-pro, serif;
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
@@ -57,7 +65,6 @@
 }
 .bigIdeasContainer {
     height:100vh;
-    /* margin:20%; */
     text-align: center;
 }
 

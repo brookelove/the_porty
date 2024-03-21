@@ -1,5 +1,5 @@
 .toolsContainer {
-    text-align: center;
+   text-align: center;
    margin-bottom: 10%;
    padding: 0 10% ;
    position: relative;
@@ -7,31 +7,31 @@
 .toolsContainer h1 {
     position: absolute;
     left: 10px;
-    top: 280px;
+    top: 10rem;
     font-size: 500%;
     font-style: oblique;
     transform: rotate(270deg);
 }
-.toolsContainer .grid {
-    display: grid;
-    grid: auto auto auto / auto auto auto auto auto;
-    align-items: space-evenly;
-    justify-content: space-evenly;
-    margin-top: 10%;
-    padding: 3%;
-    background-color: var(--popout);
-    border-radius: 60px;
+.toolsContainer .item-list {
+    margin:0;
+    list-style: none;
+    padding-inline: 0;
 }
-.toolsContainer .grid .item .reactIcon {
-    font-size: 50px;
+.toolsContainer .scroller {
+    /* max-width: 350px; */
+    overflow-x: hidden;
+    white-space: nowrap;
 }
-.toolsContainer .grid .item {
-    position: relative;
-    font-size: 50px;
-    margin:36%;
-  
+.toolsContainer .scroller-inner {
+    display: flex;
+    gap: 1rem;
+    padding-block: 1rem;
+    /* animation: scroll-animation 15s linear infinite; */
 }
-.toolsContainer .grid .item .inProgress {
+.toolsContainer .item {
+    font-size: 4rem;
+}
+.toolsContainer .item .inProgress {
     color:var(--bright-accent);
 }
 .toolsContainer .tool-tip {

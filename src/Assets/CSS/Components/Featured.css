@@ -70,11 +70,11 @@
 }
 .featuredContainer .endStack .projectContainer:nth-child(2) {
     position: relative;
-    top:108vh;
+    top:102vh;
 }
 .featuredContainer .endStack .projectContainer:nth-child(3) {
     position: relative;
-    top:3vh;
+    top:-7vh;
 }
 .featuredContainer main div img{
     width: 100%;
