@@ -98,7 +98,7 @@
     position: absolute;
     top:0;
     height: 100%;
-    width: 500vw; /* same number as the  sticky_parent height*/
+    width: 500vw;
     will-change: transform;
     display: flex;
     justify-content: space-between;
@@ -112,7 +112,7 @@
     padding: 8vw 0;
 }
 .aboutContainer .endBlurb h1 {
-    font-size: 300%;
+    font-size: 400%;
 }
 .aboutContainer .endBlurb p {
     font-size: 120%;

@@ -1,93 +1,43 @@
 .toolsContainer {
    text-align: center;
    margin-bottom: 10%;
-   padding: 0 10% ;
+   padding: 0 15% ;
    position: relative;
 }
+
 .toolsContainer h1 {
     position: absolute;
-    left: 10px;
-    top: 10rem;
+    left: 0;
+    top: 30%;
     font-size: 500%;
     font-style: oblique;
     transform: rotate(270deg);
 }
-.toolsContainer .item-list {
-    margin:0;
-    list-style: none;
-    padding-inline: 0;
+.toolsContainer #shapes {
+    width: 100%;
+    height: 20%;
+    border-radius: 20px;
+    border: 2px solid var(--light-background);
 }
-.toolsContainer .scroller {
-    /* max-width: 350px; */
-    overflow-x: hidden;
-    white-space: nowrap;
-}
-.toolsContainer .scroller-inner {
-    display: flex;
-    gap: 1rem;
-    padding-block: 1rem;
-    /* animation: scroll-animation 15s linear infinite; */
-}
-.toolsContainer .item {
-    font-size: 4rem;
-}
-.toolsContainer .item .inProgress {
-    color:var(--bright-accent);
-}
-.toolsContainer .tool-tip {
+.toolsContainer .pillContainer {
     position: absolute;
     top: 0;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: initial;
-    z-index:1;
-    padding: 5px 8px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    background-color: var(--frosted);
-    color: var(--bckgrd);
-    opacity: 0;
-    pointer-events: none;
-    border-radius: 4px;
+    width: 50%;
+    height: 38%;
+    
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10%;
+}
+
+.toolsContainer .pillContainer li {
+    padding: 3% 5%;
+    border: 2px solid grey;
+    background-color: var(--light-background);
+    color: grey;
+    border-radius: 30px;
+    margin: 0%;
     text-align: center;
-    
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -moz-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -ms-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -o-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    }
-.toolsContainer .inProgressTool-tip {
-    background-color: var(--frosted);
-    color:var(--bright-accent)
-}
-    
-.toolsContainer .item:hover .tool-tip {
-    top: -45px;
-    opacity: 1;
-    font-family: operetta-12, serif;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-
-@media screen and (min-width: 300px) and (max-width:500px) {
-    .toolsContainer .grid {
-        height: 800px;
-    } 
-    .toolsContainer h1 {
-        top: -15%;
-        transform: rotate(0deg);
-    }
-}
-@media screen and (min-width: 700px) and (max-width:900px) {
-    .toolsContainer .grid {
-        display: grid;
-        grid: auto auto / auto auto auto auto;
-        height: 700px;
-        margin-top: 10%;
-    } 
 }
