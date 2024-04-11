@@ -52,6 +52,16 @@
 	--highlight-text:#F2D0D0;
     --popout: rgb(255,255,255);
 }
+.theme-orange {
+    --light-background:rgb(65,54,78);
+    --dark-text:#594A4A;
+	--light-text: #eadfd1;
+	--dark-background: rgb(224,173,113);
+	--accent: rgb(142,40,105);
+	--bright-accent:rgb(173,39,20) ;
+	--highlight-text:rgb(72,172,163);
+    --popout: rgb(255,255,255);
+}
 .floating {
     box-shadow: 0px 10px 15px 10px rgba(0 ,0 ,0 ,0.15);
 }

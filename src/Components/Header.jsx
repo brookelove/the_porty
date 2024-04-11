@@ -7,8 +7,13 @@ const Header = () => {
     const [offset,setOffset]=useState(0);
     const [sticky,setSticky]=useState(false);
     const [date, setDate] = useState(new Date());
-    const [toggle, setToggle] = useState('dark');
+    // const [toggle, setToggle] = useState('dark');
     const [showLinks, setShowLinks] = useState(false);
+    // const [emojiThemes, setEmojiThemes] = useState({
+    //     "🦩": "light",
+    //     "🐕‍🦺": "dark",
+    //     "🐈": "orange"
+    // });
 
     const handleHamburgerClick = () => {
         setShowLinks(!showLinks);
@@ -25,13 +30,37 @@ const Header = () => {
           }
       }
 
-    const handleOnClick = () => {
-        if (localStorage.getItem('theme') === 'theme-dark') {
-            setTheme('theme-light');
-            setToggle('light')
-        } else {
-            setTheme('theme-dark');
-            setToggle('dark')
+    // const handleOnClick = () => {
+    //     if (localStorage.getItem('theme') === 'theme-dark') {
+    //         setTheme('theme-light');
+    //         setToggle('light')
+    //     } else {
+    //         setTheme('theme-dark');
+    //         setToggle('dark')
+    //     }
+    // }
+
+    const handleTheme = (theme) => {
+        let storageTheme = localStorage.getItem('theme');
+        if(storageTheme !== theme) {
+            switch (theme) {
+                case "theme-dark":
+                    setTheme('theme-dark');
+                    break;
+                case "theme-light":
+                        setTheme('theme-light');
+                        break;
+                case "theme-orange":
+                        setTheme('theme-orange');
+                        break;    
+                case "theme-pink":
+                            setTheme('theme-pink');
+                            break;
+                        
+                default:
+                    break;
+            }
+
         }
     }
 
@@ -69,14 +98,9 @@ const Header = () => {
     });
 
     useEffect(() => {
-        if (localStorage.getItem('theme') === 'theme-dark') {
-            setToggle('dark')
-        } else if (localStorage.getItem('theme') === 'theme-light') {
-            setToggle('light')
-        }
         window.addEventListener('scroll',handleScroll)
-
     }, [theme])
+    
     
     return(
         <navbar className={`navbarContainer ${sticky ? "scrolled frosted" : ""}`}>
@@ -84,9 +108,11 @@ const Header = () => {
             <section className="weatherInfo">
                 <h6>{date.toLocaleDateString()}</h6>
                 <h6>{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</h6>
-                <a>🦩</a>
-            <a>🐕‍🦺</a>
-            <a>🐈</a>
+                <a onClick={() => handleTheme("theme-light")}>🦴</a>
+                <a onClick={() => handleTheme("theme-pink")}>🦩</a>
+                <a onClick={() => handleTheme("theme-red")}>🍒</a>
+                <a  onClick={() => handleTheme("theme-dark")}>🐈‍⬛</a>
+                <a onClick={() => handleTheme("theme-orange")}>🐈</a>
             </section> 
              )}
             <div className="hamburger-menu" onClick={handleHamburgerClick}>
@@ -96,17 +122,6 @@ const Header = () => {
                 <div className="line"></div>
             </div>   
          <section className="leftside">
-         <div className="container--toggle">
-            {
-                toggle === "light" ?
-                <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} checked />
-                :
-                <input type="checkbox" id="toggle" className="toggle--checkbox" onClick={handleOnClick} />
-            }
-            <label htmlFor="toggle" className="toggle--label">
-                <span className="toggle--label-background"></span>
-            </label>
-        </div>
         <ul className={showLinks ? "show" : ""}>
             <li id="homeLi" >
                 <a id="homeA" href="/">Home</a>
@@ -121,7 +136,6 @@ const Header = () => {
                 <a id="workA" href="/work">Projects</a>
             </li>
         </ul>
-        
         </section>
         </navbar>
     )

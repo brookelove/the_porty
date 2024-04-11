@@ -15,7 +15,7 @@ const Featured = () => {
         setIsFeatured(projects.filter(project => project.isFeatured))
         console.log(window.scrollY)
         const handleScroll = debounce(() => {
-            if(window.scrollY >= 2150 && window.scrollY <= 4329) {
+            if(window.scrollY >= 2019 && window.scrollY <= 4329) {
                 setIsHeaderSticky(true);
                 setIsEndStack(false); 
                 setHeaderClass("stickyFeat")
