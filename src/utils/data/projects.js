@@ -39,7 +39,7 @@ const projects = [
     ],
     video: require("../../Assets/Images/Makeup/makeup.mp4"),
     links: {
-      live: "https://www.canva.com/design/DAFy4v355gQ/8n1-BbVIupvLeUZK1f-38g/watch?utm_content=DAFy4v355gQ&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+      live: "https://freshglow.netlify.app",
       gitFront: "https://github.com/brookelove/fresh-grow-fe",
       gitBack: "https://github.com/brookelove/FreshGlow",
     },
