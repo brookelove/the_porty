@@ -7,13 +7,7 @@ const Header = () => {
     const [offset,setOffset]=useState(0);
     const [sticky,setSticky]=useState(false);
     const [date, setDate] = useState(new Date());
-    // const [toggle, setToggle] = useState('dark');
     const [showLinks, setShowLinks] = useState(false);
-    // const [emojiThemes, setEmojiThemes] = useState({
-    //     "🦩": "light",
-    //     "🐕‍🦺": "dark",
-    //     "🐈": "orange"
-    // });
 
     const handleHamburgerClick = () => {
         setShowLinks(!showLinks);
@@ -29,16 +23,6 @@ const Header = () => {
             setSticky(false);
           }
       }
-
-    // const handleOnClick = () => {
-    //     if (localStorage.getItem('theme') === 'theme-dark') {
-    //         setTheme('theme-light');
-    //         setToggle('light')
-    //     } else {
-    //         setTheme('theme-dark');
-    //         setToggle('dark')
-    //     }
-    // }
 
     const handleTheme = (theme) => {
         let storageTheme = localStorage.getItem('theme');
@@ -56,7 +40,9 @@ const Header = () => {
                 case "theme-pink":
                             setTheme('theme-pink');
                             break;
-                        
+                case "theme-red":
+                                setTheme('theme-red');
+                                break;
                 default:
                     break;
             }

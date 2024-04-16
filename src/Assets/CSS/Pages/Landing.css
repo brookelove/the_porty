@@ -20,7 +20,7 @@
 }
 
 .theme-dark {
-	--dark-text: #70a4db;
+	--dark-text: #6e93cc;
 	--light-text: #df3e25 ;  
 	--dark-background: #030006;
 	--light-background: #c6cdce;
@@ -32,13 +32,13 @@
     --box-shadow-2:rgba(0, 0, 0, 0.23);
 }
 
-.theme-light {
-	--dark-text:#6e93cc;
-	--light-text: #DFC8F7;
+.theme-red {
+	--dark-text:#C61A09;
+	--light-text: #C6B55E;
 	--dark-background: whitesmoke;
-	--light-background: #ea9820;
+	--light-background: #DDD1C0;
 	--accent: #5E4B56;
-	--bright-accent: #31315E;
+	--bright-accent: #EA5940;
 	--highlight-text:#B64B39;
     --popout: rgb(255,255,255);
 }
@@ -60,6 +60,16 @@
 	--accent: rgb(142,40,105);
 	--bright-accent:rgb(173,39,20) ;
 	--highlight-text:rgb(72,172,163);
+    --popout: rgb(255,255,255);
+}
+.theme-light {
+    --light-background:rgb(0,0,0);
+    --dark-text:rgb(0, 0, 0);
+	--light-text: #050300;
+	--dark-background: whitesmoke;
+	--accent: rgb(15, 0, 9);
+	--bright-accent:rgb(161, 152, 151) ;
+	--highlight-text:rgb(210, 201, 165);
     --popout: rgb(255,255,255);
 }
 .floating {

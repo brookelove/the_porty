@@ -39,7 +39,7 @@ const projects = [
     ],
     video: require("../../Assets/Images/Makeup/makeup.mp4"),
     links: {
-      live: "https://freshglow.netlify.app",
+      live: "https://freshglow.netlify.app/",
       gitFront: "https://github.com/brookelove/fresh-grow-fe",
       gitBack: "https://github.com/brookelove/FreshGlow",
     },
