@@ -12,6 +12,7 @@ const Featured = () => {
     const [isEndStack, setIsEndStack] = useState(false);
 
     useEffect(()=> {
+        // rework to be more flexible and more fluid when created
         setIsFeatured(projects.filter(project => project.isFeatured))
         console.log(window.scrollY)
         const handleScroll = debounce(() => {

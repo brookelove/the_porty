@@ -61,7 +61,7 @@
 }
 .aboutContainer .right .title {
     position: relative;
-    top: 65px;
+    top: 5%;
     font-weight: 400;
     font-family: raleway, sans-serif;
 }
@@ -159,9 +159,12 @@
 
       }
 }
-@media screen and (min-width: 700px) and (max-width:900px) {
-    .aboutContainer header{
-        top:18%;
-        left: -7%;
+@media screen and (min-width: 500px) and (max-width:900px) {
+    .aboutContainer header {
+        top: 44%;
+    }
+    .aboutContainer header .middle img {
+        height: 300px;
+        width: auto;
     }
 }

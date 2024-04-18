@@ -23,8 +23,7 @@
     position: absolute;
     top: 0;
     width: 50%;
-    height: 38%;
-    
+    height: 38%; 
     border-radius: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -40,4 +39,16 @@
     border-radius: 30px;
     margin: 0%;
     text-align: center;
+}
+@media screen and (min-width: 500px) and (max-width:900px) {
+    .toolsContainer h1 {
+        top: 25%;
+       left: -10%;
+    }
+    .toolsContainer .pillContainer {
+        top: -14%
+    }
+    .toolsContainer .pillContainer li {
+        padding: 2% 4%;
+    }
 }

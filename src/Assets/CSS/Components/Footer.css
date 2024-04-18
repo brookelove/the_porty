@@ -46,3 +46,19 @@ footer section div ul li{
     margin-left: 4%;
     margin-right: 4%;
 }
+
+@media screen and (min-width: 500px) and (max-width:900px) {
+    footer h1 {
+        font-size: 500%;
+    }
+    footer .email {
+        font-size: 100%;
+    }
+    footer section div h4,  footer section div ul{
+        position: relative;
+        bottom: 105%
+    }
+    footer .copyright {
+        left:36%
+    }
+}

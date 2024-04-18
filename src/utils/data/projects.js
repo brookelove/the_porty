@@ -27,7 +27,7 @@ const projects = [
     category: "professional",
     type: "E-commerce",
     isFeatured: false,
-    languages: ["React", "CSS", "JavaScript"],
+    languages: ["React", "CSS", "JavaScript", "MYSQL", "Sequelize"],
     media: require("../../Assets/Images/1.png"),
     blurb:
       "Fresh Glow stands as an elegantly designed website, a captivating mock-up e-commerce store seamlessly integrated with a robust Sequelize backend and a dynamic React front end. Crafted with intention, this application serves as a testament to my expertise, meticulously designed to push the boundaries of my proficiency in both areas.",

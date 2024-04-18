@@ -16,11 +16,11 @@
 }
 .featuredContainer .left{
     position: relative;
-    left: 10vw;
+    left: 10%;
 }
 .featuredContainer .right{
     position: relative;
-    right: 10vw;
+    right: 10%;
 }
 
 .featuredContainer .stickyFeat {
@@ -82,4 +82,9 @@
 .featuredContainer main div img{
     width: 100%;
     border-radius:20px;
+}
+
+@media  screen and (min-width: 500px) and (max-width: 900px) {
+    .featuredContainer header h1{
+    }
 }

@@ -14,8 +14,9 @@ const Highlight = () => {
             <div class="container">
               
               <div class="lines">
-                <div class="dot"></div>
-                <div class="line"></div>
+                {/* when it is at a smaller media query make it go up and down and not to the side! */}
+                {/* <div class="dot"></div>
+                <div class="line"></div> */}
                 <div class="dot"></div>
                 <div class="line"></div>
                 <div class="dot"></div>
@@ -29,11 +30,10 @@ const Highlight = () => {
               </div>
               
               <div class="card-Container">
-                <div class="card">
-                  
+                {/* <div class="card">
                   <h4>2017</h4>
                   <p>Graduated Highschool</p>
-                </div>
+                </div> */}
                 <div class="card">
                   <h4>2021</h4>
                   <p>BS in Biology At Washington State University</p>
