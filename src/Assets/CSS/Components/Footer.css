@@ -62,3 +62,14 @@ footer section div ul li{
         left:36%
     }
 }
+
+@media screen and (min-width: 300px) and (max-width:499px) {
+    footer{
+        height: 70vh;
+    }
+    footer img {
+        top: -1rem;
+        left: 13rem;
+        width: 60%;
+      }
+}

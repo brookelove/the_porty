@@ -99,13 +99,31 @@
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
 }
+@media screen and (min-width: 501px) and (max-width:900px) {
+    .newHomeContainer {
+        height: 60vh;
+    }
+    .newHomeContainer .scrollContainer {
+        top:25rem;
+    }
+    .newHomeContainer main {
+        height: 37vh;
+    }
+    .bigIdeasContainer {
+        height: 50vh;
+        margin: 20rem 0;
+    }
+}
 @media screen and (min-width: 300px) and (max-width:500px) {
     .newHomeContainer {
         height: 82vh;
-      }
+    }
     .newHomeContainer main {
         height: 50vh;
-      }
+    }
+    .newHomeContainer .scrollContainer {
+        top:120%;
+    }
     .newHomeContainer main h1{
        font-size: 300%;
        padding-top: 40%;
@@ -118,16 +136,5 @@
     }
     .bigIdeasContainer a {
         font-weight: 100;
-    }
-}
-@media screen and (min-width: 700px) and (max-width:900px) {
-    .newHomeContainer main {
-        height: 37vh;
-    }
-    .newHomeContainer {
-        height: 60vh;
-    }
-    .bigIdeasContainer {
-        height: 50vh;
     }
 }

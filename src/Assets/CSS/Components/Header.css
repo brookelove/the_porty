@@ -150,6 +150,11 @@
     box-shadow: 0px 10px 15px 10px rgba(0 ,0 ,0 ,0.15);
     background-color: rgba(228 ,228 ,228 ,0.10);
 }
+@media screen and (min-width: 501px) and (max-width:900px) { 
+    .navbarContainer .weatherInfo {
+        width: 30%;
+      }
+}
 @media screen and (min-width: 300px) and (max-width:500px) { 
     .navbarContainer {
         padding: 3% 5%;

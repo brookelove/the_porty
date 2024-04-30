@@ -171,8 +171,9 @@
 
 @media screen and (min-width: 300px) and (max-width:499px) {
     .aboutContainer header {
-        top: 44%;
+        top: 24rem;
         left: 50%;
+        width: 100%;
     }
     .aboutContainer header .left {
         left: -9rem;
@@ -186,5 +187,6 @@
         position: relative;
         left: 8.5rem;
         bottom: 1rem;
+        width: 30%;
     }
 }

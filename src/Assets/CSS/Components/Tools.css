@@ -52,3 +52,24 @@
         padding: 2% 4%;
     }
 }
+@media screen and (min-width: 300px) and (max-width:499px) {
+    .toolsContainer h1 {
+       position: static;
+    }
+    .toolsContainer #shapes{
+        transform: rotate(90deg);
+        position: relative;
+        top: 5rem;
+        right: 3rem;
+        width: 25rem;
+    }
+    .toolsContainer .pillContainer {
+        top: 4rem;
+    }
+    .toolsContainer a button {
+        width:80%;
+        margin:15% 0;
+        position: relative;
+        top: 10rem;
+    }
+}
