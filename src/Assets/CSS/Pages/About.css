@@ -168,3 +168,23 @@
         width: auto;
     }
 }
+
+@media screen and (min-width: 300px) and (max-width:499px) {
+    .aboutContainer header {
+        top: 44%;
+        left: 50%;
+    }
+    .aboutContainer header .left {
+        left: -9rem;
+        top: 5rem;
+    }
+    .aboutContainer header .middle img {
+        height: 200px;
+        width: auto;
+    }
+    .aboutContainer header .right {
+        position: relative;
+        left: 8.5rem;
+        bottom: 1rem;
+    }
+}

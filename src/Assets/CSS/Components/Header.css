@@ -72,8 +72,15 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width:35%;
+    width:20%;
     height: 100%;
+}
+.navbarContainer .weatherInfo a svg{
+    size: 3rem;
+    transition: all ease-in-out 0.2s;
+}
+.navbarContainer .weatherInfo a svg:hover{
+    color: var(--bright-accent);
 }
 .navbarContainer .weatherInfo div{
     border: solid var(--light-background) 2px;
@@ -83,9 +90,6 @@
 }   
 .navbarContainer .weatherInfo h6{
     font-size: 90% 
-}   
-.navbarContainer .weatherInfo a{
-    font-size: 120% 
 }   
 
 .dot{

@@ -1,13 +1,16 @@
 import React, {useEffect, useState, useRef} from "react";
 import "../Assets/CSS/Components/Header.css"
 import { setTheme } from "../utils/themes";
-
+import { RiBearSmileFill } from "react-icons/ri";
 const Header = () => {
     const stickyRef = useRef(null);
     const [offset,setOffset]=useState(0);
     const [sticky,setSticky]=useState(false);
     const [date, setDate] = useState(new Date());
     const [showLinks, setShowLinks] = useState(false);
+    const [themeIndex, setThemeIndex] = useState(0);
+
+    const themeArr = ["theme-dark","theme-light", "theme-orange","theme-pink","theme-red"]
 
     const handleHamburgerClick = () => {
         setShowLinks(!showLinks);
@@ -26,27 +29,11 @@ const Header = () => {
 
     const handleTheme = (theme) => {
         let storageTheme = localStorage.getItem('theme');
-        if(storageTheme !== theme) {
-            switch (theme) {
-                case "theme-dark":
-                    setTheme('theme-dark');
-                    break;
-                case "theme-light":
-                        setTheme('theme-light');
-                        break;
-                case "theme-orange":
-                        setTheme('theme-orange');
-                        break;    
-                case "theme-pink":
-                            setTheme('theme-pink');
-                            break;
-                case "theme-red":
-                                setTheme('theme-red');
-                                break;
-                default:
-                    break;
-            }
-
+        if(storageTheme !=null){
+            const nextIndex = (themeIndex + 1) % themeArr.length;
+            const nextTheme = themeArr[nextIndex];
+            setThemeIndex(nextIndex);
+            setTheme(nextTheme);
         }
     }
 
@@ -94,11 +81,7 @@ const Header = () => {
             <section className="weatherInfo">
                 <h6>{date.toLocaleDateString()}</h6>
                 <h6>{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</h6>
-                <a onClick={() => handleTheme("theme-light")}>🦴</a>
-                <a onClick={() => handleTheme("theme-pink")}>🦩</a>
-                <a onClick={() => handleTheme("theme-red")}>🍒</a>
-                <a  onClick={() => handleTheme("theme-dark")}>🐈‍⬛</a>
-                <a onClick={() => handleTheme("theme-orange")}>🐈</a>
+                <a onClick={() => handleTheme(themeArr[themeIndex])}><RiBearSmileFill size="25"/></a>
             </section> 
              )}
             <div className="hamburger-menu" onClick={handleHamburgerClick}>

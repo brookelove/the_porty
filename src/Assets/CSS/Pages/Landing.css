@@ -235,6 +235,9 @@ button:hover {
     .miniBlurb {
         font-size: 150%;
     }
+    .lineContainer span {
+        height:80vh
+    }
 	
 }
 @media screen and (min-width: 500px) and (max-width:700px) {
