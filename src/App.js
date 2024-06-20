@@ -1,6 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./Pages/About";
-import Contact from "./Pages/Contact";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Loading from "./Pages/Loading";
 import Work from "./Pages/Work";
 import debounce from "lodash.debounce";
@@ -11,6 +14,7 @@ import Project from "./Components/Project";
 import { keepTheme } from "./utils/themes";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import gsap from "gsap";
 
 function App() {
   const [mousePosition, setMousePosition] = useState({
@@ -22,6 +26,9 @@ function App() {
     y: 0,
   });
   const [isLoading, setIsLoading] = useState(false);
+  const smoothScrollTo = (y) => {
+    gsap.to(window, { duration: 1, scrollTo: { y: y } });
+  };
 
   useEffect(() => {
     let lagOutline;
@@ -57,6 +64,16 @@ function App() {
     };
   }, []);
 
+  const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      smoothScrollTo(0);
+    }, [pathname]);
+
+    return null;
+  };
+
   return (
     <div className="App">
       {isLoading && <div className="loadingContainer">Loading...</div>}
@@ -81,15 +98,12 @@ function App() {
           <Header />
           <Router>
             <Routes>
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
               <Route path="/" element={<NewHome />} />
               <Route path="/work" element={<Work />} />
               <Route path="/project/:index" element={<Project />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </Router>
-          {/* <Contact /> */}
           <Footer />
         </>
       )}

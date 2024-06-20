@@ -12,10 +12,6 @@ const Header = () => {
 
     const themeArr = ["theme-dark","theme-light", "theme-orange","theme-pink","theme-red"]
 
-    const handleHamburgerClick = () => {
-        setShowLinks(!showLinks);
-    };
-
     let theme = localStorage.getItem('theme');
 
     const handleScroll=() => {
@@ -37,24 +33,19 @@ const Header = () => {
         }
     }
 
+    useEffect(() => {
+        const timer = setInterval(() => setDate(new Date()), 1000);
+        if (stickyRef.current) {
+            setOffset(stickyRef.current.offsetTop);
+        }
+        return () => clearInterval(timer);
+    }, []);
 
-    useEffect(()=> {
-        var timer = setInterval(()=> setDate(new Date()), 1000);
-        if(!stickyRef.current){
-            return
-        }
-        setOffset(stickyRef.current.offsetTop)
-        return function clearTime(){
-            clearInterval(timer)
-        }
-    },[stickyRef,setOffset])
     useEffect(()=> {
        const currPage = window.location.href;
        const pageLinks = {
-        "/home": { id: "homeLi", class: "dot" },
-        "/about": { id: "aboutLi", class: "dot" },
+        "/": { id: "homeLi", class: "dot" },
         "/work": { id: "workLi", class: "dot" },
-        "/contact": { id: "contactLi", class: "dot" },
     };
 
     for (const path in pageLinks) {
@@ -84,25 +75,13 @@ const Header = () => {
                 <a onClick={() => handleTheme(themeArr[themeIndex])}><RiBearSmileFill size="25"/></a>
             </section> 
              )}
-            <div className="hamburger-menu" onClick={handleHamburgerClick}>
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-                <div className="line"></div>
-            </div>   
          <section className="leftside">
         <ul className={showLinks ? "show" : ""}>
             <li id="homeLi" >
                 <a id="homeA" href="/">Home</a>
             </li>
-            <li id="aboutLi">
-                <a id="aboutA" href="/about">About</a>
-                </li>
-            <li id="contactLi">
-                <a id="contactA" href="/contact">Contact</a>
-            </li>
             <li id="workLi">
-                <a id="workA" href="/work">Projects</a>
+                <a id="workA" href="/work">My Pieces</a>
             </li>
         </ul>
         </section>

@@ -44,18 +44,16 @@ const About = () => {
                     <h1>HEY,</h1>
                     <section className="subHi">
                     <h1>I'M </h1>
-                    <h1>SAVIEN</h1>
+                    <h1>BROOKE</h1>
                     </section>
                 </section>
                 <a href="https://www.linkedin.com/in/brooke-s-love/">LINKEDIN</a>
             </div>
             <div className="middle">
-                
                 <img src={hiMe}
                 className="brooke"></img>
                 <img src={heartMe}
                 className="heartMe" ></img>
-                
             </div>
             <div className="right">
                 <p className="shortInfo">I'm a Full-stack Software developer who loves creating products that are creative, intuitive, and an experience.</p>
@@ -68,7 +66,7 @@ const About = () => {
         <main>
             <p></p>
         </main>
-        <Highlight/>
+        {/* <Highlight/> */}
         <Tools/>
         <section className="processSection" >
             <h1>PROCESS</h1>

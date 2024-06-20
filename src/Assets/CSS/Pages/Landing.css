@@ -18,7 +18,34 @@
 --footer:rgb(35,0,0); /*burgandy */
 --frosted:rgba(228 ,228 ,228 ,0.10);
 }
-
+@font-face {
+    font-family: MikuraBlack;
+    src: url(../../../utils/Font/SG\ Mikura\ Demo\ -\ Black.otf);
+}
+@font-face {
+    font-family: MikuraXLight;
+    src: url(../../../utils/Font/SG\ Mikura\ Demo\ -\ Extra\ Light.otf);
+}
+@font-face {
+    font-family: MikuraXBold;
+    src: url(../../../utils/Font/SG\ Mikura\ Demo\ -\ ExtraBold.otf)
+}
+@font-face {
+    font-family: MikuraM;
+    src: url(../../../utils/Font/SG\ Mikura\ Demo\ -\ Medium.otf)
+}
+@font-face {
+    font-family: Mikura;
+    src: url(../../../utils/Font/SG\ Mikura\ Demo\ -\ Medium.otf)
+}
+@font-face {
+    font-family: MikuraSemiBold;
+    src: url(../../../utils/Font/SG\ Mikura\ Demo\ -\ SemiBold.otf)
+}
+@font-face {
+    font-family: MikuraThin;
+    src: url(../../../utils/Font/SG\ Mikura\ Demo\ -\ Thin.otf)
+}
 .theme-dark {
 	--dark-text: #6e93cc;
 	--light-text: #df3e25 ;  
@@ -80,6 +107,7 @@
 	background-color: var(--dark-background);
 	color: var(--dark-text);
 	cursor: none;
+    font-family: Mikura;
  }
 /* cretion of the cursor */
 .cursorDot {

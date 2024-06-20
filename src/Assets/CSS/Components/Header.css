@@ -8,59 +8,13 @@
 	color: var(--light-text);
     backdrop-filter: blur(10px);
     overflow: hidden;
+    font-size:150%;
 }
 .navbarContainer .leftside {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-.hamburger-menu {
-    display: none;
-}
-.container--toggle input[type="checkbox"] {
-    display: none;
-  }
-  .container--toggle input[type="checkbox"] + label {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 20px;
-    font: 14px/20px "Open Sans", Arial, sans-serif;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-  }
-  .container--toggle input[type="checkbox"]:hover + label:before { 
-    border: 1px solid #343a3f;
-    box-shadow: 2px 1px 0 #343a3f;
-  }
-  .container--toggle input[type="checkbox"] + label:last-child {
-    margin-bottom: 0;
-  }
-  .container--toggle input[type="checkbox"] + label:before {
-    content: "";
-    display: block;
-    width: 1.4em;
-    height: 1.4em;
-    border: 1px solid #343a3f;
-    border-radius: 0.2em;
-    position: absolute;
-    left: 0;
-    top: 0;
-    -webkit-transition: all 0.2s, background 0.2s ease-in-out;
-    transition: all 0.2s, background 0.2s ease-in-out;
-    background: rgba(255, 255, 255, 0.03);
-    box-shadow: -2px -1px 0 #343a3f;
-    background: #f3f3f3;
-  }
-  .container--toggle input[type="checkbox"]:checked + label:before {
-    border: 2px solid #fff;
-    border-radius: 0.3em;
-    background: #50565a;
-    box-shadow: 2px 1px 0 #50565a;
-  }
-
 .sticky {
     position: fixed;
     top: 0;
@@ -93,42 +47,48 @@
 }   
 
 .dot{
-    text-decoration: line-through;
-    text-decoration-color: var(--highlight-text);
+    background-color: var(--highlight-text);
+    padding: 2%;
+    border-radius: 20px;
 }
 .navbarContainer ul {
-    margin-top: 15%;
     display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    left: 50px;
-    bottom:10px;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
 }
 .navbarContainer ul li{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin: 0 5%;
+    width: 100%;
 }
 .navbarContainer ul li a{
     color: var(--light-text);
     position: relative;
     overflow: hidden;
-    
+    padding: 10%;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
 }
 .navbarContainer ul li a::before {
     content: "";
     position: absolute;
-    bottom: 46%;
+    top: 0;
     left: 0;
     width: 0;
-    height: 2px;
-    background-color: var(--light-text);
-    transition: width 0.3s ease-in-out; 
+    height: 100%;
+    background-color: var(--highlight-text);
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+    border-radius: 10px;
 }
+
 .navbarContainer ul li a:hover::before {
-    width: 100%; 
+    width: 100%;
 }
+
 
 .navbarContainer ul li p{ 
     position: relative;

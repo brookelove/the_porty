@@ -1,7 +1,10 @@
+.aboutContainer {
+    position: relative;
+    margin-top: 10%;
+}
 .aboutContainer header{
-    /* height:100vh; */
     position: absolute;
-    top:50%;
+    top: 4%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 10;
@@ -11,12 +14,15 @@
     margin-top: 13%;
     flex-direction: column;
     justify-content: flex-end;
-    font-family: urw-din, sans-serif;
+    font-family: MikuraThin;
+    font-size: 275%;
 }
 .aboutContainer header .left .name {
-    font-size: 180%;
     position: relative;
     bottom: 70px;
+}
+.aboutContainer header .left a {
+    font-size:35px;
 }
 .aboutContainer header .middle {
     display: flex;
@@ -56,27 +62,29 @@
 }
 .aboutContainer header .middle .name .subHi h1 {
     padding: 0 10px;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-style: italic;
 }
 .aboutContainer .right .title {
     position: relative;
     top: 5%;
-    font-weight: 400;
-    font-family: raleway, sans-serif;
+    font-family: MikuraThin;
 }
 .aboutContainer header .right .title .soft {
-    font-weight: 700;
+    font-weight: 500;
     font-style: italic;
-    font-family: ambroise-std, serif;
+    letter-spacing: 8px;
+    font-family: MikuraXBold, serif;
 }
 .aboutContainer header .middle img {
     height: 400px;
     width: auto;
 }
 .aboutContainer header .right {
-    max-width: 10%;
-    font-family: urw-din, sans-serif;  
+    max-width: 15%;
+    font-size: 130%;
+    font-family: MikuraThin;
+
 }
 .aboutContainer .processSection h1 {
     text-align: center;
@@ -85,7 +93,7 @@
 }
 
 .aboutContainer .processSection .sticky_parent {
-    height: 500vh; /*creates the sticky scroll for the parent*/
+    height: 200vh; /*creates the sticky scroll for the parent*/
 }
 
 .aboutContainer .processSection .sticky{

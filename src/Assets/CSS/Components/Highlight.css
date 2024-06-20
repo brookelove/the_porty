@@ -1,140 +1,67 @@
-.highlightContainer {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-}
-.highlightContainer .timelineContiner,.highlightContainer .gitHubStats {
-    display: flex;
-}
-
-.cardTop {
-    height: 284px;
-    background: var(--bright-accent);
-    border-radius: 20px;
-    display: flex;
-    overflow: hidden;
-    align-items: flex-end;
-    width: 80%;
-    margin-top: 12%;
-  }
-  
-  .timeline {
-    width: 80%;
-    height:50vh;
-    background: #ecf1f524;
-    mix-blend-mode: normal;
-    backdrop-filter: blur(15px);
-    overflow: hidden;
-    position: relative;
-    top: -200px;
-    margin-left: 71px;
-    box-shadow: 0px 20px 53px -30px rgba(95, 102, 173, 0.566816);
-    border-radius: 10px;
-  }
-  .timeline h3 {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 30px;
-    color: #ffffff;
-    margin-left: 66px;
-    margin-top: 40px;
-  }
-  .timeline label {
-    font-size: 16px;
-    color: #fbfcfd;
-  }
-  .timeline .box {
-    width: 100%;
-    background: #fbfcfd;
-    margin-top: 75px;
-  }
-  .timeline .box .container {
-    width: 100%;
-    height: 357px;
-    display: flex;
-    flex-direction: column;
-  }
-  .timeline .box .container .lines {
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
-    margin:11px 21px;
-  }
-  .timeline .box .container .lines .dot {
-    width: 14px;
-    height: 14px;
-    background-color: var(--light-background);
-    border-radius: 7px;
-    margin: 0 10px;
-  }
-  .timeline .box .container .lines .line {
-    height: 2px;
-    flex:1;
-    background-color: var(--light-background);
-    margin-left: 5.3px;
-  }
-  .timeline .box .container .card-Container {
-    margin-left: 12px;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-  .timeline .box .container .card-Container .card {
-    height: 56%;
-    padding: 25px;
-    background: #ffffff;
-    box-shadow: 0 2px 2px 0 #eeeeee40;
-    border-radius: 10px;
-    box-shadow: 0px 16px 15px -10px rgba(105, 96, 215, 0.0944602);
-    margin:2px 10px;
-    width:50%;
-  }
-  .timeline .box .container .card-Container .card.mid {
-    height: 71px;
-  }
-  .timeline .box .container .card-Container .card h4 {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 19px;
-    margin-left: 25px;
-    margin-bottom: 5px;
-    color: #2b2862;
-  }
-  .timeline .box .container .cards .card p {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    color: #2b2862;
-    margin-left: 25px;
+.highlight-container {
+  margin: 14% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-.highlightContainer .gitHubStats {
-    background-color: var(--highlight-text);
-    border-radius:45px;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 65%;
-    padding: 5%;
-    box-shadow: 0px 10px 15px 10px rgba(0 ,0 ,0 ,0.15);
-}
-.highlightContainer .gitHubStats div{
-    width:200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 8px solid black;
-    border-radius:180px;
-    padding-top: 10px;
+.timeline h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 300%;
+  text-align: center;
 }
 
-.highlightContainer .gitHubStats div h1 {
-    font-size:7em;
+.highlight-container .box {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.highlight-container .sticky_parent {
+  height: 200vh; /*creates the sticky scroll for the parent*/
+}
+.highlight-container .sticky{
+  overflow: hidden;
+  position: sticky;
+  top:0;
+  height: 100vh;
+}
+.highlight-container .scroll_section{
+  position: absolute;
+  top:0;
+  height: 100%;
+  width: 500vw;
+  will-change: transform;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+}
+.highlight-container .card-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.highlight-container .card-container .card {
+  min-width: 80%;
+  flex-shrink: 0;
+  padding: 40px;
+  margin: 0 20px; 
+  border-radius: 28px;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.highlight-container .card-container .card h4 {
+  color: var(--bright-accent);
+  font-size: 140%;
+}
+
+.highlight-container .card-container .card p {
+  font-size: 160%;
 }
