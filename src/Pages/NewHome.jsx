@@ -1,37 +1,57 @@
 import { Link } from "react-router-dom";
-import "../Assets/CSS/Pages/Home.css"
-import About from "../Pages/About"
-import Isometric from "../Assets/Images/TempIsoRoom.png";
+import { useState, useEffect } from "react";
+import bAndG from "../Assets/Images/hiMe.png";
+import color from "../Assets/Images/heartme.png";
+import "../Assets/CSS/Pages/Home.css";
+import About from "../Pages/About";
 
 const NewHome = () => {
-        return (
-        <div id="smooth-wrapper">
-            <section className="newHomeContainer">
-                <img src={Isometric} className="isometricRoom" alt="isometric 3d room of a coding room "/>
-            <main>
-            <section>
-            <h1>SMALL TOWN SOFTWARE DEVELOPER</h1>
-            </section>
-            <div className="scrollContainer">
-            {/* <h5 className="scrollText"> * happy since 1999 * Creative, Fun, Organzied * TA | Developer *</h5> */}
-            </div>
-            </main>
-            </section>
-            <div className="bigIdeasContainer">
-                <h1>Creativity Is Intelligence Having Fun</h1>
-                <p>- A. Einstein</p>
-            <Link to="/work" className="linkToLearn">LEARN MORE</Link>
-            </div>
-            <div className="blurbContainer">
-            <section className="miniBlurb">
-                {/* mini blurb about me and a link to the about me */}
-                <p>Hi I'm Brooke,</p>
-                <p>A passionate <b>software developer</b> based in Georgia. I am a currently working on <b>contract</b> projects and  a <b>Tutor/TA</b> for a Fullstack Developer bootcamp. I create momeorable projects that are fun and user friendly.</p>
-            </section>
-            </div>
-            <About/>
+  const [scrollPosition, setScrollPosition] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  return (
+    <div id="smooth-wrapper">
+      <section className="newHomeContainer">
+        <main>
+          <h1
+            style={{
+              transform: `scale(${Math.max(1 - scrollPosition / 300, 0)})`,
+              opacity: Math.max(1 - scrollPosition / 300, 0),
+            }}
+          >
+            Digital <em>Journey</em>
+          </h1>
+          <section className="card journeyCard"></section>
+        </main>
+      </section>
+      <div className="blurbContainer">
+        {/* mini blurb about me */}
+        <div className="photos">
+          <img src={bAndG} className="bAndG"></img>
+          <img src={color} className="color"></img>
         </div>
-    )
-}
+        <section className="card aboutMeBlurb">
+          <p>Hi I'm Brooke,</p>
+          <br></br>
+          <p>
+            A passionate <b>Full-Stack Software Engineer</b> based in Georgia. I
+            am currently working at a startup called GRWNDED, just graduated
+            with an <b>MS in Software Development</b>, and a <b>TA</b> for a
+            Software Development bootcamp. I try to create memorable unique
+            projects that fun and user friendly.
+          </p>
+        </section>
+      </div>
+      <About />
+    </div>
+  );
+};
 
 export default NewHome;

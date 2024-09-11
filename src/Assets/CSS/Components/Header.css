@@ -1,154 +1,141 @@
 .navbarContainer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5%;
-    background-color: var(--dark-background);
-	color: var(--light-text);
-    backdrop-filter: blur(10px);
-    overflow: hidden;
-    font-size:150%;
-}
-.navbarContainer .leftside {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5%;
+  background-color: var(--dark-background);
+  color: var(--light-text);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  font-size: 150%;
+  text-transform: uppercase;
 }
 .sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-.navbarContainer .weatherInfo{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width:20%;
-    height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* width: 100%; */
 }
-.navbarContainer .weatherInfo a svg{
-    size: 3rem;
-    transition: all ease-in-out 0.2s;
-}
-.navbarContainer .weatherInfo a svg:hover{
-    color: var(--bright-accent);
-}
-.navbarContainer .weatherInfo div{
-    border: solid var(--light-background) 2px;
-    padding: 2%;
-    border-radius: 30px;
-    padding: 2% 10%; 
-}   
-.navbarContainer .weatherInfo h6{
-    font-size: 90% 
-}   
-
-.dot{
-    background-color: var(--highlight-text);
-    padding: 2%;
-    border-radius: 20px;
+.navbarContainer h3 {
+  letter-spacing: 5px;
+  background-color: var(--primary);
+  padding: 1% 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+  text-align: center;
 }
 .navbarContainer ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
 }
-.navbarContainer ul li{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 0 5%;
-    width: 100%;
+.navbarContainer ul li {
+  font-weight: 600;
+  font-size: 20px;
+  white-space: nowrap;
 }
-.navbarContainer ul li a{
-    color: var(--light-text);
-    position: relative;
-    overflow: hidden;
-    padding: 10%;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
+
+.navbarContainer ul li a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+.navbarContainer ul li a::before,
+.navbarContainer ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
 .navbarContainer ul li a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: var(--highlight-text);
-    transition: width 0.3s ease-in-out;
-    z-index: -1;
-    border-radius: 10px;
+  background-color: #000000;
+  height: 2px;
+  bottom: 0;
+  /* transform-origin: 100% 50%; */
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.navbarContainer ul li a::after {
+  content: attr(data-replace);
+  font-style: italic;
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #000000;
 }
 
 .navbarContainer ul li a:hover::before {
-    width: 100%;
+  /* transform-origin: 0% 50%; */
+  transform: scaleX(1);
+}
+.navbarContainer ul li a:hover::after {
+  transform: translate3d(0, 0, 0);
 }
 
-
-.navbarContainer ul li p{ 
-    position: relative;
-    left: -20px;
-    top: -30px;
-    font-size: 15%;   
+.navbarContainer ul li a span {
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
 }
-.scrolled{
-    position: fixed;
-    top: 0;
-    left: 0;
+
+.navbarContainer ul li a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+.navbarContainer ul li p {
+  position: relative;
+  left: -20px;
+  top: -30px;
+  font-size: 15%;
+}
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 97%;
 }
 .frosted {
-    width: 100%;
-    z-index:100;
-    padding-bottom: 2%;
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px); 
-    box-shadow: 0px 10px 15px 10px rgba(0 ,0 ,0 ,0.15);
-    background-color: rgba(228 ,228 ,228 ,0.10);
+  z-index: 100;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  background-color: rgba(196, 196, 196, 0.11);
 }
-@media screen and (min-width: 501px) and (max-width:900px) { 
-    .navbarContainer .weatherInfo {
-        width: 30%;
-      }
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .navbarContainer .weatherInfo {
+    width: 30%;
+  }
 }
-@media screen and (min-width: 300px) and (max-width:500px) { 
-    .navbarContainer {
-        padding: 3% 5%;
-    }
-    .frosted {
-        width: 90%;
-    }
-    .navbarContainer ul {
-        display: none;
-    }
-    .navbarContainer .weatherInfo {
-       display: none;
-    }
-    .navbarContainer .leftside {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .navbarContainer .hamburger-menu {
-        position: relative;
-        top: 10px;
-        display: block;
-    }
-    .navbarContainer .hamburger-menu .line {
-        width: 25px;
-        height:2px;
-        margin:3px 0;
-        background-color: var(--bright-accent);
-    }
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .navbarContainer {
+    padding: 3% 5%;
+  }
+  /* .frosted {
+    width: 90%;
+  } */
+  /* .navbarContainer ul {
+    display: none;
+  } */
+  /* .navbarContainer .weatherInfo {
+    display: none;
+  } */
+  .navbarContainer .hamburger-menu {
+    position: relative;
+    top: 10px;
+    display: block;
+  }
+  .navbarContainer .hamburger-menu .line {
+    width: 25px;
+    height: 2px;
+    margin: 3px 0;
+    background-color: var(--bright-accent);
+  }
 
-    .navbarContainer ul.show {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        position: relative;
-    }
+  .navbarContainer ul.show {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+  }
 }

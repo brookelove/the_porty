@@ -1,200 +1,131 @@
 .aboutContainer {
-    position: relative;
-    margin-top: 10%;
+  position: relative;
+  margin-top: 10%;
 }
-.aboutContainer header{
-    position: absolute;
-    top: 4%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 10;
+.aboutContainer main {
+  margin: 10% 0;
 }
-.aboutContainer header .left{
-    display: flex;
-    margin-top: 13%;
-    flex-direction: column;
-    justify-content: flex-end;
-    font-family: MikuraThin;
-    font-size: 275%;
+.aboutContainer main h1 {
+  font-family: "PPEditorial New UltralightItalic";
+  font-size: 4em;
 }
-.aboutContainer header .left .name {
-    position: relative;
-    bottom: 70px;
+.aboutContainer main h1 {
+  font-family: "PPEditorial New UltralightItalic";
+  font-size: 4em;
 }
-.aboutContainer header .left a {
-    font-size:35px;
-}
-.aboutContainer header .middle {
-    display: flex;
-    font-size: 120%;
-}
-.aboutContainer header .middle section {
-    z-index: 90;
-}
- .aboutContainer header .middle .title {
-    position: absolute;
-    
-}
-.aboutContainer header .middle .name{
-    top: 15%;
-    left: 150px;
-    font-family: raleway, sans-serif;
-}
-.aboutContainer img {
-    border-radius: 200px;
-}
-.aboutContainer img.heartMe {
-    position: absolute;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
-}
-.aboutContainer:hover img.brooke {
-    opacity: 0;
-}
-
-.aboutContainer:hover img.heartMe {
-    opacity: 1;
-}
-
-.aboutContainer header .middle .name .subHi{
-    display: flex;
-    font-family: ambroise-std, serif;
-}
-.aboutContainer header .middle .name .subHi h1 {
-    padding: 0 10px;
-    /* font-weight: 700; */
-    font-style: italic;
-}
-.aboutContainer .right .title {
-    position: relative;
-    top: 5%;
-    font-family: MikuraThin;
-}
-.aboutContainer header .right .title .soft {
-    font-weight: 500;
-    font-style: italic;
-    letter-spacing: 8px;
-    font-family: MikuraXBold, serif;
-}
-.aboutContainer header .middle img {
-    height: 400px;
-    width: auto;
-}
-.aboutContainer header .right {
-    max-width: 15%;
-    font-size: 130%;
-    font-family: MikuraThin;
-
+.aboutContainer main p {
+  margin-top: 3%;
+  max-width: 60%;
+  text-align: center;
 }
 .aboutContainer .processSection h1 {
-    text-align: center;
-    padding: 2%;
-    font-size: 500%;
+  text-align: center;
+  padding: 2%;
+  font-size: 500%;
 }
 
 .aboutContainer .processSection .sticky_parent {
-    height: 200vh; /*creates the sticky scroll for the parent*/
+  height: 200vh; /*creates the sticky scroll for the parent*/
 }
 
-.aboutContainer .processSection .sticky{
-    overflow: hidden;
-    position: sticky;
-    top:0;
-    height: 100vh;
+.aboutContainer .processSection .sticky {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
-.aboutContainer .processSection .scroll_section{
-    position: absolute;
-    top:0;
-    height: 100%;
-    width: 500vw;
-    will-change: transform;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5vw;
+.aboutContainer .processSection .scroll_section {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 500vw;
+  will-change: transform;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
 }
 .aboutContainer .endBlurb {
-    text-align: start;
-    margin: 0% 5vw;
-    width: 30%;
-    padding: 8vw 0;
+  text-align: start;
+  margin: 0% 5vw;
+  width: 30%;
+  padding: 8vw 0;
 }
 .aboutContainer .endBlurb h1 {
-    font-size: 400%;
+  font-size: 400%;
 }
 .aboutContainer .endBlurb p {
-    font-size: 120%;
+  font-size: 120%;
 }
-.aboutContainer .processSection .item h5{
-    font-size: 120%;
-    color: var(--accent);
+.aboutContainer .processSection .item h5 {
+  font-size: 120%;
+  color: var(--accent);
 }
-.aboutContainer .processSection .item h4{
-    font-size: 300%;
-    color: var(--highlight-text);
+.aboutContainer .processSection .item h4 {
+  font-size: 300%;
+  color: var(--highlight-text);
 }
-.aboutContainer .processSection .item p{
-      font-size: 150%;
-      width: 50%;
-    }
-@media screen and (min-width: 300px) and (max-width:500px){
-    .aboutContainer header {
-        top:10%;
-        left: -7%;
-        flex-direction: column;
-    }
-    .aboutContainer header .left {
-        position: relative;
-        bottom:5%;
-    }
-    .aboutContainer header .middle .name {
-        top: 5%;
-        left: 10%;
-    }
-    .aboutContainer header .right {
-        max-width: 70%;
-        font-family: urw-din, sans-serif;
-    }
-    .toolsContainer {
-        margin-bottom: 35%;
-    }
-    .toolsContainer h1 {
-        left: 5%;
-        transform: rotate(0deg);
-    }
-      .toolsContainer .grid {
-        height: 700px;
+.aboutContainer .processSection .item p {
+  font-size: 150%;
+  width: 50%;
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .aboutContainer header {
+    top: 10%;
+    left: -7%;
+    flex-direction: column;
+  }
+  .aboutContainer header .left {
+    position: relative;
+    bottom: 5%;
+  }
+  .aboutContainer header .middle .name {
+    top: 5%;
+    left: 10%;
+  }
+  .aboutContainer header .right {
+    max-width: 70%;
+    font-family: urw-din, sans-serif;
+  }
+  .toolsContainer {
+    margin-bottom: 35%;
+  }
+  .toolsContainer h1 {
+    left: 5%;
+    transform: rotate(0deg);
+  }
+  .toolsContainer .grid {
+    height: 700px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .aboutContainer header {
+    top: 44%;
+  }
+  .aboutContainer header .middle img {
+    height: 300px;
+    width: auto;
+  }
+}
 
-      }
-}
-@media screen and (min-width: 500px) and (max-width:900px) {
-    .aboutContainer header {
-        top: 44%;
-    }
-    .aboutContainer header .middle img {
-        height: 300px;
-        width: auto;
-    }
-}
-
-@media screen and (min-width: 300px) and (max-width:499px) {
-    .aboutContainer header {
-        top: 24rem;
-        left: 50%;
-        width: 100%;
-    }
-    .aboutContainer header .left {
-        left: -9rem;
-        top: 5rem;
-    }
-    .aboutContainer header .middle img {
-        height: 200px;
-        width: auto;
-    }
-    .aboutContainer header .right {
-        position: relative;
-        left: 8.5rem;
-        bottom: 1rem;
-        width: 30%;
-    }
+@media screen and (min-width: 300px) and (max-width: 499px) {
+  .aboutContainer header {
+    top: 24rem;
+    left: 50%;
+    width: 100%;
+  }
+  .aboutContainer header .left {
+    left: -9rem;
+    top: 5rem;
+  }
+  .aboutContainer header .middle img {
+    height: 200px;
+    width: auto;
+  }
+  .aboutContainer header .right {
+    position: relative;
+    left: 8.5rem;
+    bottom: 1rem;
+    width: 30%;
+  }
 }
