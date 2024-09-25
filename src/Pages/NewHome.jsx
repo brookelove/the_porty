@@ -44,7 +44,7 @@ const NewHome = () => {
             A passionate <b>Full-Stack Software Engineer</b> based in Georgia. I
             am currently working at a startup called GRWNDED, just graduated
             with an <b>MS in Software Development</b>, and a <b>TA</b> for a
-            Software Development bootcamp. I try to create memorable unique
+            Software Development Bootcamp. I try to create memorable unique
             projects that fun and user friendly.
           </p>
         </section>

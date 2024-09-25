@@ -1,66 +1,102 @@
-import React, {useEffect, useState} from "react";
-import resume from "../Assets/Images/SL_Resume_PDF.pdf"
-import "../Assets/CSS/Components/Tools.css"
-import toolVideo from "../Assets/Images/tools.mp4"
+import React, { useEffect, useState } from "react";
+import resume from "../Assets/Images/SL_Resume_PDF.pdf";
+import "../Assets/CSS/Components/Tools.css";
+import skills from "../utils/data/skills";
+
+const wrapIndex = (index, length) => {
+  return ((index % length) + length) % length; // Handles negative indices correctly
+};
 
 const Tools = () => {
-    const [shuffledSkills, setShuffledSkills] = useState([]); 
-    const skills = [
-        { name: "Java", category: "language" },
-        { name: "Python", category: "language" },
-        { name: "JavaScript", category: "language" },
-        { name: "HTML5", category: "language" },
-        { name: "CSS3", category: "language" },
-        { name: "Kotlin", category: "language" },
-        { name: "JSON", category: "language" },
-        { name: "React.js", category: "framework" },
-        { name: "Node.js", category: "framework" },
-        { name: "Express", category: "framework" },
-        { name: "Sassy CSS", category: "framework" },
-        { name: "Bootstrap", category: "framework" },
-        { name: "JQuery", category: "framework" },
-        { name: "Handlebars.js", category: "framework" },
-        { name: "Apollo GraphQL", category: "framework" },
-        { name: "Github", category: "version-control" },
-        { name: "Gitlab", category: "version-control" },
-        { name: "Nginx", category: "version-control" },
-        { name: "Docker", category: "version-control" },
-        { name: "Jest", category: "testing" },
-        { name: "AWS", category: "cloud" },
-        { name: "Figma", category: "design" },
-        { name: "Canva", category: "design" },
-        { name: "Notion", category: "productivity" }
-    ];
-    useEffect(() => {
-        const shuffledData = skills.sort(() => Math.random() - 0.5);
-        setShuffledSkills(shuffledData);
-    }, []);
+  const [shuffledSkills, setShuffledSkills] = useState([]);
+  const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
 
-    return(
-        <div className="toolsContainer">
-            <div>
-            <h1>SKILLS</h1>
-            <section>
-                {/* languages */}
-                <video autoPlay muted loop id="shapes">
-                    <source  className="toolVideo"src={toolVideo} type="video/mp4"/>
-                </video>
-                <ul className="pillContainer">
-                {shuffledSkills.map((skill, index) => (
-                            <li key={index} className={skill.category}>
-                                {skill.name}
-                            </li>
-                        ))}
-                </ul>
-            </section>
-            <a href={resume} target="_blank" rel="noreferrer">
-            <button className="button">
-                RESUME
-            </button>
-            </a>
-            </div>
+  useEffect(() => {
+    const sortedData = skills.sort((a, b) => a.name.localeCompare(b.name));
+    setShuffledSkills(sortedData);
+  }, []);
+
+  const handleMouseDown = (event) => {
+    setIsDragging(true);
+    setStartX(event.clientX);
+  };
+
+  const handleMouseMove = (event) => {
+    if (!isDragging) return;
+
+    const distance = event.clientX - startX;
+    if (distance > 100) {
+      // Dragged right
+      setCurrentSkillIndex((prevIndex) =>
+        wrapIndex(prevIndex - 1, shuffledSkills.length)
+      );
+      setStartX(event.clientX);
+    } else if (distance < -100) {
+      // Dragged left
+      setCurrentSkillIndex((prevIndex) =>
+        wrapIndex(prevIndex + 1, shuffledSkills.length)
+      );
+      setStartX(event.clientX);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  return (
+    <div
+      className="toolsContainer"
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+    >
+      <div>
+        <h1>SKILLS</h1>
+        <div className="cards">
+          {shuffledSkills.map((skill, index) => {
+            const isCurrent =
+              index === wrapIndex(currentSkillIndex, shuffledSkills.length);
+            const isPrevious =
+              index === wrapIndex(currentSkillIndex - 1, shuffledSkills.length);
+            const isNext =
+              index === wrapIndex(currentSkillIndex + 1, shuffledSkills.length);
+            return (
+              <div
+                key={skill.name} // Ensure this is unique for each skill
+                className={`skill-card ${
+                  isCurrent
+                    ? "current"
+                    : isPrevious
+                    ? "previous"
+                    : isNext
+                    ? "next"
+                    : "hidden"
+                }`}
+              >
+                <div className="iconCard">
+                  <img alt={skill.name} />
+                </div>
+                {isCurrent && (
+                  <section className="skill-information">
+                    <h3>{skill.name}</h3>
+                    <h5>{skill.type}</h5>
+                    <p>{skill.information}</p>
+                  </section>
+                )}
+              </div>
+            );
+          })}
         </div>
-    )
-}
+        <a href={resume} target="_blank" rel="noreferrer">
+          <button className="">RESUME</button>
+        </a>
+      </div>
+    </div>
+  );
+};
 
 export default Tools;
