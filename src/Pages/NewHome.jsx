@@ -35,7 +35,7 @@ const NewHome = () => {
         {/* mini blurb about me */}
         <div className="photos">
           <img src={bAndG} className="bAndG"></img>
-          <img src={color} className="color"></img>
+          {/* <img src={color} className="color"></img> */}
         </div>
         <section className="card aboutMeBlurb">
           <p>Hi I'm Brooke,</p>

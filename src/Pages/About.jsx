@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import hiMe from "../Assets/Images/hiMe.png";
-import heartMe from "../Assets/Images/heartme.png";
 import Tools from "../Components/Tools";
 import "../Assets/CSS/Pages/About.css";
-import Highlight from "../Components/Highlights";
 
 const About = () => {
   const stickyRef = useRef(null);
@@ -26,8 +23,10 @@ const About = () => {
   return (
     <div className="aboutContainer">
       <main className="d-c-center">
-        <h1>Almost 3 Years of Coding Experience</h1>
-        <p className="ibm-plex-mono-regular">
+        <h1 className="inter-italic-thin">
+          Almost 3 Years of Coding Experience
+        </h1>
+        <p className="inter-semibold">
           With a history of biology tattooing and veterinary science. My journey
           has lead me to hone different types of skills to become a better
           coder.

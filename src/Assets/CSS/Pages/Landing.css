@@ -94,22 +94,22 @@ li {
   display: none;
 }
 button {
-  margin-top: 10%;
-  width: 40%;
-  padding: 2%;
+  width: 20%;
+  padding: 1% 2%;
   font-weight: 600;
-  letter-spacing: 20px;
-  border: 1.5px solid var(--dark-background);
-  background-color: var(--dark-text);
-  color: var(--dark-background);
+  font-size: large;
+  letter-spacing: 10px;
   transition: all 0.3s ease-in;
   border-radius: 50px;
-}
-
-button:hover {
   background-color: var(--dark-background);
   color: var(--dark-text);
   border: 1.5px solid var(--dark-text);
+}
+
+button:hover {
+  border: 1.5px solid var(--primary);
+  background-color: #030006;
+  color: var(--primary);
 }
 .d-center {
   display: flex;
