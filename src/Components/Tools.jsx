@@ -262,7 +262,7 @@ const Tools = () => {
         rel="noreferrer"
         className="resume-container"
       >
-        <button>RESUME</button>
+        <button className="shadow-twelve">RESUME</button>
       </a>
     </div>
   );

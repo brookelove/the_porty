@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap/gsap-core";
 import Tools from "../Components/Tools";
 import "../Assets/CSS/Pages/About.css";
 
@@ -12,9 +13,9 @@ const About = () => {
       console.log(offsetTop); //2485
       const scrollSection = section.querySelector(".scroll_section");
       console.log(scrollSection);
-      let perentange =
+      let percentage =
         ((window.scrollY - offsetTop) / window.innerHeight) * 100; //percentage of amount tha we have scrolled on the screen
-      scrollSection.style.transform = `translate3d(${-perentange}vw, 0, 0)`;
+      scrollSection.style.transform = `translate3d(${-percentage}vw, 0, 0)`;
     };
 
     window.addEventListener("scroll", (e) => transform(stickyDiv));
@@ -84,7 +85,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="endBlurb"></section>
     </div>
   );
 };

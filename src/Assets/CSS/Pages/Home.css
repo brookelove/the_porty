@@ -23,7 +23,6 @@
   width: 100vw;
   white-space: nowrap;
   letter-spacing: 20px;
-  font-family: "PPEditorial New Regular";
 }
 
 .newHomeContainer main h5 {
@@ -35,9 +34,16 @@
   overflow: hidden;
   width: 100vw;
 }
+.journey-card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .journeyCard {
   margin: 20vh 0vh;
-  width: 60%;
+  width: 50%;
   height: 20em;
 }
 .blurbContainer {

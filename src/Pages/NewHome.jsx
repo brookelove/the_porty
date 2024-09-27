@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import bAndG from "../Assets/Images/hiMe.png";
-import color from "../Assets/Images/heartme.png";
 import "../Assets/CSS/Pages/Home.css";
 import About from "../Pages/About";
+import star from "../Assets/Images/Star 6.svg";
 
 const NewHome = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -21,6 +20,7 @@ const NewHome = () => {
       <section className="newHomeContainer">
         <main>
           <h1
+            className="inria-serif-bold-italic"
             style={{
               transform: `scale(${Math.max(1 - scrollPosition / 300, 0)})`,
               opacity: Math.max(1 - scrollPosition / 300, 0),
@@ -28,7 +28,11 @@ const NewHome = () => {
           >
             Digital <em>Journey</em>
           </h1>
-          <section className="card journeyCard"></section>
+          <section className="journey-card-container">
+            <img src={star} alt="Star" width="88" height="88" />
+            <section className="card journeyCard shadow-twenty-two"></section>
+            <img src={star} alt="Star" width="88" height="88" />
+          </section>
         </main>
       </section>
       <div className="blurbContainer">

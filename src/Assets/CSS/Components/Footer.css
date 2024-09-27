@@ -1,75 +1,26 @@
 footer {
-    margin: 3%;
-    padding:4%;
-    height: 40vh;
-    width: 85% !important;
-    border-radius: 20px;
+  margin: 3%;
+  padding: 4%;
+  /* height: 35vh; */
+  width: 85% !important;
+  border-radius: 20px;
+  border: solid #000000 1px;
 }
-footer h1 {
-    font-size: 500%;
-    margin-bottom: 5%;
-    color: var(--light-background);
+footer main section h1 {
+  text-transform: uppercase;
+  width: 250px;
+  font-size: 45px;
 }
-footer .email {
-    font-size: 140%;
-    color: var(--light-text);
+footer main section ul {
+  margin: 20px 0;
+  color: #000000;
 }
-footer .email:hover {
-    cursor: pointer;
-    color: var(--accent);
+footer main section ul li {
+  margin: 10px 0;
 }
-footer section {
-    display:flex;
-    justify-content: space-between;
+footer main a {
+  color: #000000;
 }
-footer img {
-    position: absolute;
-    top: -3vw;
-    left: 65vw;
-    width: 30%;
-}
-footer section div h4 {
-    text-align: end;
-    margin-bottom: 10%;
-}
-footer .copyright {
-    position: absolute;
-    bottom: 10%;
-    left: 40%;
-    font-weight: 600;
-}
-footer section div ul{
-    text-align: end;
-    margin: 2%;
-}
-footer section div ul li{
-    margin-left: 4%;
-    margin-right: 4%;
-}
-
-@media screen and (min-width: 500px) and (max-width:900px) {
-    footer h1 {
-        font-size: 500%;
-    }
-    footer .email {
-        font-size: 100%;
-    }
-    footer section div h4,  footer section div ul{
-        position: relative;
-        bottom: 105%
-    }
-    footer .copyright {
-        left:36%
-    }
-}
-
-@media screen and (min-width: 300px) and (max-width:499px) {
-    footer{
-        height: 70vh;
-    }
-    footer img {
-        top: -1rem;
-        left: 13rem;
-        width: 60%;
-      }
+footer div {
+  text-align: center;
 }

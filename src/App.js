@@ -1,20 +1,18 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import debounce from "lodash.debounce";
+
+// Components and Pages
 import Loading from "./Pages/Loading";
 import Work from "./Pages/Work";
-import debounce from "lodash.debounce";
 import PageNotFound from "./Pages/PageNotFound";
-import React, { useEffect, useState } from "react";
 import NewHome from "./Pages/NewHome";
 import Project from "./Components/Project";
-import { keepTheme } from "./utils/themes";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import gsap from "gsap";
+
+// Utilities
+import { keepTheme } from "./utils/themes";
 
 function App() {
   const [mousePosition, setMousePosition] = useState({
@@ -26,9 +24,7 @@ function App() {
     y: 0,
   });
   const [isLoading, setIsLoading] = useState(false);
-  const smoothScrollTo = (y) => {
-    gsap.to(window, { duration: 1, scrollTo: { y: y } });
-  };
+  const main = useRef();
 
   useEffect(() => {
     let lagOutline;
@@ -56,7 +52,6 @@ function App() {
     // Add event listener for mouse move
     window.addEventListener("mousemove", mouseMove);
     keepTheme();
-
     // Clean up function
     return () => {
       clearTimeout(timeout);
@@ -64,18 +59,8 @@ function App() {
     };
   }, []);
 
-  const ScrollToTop = () => {
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-      smoothScrollTo(0);
-    }, [pathname]);
-
-    return null;
-  };
-
   return (
-    <div className="App">
+    <div className="App" ref={main}>
       {isLoading && <div className="loadingContainer">Loading...</div>}
       {!isLoading && (
         <>
@@ -97,12 +82,14 @@ function App() {
           ></div>
           <Header />
           <Router>
-            <Routes>
-              <Route path="/" element={<NewHome />} />
-              <Route path="/work" element={<Work />} />
-              <Route path="/project/:index" element={<Project />} />
-              <Route path="*" element={<PageNotFound />} />
-            </Routes>
+            <div>
+              <Routes>
+                <Route path="/" element={<NewHome />} />
+                <Route path="/work" element={<Work />} />
+                <Route path="/project/:index" element={<Project />} />
+                <Route path="*" element={<PageNotFound />} />
+              </Routes>
+            </div>
           </Router>
           <Footer />
         </>
