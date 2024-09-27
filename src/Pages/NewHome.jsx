@@ -41,15 +41,17 @@ const NewHome = () => {
           <img src={bAndG} className="bAndG"></img>
           {/* <img src={color} className="color"></img> */}
         </div>
-        <section className="card aboutMeBlurb">
+        <section className="card aboutMeBlurb inter-light shadow-twenty-two">
           <p>Hi I'm Brooke,</p>
-          <br></br>
           <p>
-            A passionate <b>Full-Stack Software Engineer</b> based in Georgia. I
-            am currently working at a startup called GRWNDED, just graduated
-            with an <b>MS in Software Development</b>, and a <b>TA</b> for a
-            Software Development Bootcamp. I try to create memorable unique
-            projects that fun and user friendly.
+            A passionate{" "}
+            <b className="inter-medium">Full-Stack Software Engineer</b> based
+            in Georgia. I am currently working at a startup called GRWNDED, just
+            graduated with an{" "}
+            <b className="inter-medium">MS in Software Development</b>, and a{" "}
+            <b className="inter-medium">TA</b> for a Software Development
+            Bootcamp. I try to create memorable unique projects that fun and
+            user friendly.
           </p>
         </section>
       </div>

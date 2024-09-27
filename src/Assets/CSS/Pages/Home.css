@@ -58,21 +58,20 @@
   z-index: 90;
   position: absolute;
   right: 10%;
-  top: -8em;
+  top: -7em;
 }
 .blurbContainer img {
   border-radius: 200px;
-  height: 250px;
+  height: 200px;
   width: auto;
-}
-.blurbContainer:hover img.bAndG {
-  opacity: 1;
+  transform: scaleX(-1);
 }
 .aboutMeBlurb {
   font-size: 160%;
   line-height: 150%;
   max-width: 60%;
   text-align: justify;
+  padding: 2%;
 }
 @media screen and (min-width: 501px) and (max-width: 900px) {
   .newHomeContainer {
