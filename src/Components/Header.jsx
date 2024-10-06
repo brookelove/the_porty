@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "../Assets/CSS/Components/Header.css";
 import { setTheme } from "../utils/themes";
 import { FaRegCircleDot } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -50,6 +51,8 @@ const Header = () => {
     console.log(sectionId === "about-section");
     if (sectionId === "about-section") {
       yOffset = 200;
+    } else if (sectionId === "journey-section") {
+      yOffset = 10;
     } else {
       yOffset = 150;
     }
@@ -107,6 +110,11 @@ const Header = () => {
           >
             <span>Journey</span>
           </a>
+        </li>
+        <li className="inter-semibold">
+          <Link data-replace="Projects" to="work">
+            <span>Projects</span>
+          </Link>
         </li>
         <li className="inter-semibold">
           <a
