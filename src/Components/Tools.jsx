@@ -94,6 +94,7 @@ const Tools = () => {
 
   return (
     <div
+      id="skills-section"
       className="tools-container"
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
@@ -135,7 +136,9 @@ const Tools = () => {
         rel="noreferrer"
         className="resume-container"
       >
-        <button className="shadow-twelve">RESUME</button>
+        <button className="shadow-twelve" id="resume-section">
+          RESUME
+        </button>
       </a>
     </div>
   );

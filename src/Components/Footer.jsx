@@ -11,7 +11,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="frosted shadow-twenty-two">
+    <footer className="frosted shadow-twenty-two" id="contact-section">
       <main>
         <section>
           <h1 className="inter-bold-italic">Let's go on a journey</h1>

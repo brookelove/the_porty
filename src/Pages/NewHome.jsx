@@ -3,6 +3,8 @@ import bAndG from "../Assets/Images/hiMe.png";
 import "../Assets/CSS/Pages/Home.css";
 import About from "../Pages/About";
 import star from "../Assets/Images/Star 6.svg";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 const NewHome = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -17,6 +19,7 @@ const NewHome = () => {
   }, []);
   return (
     <div id="smooth-wrapper">
+      <Header />
       <section className="newHomeContainer">
         <main>
           <h1
@@ -28,7 +31,7 @@ const NewHome = () => {
           >
             Digital <em>Journey</em>
           </h1>
-          <section className="journey-card-container">
+          <section className="journey-card-container" id="journey-section">
             <img src={star} alt="Star" width="88" height="88" />
             <section className="card journeyCard shadow-twenty-two"></section>
             <img src={star} alt="Star" width="88" height="88" />
@@ -41,7 +44,11 @@ const NewHome = () => {
           <img src={bAndG} className="bAndG"></img>
           {/* <img src={color} className="color"></img> */}
         </div>
-        <section className="card aboutMeBlurb inter-light shadow-twenty-two">
+        <div></div>
+        <section
+          className="card aboutMeBlurb inter-light shadow-twenty-two"
+          id="about-section"
+        >
           <p>Hi I'm Brooke,</p>
           <p>
             A passionate{" "}
@@ -56,6 +63,7 @@ const NewHome = () => {
         </section>
       </div>
       <About />
+      <Footer />
     </div>
   );
 };

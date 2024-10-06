@@ -80,7 +80,7 @@ function App() {
               left: `${outlinePosition.x}px`,
             }}
           ></div>
-          <Header />
+          {/* <Header /> */}
           <Router>
             <div>
               <Routes>
@@ -91,7 +91,7 @@ function App() {
               </Routes>
             </div>
           </Router>
-          <Footer />
+          {/* <Footer /> */}
         </>
       )}
     </div>

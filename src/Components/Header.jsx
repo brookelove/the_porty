@@ -2,6 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import "../Assets/CSS/Components/Header.css";
 import { setTheme } from "../utils/themes";
 import { FaRegCircleDot } from "react-icons/fa6";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
+
 const Header = () => {
   const stickyRef = useRef(null);
   const [offset, setOffset] = useState(0);
@@ -39,6 +44,26 @@ const Header = () => {
     }
   };
 
+  const handleLinkClick = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    let yOffset;
+    console.log(sectionId === "about-section");
+    if (sectionId === "about-section") {
+      yOffset = 200;
+    } else {
+      yOffset = 150;
+    }
+
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: {
+        y: element,
+        offsetY: yOffset,
+      },
+      ease: "power2.inOut",
+    });
+  };
+
   useEffect(() => {
     if (stickyRef.current) {
       setOffset(stickyRef.current.offsetTop);
@@ -73,40 +98,29 @@ const Header = () => {
     <navbar
       className={`navbarContainer ${sticky ? "scrolled frosted" : "frosted"}`}
     >
-      {/*{showLinks ? null : (
-      {/* <a onClick={() => handleTheme(themeArr[themeIndex])}>
-         }   <RiBearSmileFill size="25" />
-          </a>
-        </section>
-      )}*/}
-      {/* <section className="leftside">
-        <ul className={showLinks ? "show" : ""}>
-          <li id="homeLi">
-            <a id="homeA" href="/" className="inter-bold">
-              Home
-            </a>
-          </li>
-          <li id="workLi">
-            <a id="workA" href="/work" className="inter-bold">
-              My Pieces
-            </a>
-          </li>
-        </ul>
-      </section> */}
       {/* need to add in an hamburger icon that only appears when less than 768px */}
       <ul>
         <li className="inter-semibold">
-          <a data-replace="Journey">
+          <a
+            data-replace="Journey"
+            onClick={() => handleLinkClick("journey-section")}
+          >
             <span>Journey</span>
           </a>
         </li>
         <li className="inter-semibold">
-          <a data-replace="Resume">
+          <a
+            data-replace="Resume"
+            onClick={() => handleLinkClick("resume-section")}
+          >
             <span>Resume</span>
           </a>
         </li>
         <li className="inter-semibold">
-          <a data-replace="Skills">
+          <a
+            data-replace="Skills"
+            onClick={() => handleLinkClick("skills-section")}
+          >
             <span>Skills</span>
           </a>
         </li>
@@ -116,17 +130,26 @@ const Header = () => {
       </a>
       <ul>
         <li className="inter-semibold">
-          <a data-replace="About">
+          <a
+            data-replace="About"
+            onClick={() => handleLinkClick("about-section")}
+          >
             <span>About</span>
           </a>
         </li>
         <li className="inter-semibold">
-          <a data-replace="Process">
+          <a
+            data-replace="Process"
+            onClick={() => handleLinkClick("process-section")}
+          >
             <span>Process</span>
           </a>
         </li>
         <li className="inter-semibold">
-          <a data-replace="Reach Out">
+          <a
+            data-replace="Reach Out"
+            onClick={() => handleLinkClick("contact-section")}
+          >
             <span>Reach Out</span>
           </a>
         </li>
