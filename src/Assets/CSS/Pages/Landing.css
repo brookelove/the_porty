@@ -9,33 +9,23 @@
 }
 
 html,
+body,
 #root {
   background-color: var(--dark-background);
-  color: var(--dark-text);
+  color: var(--light-text);
   cursor: none;
-  font-family: Mikura;
 }
 /* cretion of the cursor */
-.cursorDot {
-  width: 10px;
-  height: 10px;
-  background-color: var(--dark-text);
-}
-.cursorOutline {
-  width: 30px;
-  height: 30px;
-  border: 2px solid var(--dark-text);
-  transition: top 0.2s ease, left 0.2s ease;
-}
-.cursorDot,
-.cursorOutline {
+.cursor {
   position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  z-index: 101;
+  background: white;
+  mix-blend-mode: difference; /* Inverts the background it's over */
   pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
 }
 a {
   text-decoration: none;
@@ -85,9 +75,6 @@ li {
   background-color: var(--popout);
   padding: 4.5%;
   border-radius: 30px;
-
-  /* text-align: start; */
-
   border: solid black 1px;
 }
 .none {
@@ -110,13 +97,13 @@ button {
   transition: all 0.3s ease-in;
   border-radius: 50px;
   background-color: var(--dark-background);
-  color: var(--dark-text);
-  border: 1.5px solid var(--dark-text);
+  color: var(--light-text);
+  border: 1.5px solid var(--light-text);
 }
 
 button:hover {
-  border: 1.5px solid var(--primary);
-  background-color: #030006;
+  border: 1.5px solid var(--light-text);
+  background-color: var(--light-text);
   color: var(--primary);
 }
 .d-center {

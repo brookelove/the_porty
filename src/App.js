@@ -3,18 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import debounce from "lodash.debounce";
 
 // Components and Pages
-import Loading from "./Pages/Loading";
 import Work from "./Pages/Work";
 import PageNotFound from "./Pages/PageNotFound";
 import NewHome from "./Pages/NewHome";
 import Project from "./Components/Project";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+import Cursor from "./Components/Cursor";
 
 // Utilities
 import { keepTheme } from "./utils/themes";
 
 function App() {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0,
@@ -27,35 +26,26 @@ function App() {
   const main = useRef();
 
   useEffect(() => {
-    let lagOutline;
-    const mouseMove = debounce((e) => {
-      setMousePosition({
-        x: e.clientX,
-        y: e.clientY,
-      });
-      clearTimeout(lagOutline);
-      lagOutline = setTimeout(() => {
-        setOutlinePosition({
-          x: e.clientX,
-          y: e.clientY,
-        });
-      }, 15);
-    });
+    const handleMouseMove = (event) => {
+      setPosition({ x: event.clientX, y: event.clientY });
+    };
 
     setIsLoading(true);
 
     // Simulate loading process
     const timeout = setTimeout(() => {
-      setIsLoading(false); // Set loading to false after 2 seconds (simulated loading time)
+      setIsLoading(false);
     }, 2000);
 
     // Add event listener for mouse move
-    window.addEventListener("mousemove", mouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+
     keepTheme();
+
     // Clean up function
     return () => {
       clearTimeout(timeout);
-      window.removeEventListener("mousemove", mouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -64,23 +54,7 @@ function App() {
       {isLoading && <div className="loadingContainer">Loading...</div>}
       {!isLoading && (
         <>
-          <div
-            className="cursorDot"
-            id="cursor-dot"
-            style={{
-              top: `${mousePosition.y}px`,
-              left: `${mousePosition.x}px`,
-            }}
-          ></div>
-          <div
-            className="cursorOutline"
-            id="cursor-outline"
-            style={{
-              top: `${outlinePosition.y}px`,
-              left: `${outlinePosition.x}px`,
-            }}
-          ></div>
-          {/* <Header /> */}
+          <Cursor position={position} />
           <Router>
             <div>
               <Routes>

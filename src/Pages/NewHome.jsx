@@ -5,6 +5,8 @@ import About from "../Pages/About";
 import star from "../Assets/Images/Star 6.svg";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import Cursor from "../Components/Cursor";
+import SpriteAnimation from "../Components/Sprite";
 
 const NewHome = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -19,6 +21,7 @@ const NewHome = () => {
   }, []);
   return (
     <div id="smooth-wrapper">
+      {/* <Cursor /> */}
       <Header />
       <section className="newHomeContainer">
         <main>
@@ -62,6 +65,8 @@ const NewHome = () => {
           </p>
         </section>
       </div>
+
+      <SpriteAnimation />
       <About />
       <Footer />
     </div>

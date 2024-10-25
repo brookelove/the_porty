@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
-import resume from "../Assets/Images/SL_Resume_PDF.pdf";
 import "../Assets/CSS/Components/Tools.css";
 import skills from "../utils/data/skills";
 import star from "../Assets/Images/Star 6.svg";
+
+import Modal from "../Components/Modal";
 const Tools = () => {
   const [shuffledSkills, setShuffledSkills] = useState([]);
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0); // Default to 0 (can change to target specific skill)
@@ -11,6 +12,16 @@ const Tools = () => {
   const [startX, setStartX] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const cardWidth = 240;
+
+  //modal information
+  const [isModalOpen, setModalOpen] = useState(false);
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   useEffect(() => {
     const sortedData = skills.sort((a, b) => a.name.localeCompare(b.name));
@@ -130,16 +141,10 @@ const Tools = () => {
           <p>Loading skills...</p>
         )}
       </section>
-      <a
-        href={resume}
-        target="_blank"
-        rel="noreferrer"
-        className="resume-container"
-      >
-        <button className="shadow-twelve" id="resume-section">
-          RESUME
-        </button>
-      </a>
+      <button className="shadow-twelve" onClick={openModal}>
+        RESUME
+      </button>
+      <Modal isVisible={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
