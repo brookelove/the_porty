@@ -116,14 +116,14 @@ const Header = () => {
             <span>Projects</span>
           </Link>
         </li>
-        <li className="inter-semibold">
+        {/* <li className="inter-semibold">
           <a
             data-replace="Resume"
             onClick={() => handleLinkClick("resume-section")}
           >
             <span>Resume</span>
           </a>
-        </li>
+        </li> */}
         <li className="inter-semibold">
           <a
             data-replace="Skills"
@@ -145,14 +145,14 @@ const Header = () => {
             <span>About</span>
           </a>
         </li>
-        <li className="inter-semibold">
+        {/* <li className="inter-semibold">
           <a
             data-replace="Process"
             onClick={() => handleLinkClick("process-section")}
           >
             <span>Process</span>
           </a>
-        </li>
+        </li> */}
         <li className="inter-semibold">
           <a
             data-replace="Reach Out"

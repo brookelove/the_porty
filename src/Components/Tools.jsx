@@ -126,7 +126,7 @@ const Tools = () => {
                 className={`icon-card ${isActive ? "active-card" : ""}`}
                 key={index}
               >
-                <img alt={skill.name} />
+                <skill.icon size={150} color={skill.color} />
               </div>
             );
           })}
@@ -141,7 +141,7 @@ const Tools = () => {
           <p>Loading skills...</p>
         )}
       </section>
-      <button className="shadow-twelve" onClick={openModal}>
+      <button className="resumeBtn shadow-twelve" onClick={openModal}>
         RESUME
       </button>
       <Modal isVisible={isModalOpen} onClose={closeModal} />

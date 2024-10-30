@@ -1,5 +1,6 @@
 /* Font Links ============================ */
-@import url("https://use.typekit.net/tkn1umx.css");
+/* @import url("https://use.typekit.net/tkn1umx.css"); */
+@import url("https://use.typekit.net/lvh3taz.css");
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,6 @@ body,
   color: var(--light-text);
   cursor: none;
 }
-/* cretion of the cursor */
 .cursor {
   position: fixed;
   width: 32px;
@@ -129,12 +129,23 @@ button:hover {
 }
 .loadingContainer {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .cap {
   text-transform: capitalize;
+}
+.sprite {
+  width: 40px;
+  height: 40px;
+  transform: scale(2.5);
+  background-image: url("../../Images/ShorterSpriteSheet.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: contrast(1.2) brightness(1.1);
 }
 
 /*animation to scroll across screen */

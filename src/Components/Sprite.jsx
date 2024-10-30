@@ -7,7 +7,21 @@ const SpriteAnimation = () => {
 
   useEffect(() => {
     const spriteElement = spriteRef.current;
-    const animateSprite = () => {};
+    const frameWidth = 100;
+    const totalFrames = 5;
+    const animationSpeed = 0.1;
+
+    // const rowPositionY = -(targetRow - 1) * frameWidth;
+
+    const animateSprite = () => {
+      gsap.to(spriteElement, {
+        backgroundPositionX: `-${frameWidth * (totalFrames - 1) + 5}px `,
+        ease: "steps(" + totalFrames + ")",
+        duration: totalFrames * animationSpeed,
+        repeat: -1, // Loops the animation indefinitely
+      });
+    };
+
     animateSprite();
   }, []);
 

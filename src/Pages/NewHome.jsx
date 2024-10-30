@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import bAndG from "../Assets/Images/hiMe.png";
 import "../Assets/CSS/Pages/Home.css";
-import About from "../Pages/About";
 import star from "../Assets/Images/Star 6.svg";
+
+// components
+import About from "../Pages/About";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Cursor from "../Components/Cursor";
@@ -21,7 +23,6 @@ const NewHome = () => {
   }, []);
   return (
     <div id="smooth-wrapper">
-      {/* <Cursor /> */}
       <Header />
       <section className="newHomeContainer">
         <main>
@@ -42,10 +43,8 @@ const NewHome = () => {
         </main>
       </section>
       <div className="blurbContainer">
-        {/* mini blurb about me */}
         <div className="photos">
           <img src={bAndG} className="bAndG"></img>
-          {/* <img src={color} className="color"></img> */}
         </div>
         <div></div>
         <section
@@ -66,7 +65,6 @@ const NewHome = () => {
         </section>
       </div>
 
-      <SpriteAnimation />
       <About />
       <Footer />
     </div>

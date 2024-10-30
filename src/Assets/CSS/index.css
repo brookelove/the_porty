@@ -1,32 +1,9 @@
 :root {
-  /* New Color Scheme */
-  /*--new-primary: #192928;
-  --new-secondary: #bfea88;
-  --new-point: rgb(26, 59, 59);
-  --new-secondPoint: rgb(65, 134, 126);
-  --new-tertiary: rgb(133, 41, 19);
-  --new-secondTertiary: rgb(164, 86, 36);
-  --new-quarterly: #b98663;
-  --footerWords: rgb(235, 70, 60);
-  --footer: rgb(35, 0, 0);  */
-  --secondQuarterly: #a9846a; /* cafe au lait */
   --frosted: rgba(196, 196, 196, 0.11);
-  --primary: #d9d9d9;
-  --text: #212121;
-  --dark-text: #f2f2f2;
-  --secondary: #5f6f5f;
-  --tertiary: #4d5d72;
-  --accent: #932c28;
-  --second-accent: #b25329;
-  --tertiary-accent: #cb8b33;
-  --extra: #ab351c;
-  --orange: #ff451f;
-  --extra-secondary: #9e3118;
-  --purple: #555783;
-  --dark-purple: #38132c;
-  --light-green: #5e7e7c;
-  --med-green: #54695e;
-  --tan: #d0c9a9;
+  --primary: rgb(183, 173, 154);
+  --accent: rgb(174, 114, 45);
+  --secondary: rgb(21, 22, 20);
+  --second-accent: rgb(138, 67, 24);
 }
 .theme-dark {
   --dark-text: #6e93cc;
@@ -41,7 +18,7 @@
   --box-shadow-2: rgba(0, 0, 0, 0.23);
 }
 
-.theme-red {
+/* .theme-red {
   --dark-text: #c61a09;
   --light-text: #c6b55e;
   --dark-background: whitesmoke;
@@ -50,8 +27,8 @@
   --bright-accent: #ea5940;
   --highlight-text: #b64b39;
   --popout: rgb(255, 255, 255);
-}
-.theme-pink {
+} */
+/* .theme-pink {
   --dark-text: #594a4a;
   --light-text: #eadfd1;
   --light-background: whitesmoke;
@@ -59,9 +36,9 @@
   --accent: #f16052;
   --bright-accent: #f39;
   --highlight-text: #f2d0d0;
-  --popout: rgb(255, 255, 255);
-}
-.theme-orange {
+  --popout: rgb(255, 255, 255); 
+}*/
+/* .theme-orange {
   --light-background: rgb(65, 54, 78);
   --dark-text: #594a4a;
   --light-text: #eadfd1;
@@ -70,7 +47,7 @@
   --bright-accent: rgb(173, 39, 20);
   --highlight-text: rgb(72, 172, 163);
   --popout: rgb(255, 255, 255);
-}
+} */
 .theme-light {
   --light-background: rgb(0, 0, 0);
   --dark-text: rgb(226, 226, 226);
@@ -80,4 +57,16 @@
   --bright-accent: rgb(161, 152, 151);
   --highlight-text: rgb(210, 201, 165);
   --popout: rgb(255, 255, 255);
+}
+.theme--light {
+  --light-background: rgb(21, 22, 20);
+  --dark-background: rgb(183, 173, 154);
+  --accent: rgb(174, 114, 45);
+  --second-accent: rgb(138, 67, 24);
+}
+.theme--dark {
+  --light-background: rgb(21, 22, 20);
+  --light-background: rgb(183, 173, 154);
+  --accent: rgb(174, 114, 45);
+  --second-accent: rgb(138, 67, 24);
 }

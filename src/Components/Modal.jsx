@@ -10,12 +10,17 @@ const Modal = ({ isVisible, onClose }) => {
   // GSAP animation on component mount
   useEffect(() => {
     if (isVisible) {
-      gsap.to(modalRef.current, {
-        opacity: 1,
-        scale: 1,
-        duration: 0.5,
-        ease: "power3.out",
-      });
+      gsap.fromTo(
+        modalRef.current,
+        { opacity: 0, scale: 0.7 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.5,
+          y: 80,
+          ease: "power1.out",
+        }
+      );
     } else {
       gsap.to(modalRef.current, {
         opacity: 0,

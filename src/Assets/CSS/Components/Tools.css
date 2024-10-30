@@ -25,6 +25,9 @@
   border-radius: 20px;
   margin: 0 20px;
   transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .skill-information {
   display: flex;
@@ -45,8 +48,6 @@
   padding-top: 2%;
   width: 70%;
 }
-.resume-container button {
+.resumeBtn {
   margin-top: 3%;
-  background-color: #ffffff;
-  color: black;
 }

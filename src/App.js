@@ -1,41 +1,50 @@
 import React, { useEffect, useState, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import debounce from "lodash.debounce";
-
+import { gsap } from "gsap";
+// import { ScrollSmoother } from "gsap/ScrollSmoother";
+import "./Assets/CSS/Pages/Landing.css";
 // Components and Pages
 import Work from "./Pages/Work";
 import PageNotFound from "./Pages/PageNotFound";
 import NewHome from "./Pages/NewHome";
 import Project from "./Components/Project";
 import Cursor from "./Components/Cursor";
+import SpriteAnimation from "./Components/Sprite";
 
 // Utilities
 import { keepTheme } from "./utils/themes";
 
 function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
-  const [outlinePosition, setOutlinePosition] = useState({
-    x: 0,
-    y: 0,
-  });
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // Start as loading
+  const [loadingProgress, setLoadingProgress] = useState(0); // New state for loading progress
   const main = useRef();
 
   useEffect(() => {
+    // gsap.registerPlugin(ScrollSmoother);
+
     const handleMouseMove = (event) => {
       setPosition({ x: event.clientX, y: event.clientY });
     };
 
-    setIsLoading(true);
-
     // Simulate loading process
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
+    const loadingInterval = setInterval(() => {
+      setLoadingProgress((prevProgress) => {
+        if (prevProgress >= 100) {
+          clearInterval(loadingInterval);
+          setIsLoading(false); // Stop loading when 100%
+          return 100; // Ensure it does not exceed 100
+        }
+        return prevProgress + 1; // Increment progress
+      });
+    }, 20); // Adjust the speed as necessary
+
+    // ScrollSmoother.create({
+    //   wrapper: main.current,
+    //   content: "#smooth-content",
+    //   smooth: 1.5,
+    //   effects: true,
+    // });
 
     // Add event listener for mouse move
     window.addEventListener("mousemove", handleMouseMove);
@@ -44,19 +53,23 @@ function App() {
 
     // Clean up function
     return () => {
-      clearTimeout(timeout);
+      clearInterval(loadingInterval);
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   return (
     <div className="App" ref={main}>
-      {isLoading && <div className="loadingContainer">Loading...</div>}
+      {isLoading && (
+        <div className="loadingContainer">
+          <SpriteAnimation />
+        </div>
+      )}
       {!isLoading && (
         <>
           <Cursor position={position} />
           <Router>
-            <div>
+            <div id="smooth-content">
               <Routes>
                 <Route path="/" element={<NewHome />} />
                 <Route path="/work" element={<Work />} />
