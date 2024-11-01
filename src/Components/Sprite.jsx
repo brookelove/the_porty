@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import "../Assets/CSS/Pages/Landing.css"; // Ensure this includes your CSS for the sprite
+import "../Assets/CSS/Pages/Landing.css";
 
 const SpriteAnimation = () => {
   const spriteRef = useRef();
   const [isAnimating, setIsAnimating] = useState(false);
   const frameWidth = 100; // Width of one frame
-  const totalFrames = 5; // Total number of frames in the sprite sheet
+  const totalFrames = 5;
   const animationSpeed = 0.1; // Speed of the animation
 
   useEffect(() => {
@@ -23,24 +23,24 @@ const SpriteAnimation = () => {
         });
       } else {
         // Stop animation immediately on mouse leave
-        gsap.killTweensOf(spriteElement); // Stop all animations on this element
-        spriteElement.style.backgroundPositionX = `0px`; // Set to the first frame immediately
+        gsap.killTweensOf(spriteElement);
+        spriteElement.style.backgroundPositionX = `0px`;
       }
     };
 
     animateSprite();
 
     return () => {
-      gsap.killTweensOf(spriteElement); // Cleanup on unmount
+      gsap.killTweensOf(spriteElement); // Cleanup
     };
-  }, [isAnimating]); // Dependency on isAnimating
+  }, [isAnimating]);
 
   return (
     <div
       ref={spriteRef}
       className="sprite"
-      onMouseEnter={() => setIsAnimating(true)} // Start animation on hover
-      onMouseLeave={() => setIsAnimating(false)} // Stop animation when hover ends
+      onMouseEnter={() => setIsAnimating(true)}
+      onMouseLeave={() => setIsAnimating(false)}
     ></div>
   );
 };
