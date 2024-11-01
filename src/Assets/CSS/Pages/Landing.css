@@ -77,6 +77,12 @@ li {
   border-radius: 30px;
   border: solid black 1px;
 }
+.star path {
+  fill: var(--star);
+  /* filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)); */
+  /* filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 5px 10px 0px inset); */
+  /* box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px 0px inset !important; */
+}
 .none {
   display: none;
 }

@@ -48,7 +48,17 @@ const About = () => {
     <div className="aboutContainer">
       <main>
         <div ref={starRef1}>
-          <img src={star} alt="Star" width="88" height="88" />
+          <svg
+            className="star"
+            width="88"
+            height="88"
+            viewBox="0 0 99 99"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_i_9_2)">
+              <path d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z" />
+            </g>
+          </svg>
         </div>
         <div>
           <h1 className="inter-italic-thin">
@@ -61,7 +71,17 @@ const About = () => {
           </p>
         </div>
         <div ref={starRef2}>
-          <img src={star} alt="Star" width="88" height="88" />
+          <svg
+            className="star"
+            width="88"
+            height="88"
+            viewBox="0 0 99 99"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_i_9_2)">
+              <path d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z" />
+            </g>
+          </svg>
         </div>
       </main>
       <Tools />

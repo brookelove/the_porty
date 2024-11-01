@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
 import bAndG from "../Assets/Images/hiMe.png";
 import "../Assets/CSS/Pages/Home.css";
-import star from "../Assets/Images/Star 6.svg";
 
 // components
 import About from "../Pages/About";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import Cursor from "../Components/Cursor";
-import SpriteAnimation from "../Components/Sprite";
 
 const NewHome = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -36,9 +33,29 @@ const NewHome = () => {
             Digital <em>Journey</em>
           </h1>
           <section className="journey-card-container" id="journey-section">
-            <img src={star} alt="Star" width="88" height="88" />
+            <svg
+              className="star"
+              width="88"
+              height="88"
+              viewBox="0 0 99 99"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_i_9_2)">
+                <path d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z" />
+              </g>
+            </svg>
             <section className="card journeyCard shadow-twenty-two"></section>
-            <img src={star} alt="Star" width="88" height="88" />
+            <svg
+              className="star"
+              width="88"
+              height="88"
+              viewBox="0 0 99 99"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_i_9_2)">
+                <path d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z" />
+              </g>
+            </svg>
           </section>
         </main>
       </section>

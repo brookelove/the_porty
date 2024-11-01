@@ -15,8 +15,7 @@
   --accent-secondary: #ffffff;
   --callout-box: #cecece;
   --card: #ffffff;
-
-  /* #ffffff #cecece*/
+  --star: rgb(21, 22, 20);
 }
 /* Light Theme */
 .theme--light {
@@ -29,6 +28,7 @@
   --accent-secondary: rgb(174, 114, 45);
   --callout-box: #000000;
   --card: whitesmoke;
+  --star: rgb(174, 114, 45);
 }
 
 /* Dark Theme */
@@ -42,4 +42,5 @@
   --accent-secondary: rgb(138, 67, 24);
   --callout-box: #000000;
   --card: whitesmoke;
+  --star: #d9d9d9;
 }

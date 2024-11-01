@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
+import SpriteAnimation from "./Sprite";
+
 gsap.registerPlugin(ScrollToPlugin);
 
 const Header = () => {
@@ -138,9 +140,13 @@ const Header = () => {
             <span>Reach Out</span>
           </a>
         </li>
-        <li className="inter-semibold">
+        <li
+          className="inter-semibold"
+          onClick={() => handleTheme(themeArr[themeIndex])}
+        >
           {/* want to make it a drop down bar to choose whichever one at any time */}
-          <FaRegCircleDot onClick={() => handleTheme(themeArr[themeIndex])} />
+          <SpriteAnimation />
+          {/* <FaRegCircleDot /> */}
         </li>
       </ul>
     </navbar>

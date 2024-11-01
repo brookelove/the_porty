@@ -113,9 +113,35 @@ const Tools = () => {
       onMouseLeave={handleMouseUp}
     >
       <div className=" d-center header">
-        <img src={star} alt="Star" width="38" height="48" />
+        <svg
+          className="star"
+          width="38"
+          height="48"
+          viewBox="0 0 99 99"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_i_9_2)">
+            <path
+              d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z"
+              // fill={{ fill: "var(--star)" }} // Your custom color
+            />
+          </g>
+        </svg>
         <h1 className="inria-serif-bold sub-heading">SKILLS</h1>
-        <img src={star} alt="Star" width="38" height="48" />
+        <svg
+          className="star"
+          width="38"
+          height="48"
+          viewBox="0 0 99 99"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_i_9_2)">
+            <path
+              d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z"
+              // fill={{ fill: "var(--star)" }} // Your custom color
+            />
+          </g>
+        </svg>
       </div>
       <section className="cards-container">
         <div className="cards">
