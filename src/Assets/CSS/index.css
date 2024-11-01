@@ -5,68 +5,41 @@
   --secondary: rgb(21, 22, 20);
   --second-accent: rgb(138, 67, 24);
 }
-.theme-dark {
-  --dark-text: #6e93cc;
-  --light-text: #df3e25;
-  --dark-background: #030006;
-  --light-background: #c6cdce;
-  --accent: #ea9820;
-  --bright-accent: #ee6a92;
-  --highlight-text: #7ac3f4;
-  --popout: #0725a0;
-  --box-shadow-one: rgba(0, 0, 0, 0.16);
-  --box-shadow-2: rgba(0, 0, 0, 0.23);
+/* Clean Theme */
+.theme--clean {
+  --background-primary: #ffffff;
+  --background-secondary: rgb(21, 22, 20);
+  --text-primary: rgb(21, 22, 20);
+  --text-secondary: rgb(21, 22, 20);
+  --accent-primary: #d9d9d9;
+  --accent-secondary: #ffffff;
+  --callout-box: #cecece;
+  --card: #ffffff;
+
+  /* #ffffff #cecece*/
+}
+/* Light Theme */
+.theme--light {
+  --background-primary: rgb(183, 173, 154);
+  --background-secondary: rgb(21, 22, 20);
+  --text-primary: #ffffff;
+  --text-secondary: whitesmoke;
+  --text-tertiary: rgb(21, 22, 20);
+  --accent-primary: rgb(138, 67, 24);
+  --accent-secondary: rgb(174, 114, 45);
+  --callout-box: #000000;
+  --card: whitesmoke;
 }
 
-/* .theme-red {
-  --dark-text: #c61a09;
-  --light-text: #c6b55e;
-  --dark-background: whitesmoke;
-  --light-background: #ddd1c0;
-  --accent: #5e4b56;
-  --bright-accent: #ea5940;
-  --highlight-text: #b64b39;
-  --popout: rgb(255, 255, 255);
-} */
-/* .theme-pink {
-  --dark-text: #594a4a;
-  --light-text: #eadfd1;
-  --light-background: whitesmoke;
-  --dark-background: #f39188;
-  --accent: #f16052;
-  --bright-accent: #f39;
-  --highlight-text: #f2d0d0;
-  --popout: rgb(255, 255, 255); 
-}*/
-/* .theme-orange {
-  --light-background: rgb(65, 54, 78);
-  --dark-text: #594a4a;
-  --light-text: #eadfd1;
-  --dark-background: rgb(224, 173, 113);
-  --accent: rgb(142, 40, 105);
-  --bright-accent: rgb(173, 39, 20);
-  --highlight-text: rgb(72, 172, 163);
-  --popout: rgb(255, 255, 255);
-} */
-.theme-light {
-  --light-background: rgb(0, 0, 0);
-  --dark-text: rgb(226, 226, 226);
-  --light-text: #272727;
-  --dark-background: whitesmoke;
-  --accent: rgb(237, 237, 237);
-  --bright-accent: rgb(161, 152, 151);
-  --highlight-text: rgb(210, 201, 165);
-  --popout: rgb(255, 255, 255);
-}
-.theme--light {
-  --light-background: rgb(21, 22, 20);
-  --dark-background: rgb(183, 173, 154);
-  --accent: rgb(174, 114, 45);
-  --second-accent: rgb(138, 67, 24);
-}
+/* Dark Theme */
 .theme--dark {
-  --light-background: rgb(21, 22, 20);
-  --light-background: rgb(183, 173, 154);
-  --accent: rgb(174, 114, 45);
-  --second-accent: rgb(138, 67, 24);
+  --background-primary: rgb(21, 22, 20);
+  --background-secondary: rgb(183, 173, 154);
+  --text-primary: rgb(174, 114, 45);
+  --text-secondary: rgb(183, 173, 154);
+  --text-tertiary: whitesmoke;
+  --accent-primary: rgb(174, 114, 45);
+  --accent-secondary: rgb(138, 67, 24);
+  --callout-box: #000000;
+  --card: whitesmoke;
 }

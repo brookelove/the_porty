@@ -1,10 +1,13 @@
 footer {
   margin: 3%;
   padding: 4%;
-  /* height: 35vh; */
   width: 85% !important;
   border-radius: 20px;
   border: solid #000000 1px;
+}
+.footer {
+  background-color: var(--accent-primary);
+  color: var(--text-secondary);
 }
 footer main section h1 {
   text-transform: uppercase;
@@ -19,6 +22,9 @@ footer main section ul li {
   margin: 10px 0;
 }
 footer main a {
+  color: #000000;
+}
+footer main p {
   color: #000000;
 }
 footer div {

@@ -15,13 +15,7 @@ const Header = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [themeIndex, setThemeIndex] = useState(0);
 
-  const themeArr = [
-    "theme-dark",
-    "theme-light",
-    "theme-orange",
-    "theme-pink",
-    "theme-red",
-  ];
+  const themeArr = ["theme--dark", "theme--light", "theme--clean"];
 
   let theme = localStorage.getItem("theme");
 
@@ -35,7 +29,6 @@ const Header = () => {
   };
 
   const handleTheme = (theme) => {
-    console.log(theme);
     let storageTheme = localStorage.getItem("theme");
     if (storageTheme != null) {
       const nextIndex = (themeIndex + 1) % themeArr.length;
@@ -116,14 +109,6 @@ const Header = () => {
             <span>Projects</span>
           </Link>
         </li>
-        {/* <li className="inter-semibold">
-          <a
-            data-replace="Resume"
-            onClick={() => handleLinkClick("resume-section")}
-          >
-            <span>Resume</span>
-          </a>
-        </li> */}
         <li className="inter-semibold">
           <a
             data-replace="Skills"
@@ -145,14 +130,6 @@ const Header = () => {
             <span>About</span>
           </a>
         </li>
-        {/* <li className="inter-semibold">
-          <a
-            data-replace="Process"
-            onClick={() => handleLinkClick("process-section")}
-          >
-            <span>Process</span>
-          </a>
-        </li> */}
         <li className="inter-semibold">
           <a
             data-replace="Reach Out"

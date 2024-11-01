@@ -6,34 +6,24 @@ function setTheme(themeName) {
 function keepTheme() {
   let theme = localStorage.getItem("theme");
   if (localStorage.getItem("theme")) {
-    // if (localStorage.getItem("theme") === "theme-dark") {
-    //   setTheme("theme-dark");
-    // } else if (localStorage.getItem("theme") === "theme-light") {
-    //   setTheme("theme-light");
-    // }
     switch (theme) {
-      case "theme-dark":
-        setTheme("theme-dark");
+      case "theme--clean":
+        setTheme("theme--clean");
         break;
-      case "theme-light":
-        setTheme("theme-light");
+      case "theme--light":
+        setTheme("theme--light");
         break;
-      case "theme-pink":
-        setTheme("theme-pink");
-        break;
-      case "theme-red":
-        setTheme("theme-red");
-        break;
-      case "theme-orange":
-        setTheme("theme-orange");
+      case "theme--dark":
+        setTheme("theme--dark"); // Corrected this line
         break;
       default:
-        setTheme("theme-dark");
+        setTheme("theme--dark");
         break;
     }
   } else {
-    setTheme("theme-dark");
+    setTheme("theme--clean");
   }
+  console.log(theme);
 }
 
 module.exports = {

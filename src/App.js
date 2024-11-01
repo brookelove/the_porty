@@ -50,7 +50,6 @@ function App() {
     window.addEventListener("mousemove", handleMouseMove);
 
     keepTheme();
-
     // Clean up function
     return () => {
       clearInterval(loadingInterval);

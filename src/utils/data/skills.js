@@ -125,7 +125,7 @@ const skills = [
   {
     name: "Animation",
     icon: SiAdobeaftereffects,
-    color: "linear-gradient(90deg, #7A7BFF, #00D8FF)",
+    color: "#7A7BFF",
     type: "GSAP, Three.js, Adobe AfterEffects",
     information:
       "I utilize GSAP to create smooth, high-performance animations that enhance user engagement and improve the overall visual experience of web applications.",

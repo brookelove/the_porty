@@ -114,7 +114,7 @@ const Tools = () => {
     >
       <div className=" d-center header">
         <img src={star} alt="Star" width="38" height="48" />
-        <h1 className="inria-serif-bold">SKILLS</h1>
+        <h1 className="inria-serif-bold sub-heading">SKILLS</h1>
         <img src={star} alt="Star" width="38" height="48" />
       </div>
       <section className="cards-container">

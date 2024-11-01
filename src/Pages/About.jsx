@@ -55,7 +55,7 @@ const About = () => {
             Almost 3 Years of Coding Experience
           </h1>
           <p className="inter-semibold">
-            With a history of biology tattooing and veterinary science. My
+            With a history of biology, tattooing, and veterinary science. My
             journey has lead me to hone different types of skills to become a
             better coder.
           </p>

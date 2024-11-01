@@ -12,8 +12,8 @@
 html,
 body,
 #root {
-  background-color: var(--dark-background);
-  color: var(--light-text);
+  background-color: var(--background-primary);
+  color: var(--text-primary);
   cursor: none;
 }
 .cursor {
@@ -96,15 +96,15 @@ button {
   letter-spacing: 10px;
   transition: all 0.3s ease-in;
   border-radius: 50px;
-  background-color: var(--dark-background);
-  color: var(--light-text);
-  border: 1.5px solid var(--light-text);
+  background-color: var(--accent-secondary);
+  color: var(--text-primary);
+  border: 1.5px solid var(--text-secondary);
 }
 
 button:hover {
-  border: 1.5px solid var(--light-text);
-  background-color: var(--light-text);
-  color: var(--primary);
+  border: 1.5px solid var(--text-secondary);
+  background-color: var(--text-primary);
+  color: var(--accent-secondary);
 }
 .d-center {
   display: flex;

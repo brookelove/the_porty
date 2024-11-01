@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: var(--text-primary);
 }
 .newHomeContainer {
   display: flex;
@@ -67,6 +68,7 @@
   transform: scaleX(-1);
 }
 .aboutMeBlurb {
+  background-color: var(--callout-box);
   font-size: 160%;
   line-height: 150%;
   max-width: 60%;
