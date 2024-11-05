@@ -1,9 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { gsap } from "gsap";
-// import { ScrollSmoother } from "gsap/ScrollSmoother";
-import "./Assets/CSS/Pages/Landing.css";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 // Components and Pages
+import "./Assets/CSS/Pages/Landing.css";
 import Work from "./Pages/Work";
 import PageNotFound from "./Pages/PageNotFound";
 import NewHome from "./Pages/NewHome";
@@ -19,10 +22,32 @@ function App() {
   const [isLoading, setIsLoading] = useState(true); // Start as loading
   const [loadingProgress, setLoadingProgress] = useState(0); // New state for loading progress
   const main = useRef();
+  const smoother = useRef();
+  const panelsRef = useRef({
+    left: null,
+    right: null,
+  });
+
+  gsap.registerPlugin(ScrollSmoother, useGSAP, ScrollTrigger);
 
   useEffect(() => {
-    // gsap.registerPlugin(ScrollSmoother);
+    if (!isLoading && panelsRef.current.left && panelsRef.current.right) {
+      gsap.to([panelsRef.current.left, panelsRef.current.right], {
+        x: (i) => (i === 0 ? "-100%" : "100%"),
+        duration: 1.2,
+        ease: "power3.inOut",
+      });
+    }
+  }, [isLoading]);
 
+  smoother.current = ScrollSmoother.create({
+    wrapper: "#smooth-wrapper", // Define the wrapper
+    content: "#smooth-content",
+    smooth: 2, // seconds it takes to "catch up" to native scroll position
+    effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
+  });
+
+  useEffect(() => {
     const handleMouseMove = (event) => {
       setPosition({ x: event.clientX, y: event.clientY });
     };
@@ -39,13 +64,6 @@ function App() {
       });
     }, 20); // Adjust the speed as necessary
 
-    // ScrollSmoother.create({
-    //   wrapper: main.current,
-    //   content: "#smooth-content",
-    //   smooth: 1.5,
-    //   effects: true,
-    // });
-
     // Add event listener for mouse move
     window.addEventListener("mousemove", handleMouseMove);
 
@@ -58,26 +76,26 @@ function App() {
   }, []);
 
   return (
-    <div className="App" ref={main}>
+    <div id="smooth-wrapper" className="App" ref={main}>
       {isLoading && (
         <div className="loadingContainer">
-          <SpriteAnimation />
+          <h1>H</h1>
+          <h1>J</h1>
         </div>
       )}
       {!isLoading && (
         <>
           <Cursor position={position} />
-          <Router>
-            <div id="smooth-content">
+          <div id="smooth-content">
+            <Router>
               <Routes>
                 <Route path="/" element={<NewHome />} />
                 <Route path="/work" element={<Work />} />
                 <Route path="/project/:index" element={<Project />} />
                 <Route path="*" element={<PageNotFound />} />
               </Routes>
-            </div>
-          </Router>
-          {/* <Footer /> */}
+            </Router>
+          </div>
         </>
       )}
     </div>

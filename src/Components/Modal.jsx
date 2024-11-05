@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import "../Assets/CSS/Components/Modal.css";
 import { MdFileDownload } from "react-icons/md";
 import star from "../Assets/Images/Star 6.svg";
+import resume from "../Assets/Images/resumePicture.png";
 
 const Modal = ({ isVisible, onClose }) => {
   const modalRef = useRef();
@@ -10,6 +11,7 @@ const Modal = ({ isVisible, onClose }) => {
   // GSAP animation on component mount
   useEffect(() => {
     if (isVisible) {
+      // document.body.style.overflow = "hidden";
       gsap.fromTo(
         modalRef.current,
         { opacity: 0, scale: 0.7 },
@@ -47,6 +49,7 @@ const Modal = ({ isVisible, onClose }) => {
           onClick={onClose}
         />
 
+        <img src={resume} />
         <button>
           <MdFileDownload />
         </button>

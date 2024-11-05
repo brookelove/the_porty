@@ -8,6 +8,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
 const NewHome = () => {
+  const videoUrl = "https://photos.app.goo.gl/DQJ87jeFoVccKLsS8";
   const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
     const handleScroll = () => {
@@ -23,40 +24,31 @@ const NewHome = () => {
       <Header />
       <section className="newHomeContainer">
         <main>
-          <h1
-            className="inria-serif-bold-italic"
-            style={{
-              transform: `scale(${Math.max(1 - scrollPosition / 300, 0)})`,
-              opacity: Math.max(1 - scrollPosition / 300, 0),
-            }}
+          {/* <section className="journey-card-container" id="journey-section"> */}
+          {/* <svg
+            className="star"
+            width="88"
+            height="88"
+            viewBox="0 0 99 99"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Digital <em>Journey</em>
-          </h1>
-          <section className="journey-card-container" id="journey-section">
-            <svg
-              className="star"
-              width="88"
-              height="88"
-              viewBox="0 0 99 99"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g filter="url(#filter0_i_9_2)">
-                <path d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z" />
-              </g>
-            </svg>
-            <section className="card journeyCard shadow-twenty-two"></section>
-            <svg
-              className="star"
-              width="88"
-              height="88"
-              viewBox="0 0 99 99"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g filter="url(#filter0_i_9_2)">
-                <path d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z" />
-              </g>
-            </svg>
-          </section>
+            <g filter="url(#filter0_i_9_2)">
+              <path d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z" />
+            </g>
+          </svg> */}
+          <h1 className="">Hacker Jack</h1>
+          {/* <svg
+            className="star"
+            width="88"
+            height="88"
+            viewBox="0 0 99 99"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g filter="url(#filter0_i_9_2)">
+              <path d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z" />
+            </g>
+          </svg> */}
+          {/* </section> */}
         </main>
       </section>
       <div className="blurbContainer">
