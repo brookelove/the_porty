@@ -1,15 +1,41 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import bAndG from "../Assets/Images/hiMe.png";
 import "../Assets/CSS/Pages/Home.css";
+import { ReactComponent as PathSVG } from "../Assets/Images/path.svg";
 
 // components
 import About from "../Pages/About";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
+//register gsap
+gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+
 const NewHome = () => {
   const videoUrl = "https://photos.app.goo.gl/DQJ87jeFoVccKLsS8";
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isDrawing, setIsDrawing] = useState(false);
+  const svgRef = useRef(null);
+  useEffect(() => {
+    const paths = svgRef.current?.querySelectorAll("path");
+
+    // Animate the SVG path to draw from 0% to 100% over 2 seconds
+    if (paths) {
+      gsap.fromTo(
+        paths,
+        { drawSVG: "0%" },
+        {
+          drawSVG: "100%", // The SVG path will be drawn completely
+          duration: 2, // Duration of the animation (2 seconds)
+          ease: "power1.out", // Easing for smooth animation
+        }
+      );
+    }
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
@@ -24,33 +50,12 @@ const NewHome = () => {
       <Header />
       <section className="newHomeContainer">
         <main>
-          {/* <section className="journey-card-container" id="journey-section"> */}
-          {/* <svg
-            className="star"
-            width="88"
-            height="88"
-            viewBox="0 0 99 99"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g filter="url(#filter0_i_9_2)">
-              <path d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z" />
-            </g>
-          </svg> */}
           <h1 className="">Hacker Jack</h1>
-          {/* <svg
-            className="star"
-            width="88"
-            height="88"
-            viewBox="0 0 99 99"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g filter="url(#filter0_i_9_2)">
-              <path d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z" />
-            </g>
-          </svg> */}
-          {/* </section> */}
         </main>
       </section>
+      <div className="svg-background">
+        <PathSVG ref={svgRef} className="animated-svg" />
+      </div>
       <div className="blurbContainer">
         <div className="photos">
           <img src={bAndG} className="bAndG"></img>

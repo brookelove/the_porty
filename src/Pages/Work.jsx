@@ -1,76 +1,43 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../Assets/CSS/Pages/Work.css";
-import projects  from "../utils/data/projects";
+import projects from "../utils/data/projects";
 import { Link } from "react-router-dom";
 
+// components
+import Header from "../Components/Header";
 
 const Work = () => {
-  const [hoveredProject, setHoveredProject] = useState(null);
-  // creates an array of the category type
   const [category, setCategory] = useState([]);
   let tempArr = [];
-  const getCategory = (type) => {
-    switch (type) {
-      case "school":
-        tempArr =  projects.filter(project => project.category == "school") 
-        setCategory(tempArr)
-        // setHoveredProject(null);
-        break;
-      case "personal":
-        tempArr =  projects.filter(project => project.category === "personal") 
-        setCategory(tempArr)
-        // setHoveredProject(null);
-        break;
-      case "professional":
-          tempArr =  projects.filter(project => project.category === "professional") 
-          setCategory(tempArr)
-          // setHoveredProject(null);
-          break;
-      default:
-        setCategory(projects)
-        // setHoveredProject(null);
-    }
-  }
-  console.log(category)
-  
-    return (
-      <div className="workContainer parallax">
-        {/* <div className="d-even tags">
-                <a onClick={() => getCategory("all")}>ALL</a>
-                <a onClick={() => getCategory("school")}>SCHOOL</a>
-                <a onClick={() => getCategory("personal")}>PERSONAL</a>
-                <a onClick={() => getCategory("professional")}>PROFESSIONAL</a>
-            </div> */}
+
+  return (
+    <div className="workContainer">
+      <Header />
+      <div className="allProjects">
         <div className="projectContainer">
-          {(category.length ? category : projects).map((project, index) => (
-             <Link to={`/project/${index}`} key={index}>
-            <div className="projectCard"
-              key={index}
-              onMouseEnter={() => setHoveredProject(index)}
-              onMouseLeave={() => setHoveredProject(null)}
-            >
-              <img className={`projectImg ${
-                  hoveredProject === index ? "show" : ""
-                }`}src={project.media} alt={project.name} />
-              <video autoPlay loop muted>
-                    <source src={project.video} type="video/mp4"/>
-                </video>
-              <footer className="d-between">
-                <div>
-                  <h5>0{project.id}</h5>
-                  <h4>{project.type}</h4>
-                </div>
-                <h2 className="cap">{project.name}</h2>
-              </footer>
-            </div>
+          {projects.map((project, index) => (
+            <Link to={`/project/${index}`} key={index}>
+              <div className="projectCard" key={index}>
+                <img
+                  className="projectImg"
+                  src={project.media}
+                  alt={project.name}
+                />
+                <section>
+                  <h5 className="inter-xbold-italic  index ">0{project.id}</h5>
+                </section>
+              </div>
             </Link>
           ))}
         </div>
-        <button>
-          <a>GITHUB</a>
+        <button className="githubBtn">
+          <a href="https://github.com/brookelove" target="noref">
+            GITHUB
+          </a>
         </button>
       </div>
-    );
-  };
-  
-  export default Work;
+    </div>
+  );
+};
+
+export default Work;

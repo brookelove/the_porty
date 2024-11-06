@@ -45,7 +45,20 @@
   font-size: 20px;
   white-space: nowrap;
 }
+.inactive {
+  pointer-events: none;
+  opacity: 0;
+}
+.inactive:hover::before,
+.inactive:hover::after,
+.inactive:hover span {
+  transform: none; /* Prevent hover transformation */
+  transition: none; /* Disable the transition on hover */
+}
 
+.inactive:hover {
+  cursor: default;
+}
 .navbarContainer ul li a {
   overflow: hidden;
   position: relative;

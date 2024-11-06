@@ -1,68 +1,69 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import "../Assets/CSS/Components/Tools.css";
 import skills from "../utils/data/skills";
-import star from "../Assets/Images/Star 6.svg";
-
 import Modal from "../Components/Modal";
+
 const Tools = () => {
   const [shuffledSkills, setShuffledSkills] = useState([]);
-  const [currentSkillIndex, setCurrentSkillIndex] = useState(0); // Default to 0 (can change to target specific skill)
+  const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const cardWidth = 240;
+  const containerRef = useRef(null); // For referencing the carousel container
 
-  //modal information
+  // Modal management
   const [isModalOpen, setModalOpen] = useState(false);
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
 
   useEffect(() => {
     const sortedData = skills.sort((a, b) => a.name.localeCompare(b.name));
     setShuffledSkills([...sortedData, ...sortedData]); // Duplicate skills for infinite scroll
+  }, []);
 
-    // Ensure the initial card (CSS or any) is centered after mount
-    gsap.to(".cards", {
-      x: -(
-        currentSkillIndex * cardWidth -
-        window.innerWidth / 2 +
-        cardWidth / 2
-      ), // Adjust position to center the card
-      duration: 0.5,
-      ease: "power2.out",
-    });
-  }, [currentSkillIndex]); // Run on index or component mount
+  // Ensure the currentSkillIndex starts at the middle of the list after shuffle
+  useEffect(() => {
+    if (shuffledSkills.length > 0) {
+      setCurrentSkillIndex(Math.floor(shuffledSkills.length / 2)); // Start at the middle of the list
+    }
+  }, [shuffledSkills]);
 
+  // Using useLayoutEffect to set the initial position of the carousel after data is loaded
+  useLayoutEffect(() => {
+    if (shuffledSkills.length > 0) {
+      animateSkillChange(); // Adjust carousel to show the correct card in the center initially
+    }
+  }, [shuffledSkills, currentSkillIndex]);
+
+  // Wrapping the index for infinite scrolling
   const wrapIndex = (index, length) => {
     return (index + length) % length;
   };
 
+  // Handle dragging start
   const handleMouseDown = (event) => {
     setIsDragging(true);
     setStartX(event.clientX);
+    containerRef.current.style.cursor = "grabbing"; // Change cursor on drag
   };
 
+  // Handle dragging move
   const handleMouseMove = (event) => {
     if (!isDragging || isAnimating) return;
 
     const distance = event.clientX - startX;
-
     if (Math.abs(distance) > 100) {
       setIsAnimating(true);
 
       if (distance > 0) {
-        // Move to the previous skill
+        // Move to previous skill
         setCurrentSkillIndex((prevIndex) =>
           wrapIndex(prevIndex - 1, shuffledSkills.length)
         );
       } else {
-        // Move to the next skill
+        // Move to next skill
         setCurrentSkillIndex((prevIndex) =>
           wrapIndex(prevIndex + 1, shuffledSkills.length)
         );
@@ -73,11 +74,21 @@ const Tools = () => {
     }
   };
 
+  // Handle dragging end
   const handleMouseUp = () => {
     setIsDragging(false);
+    containerRef.current.style.cursor = "grab"; // Reset cursor
   };
 
+  // Ensure the active index is valid
+  const activeIndex = wrapIndex(currentSkillIndex, shuffledSkills.length);
+  const currentSkill = shuffledSkills[activeIndex];
+
+  // Animate skill change
   const animateSkillChange = () => {
+    const activeCard = document.querySelectorAll(".icon-card")[activeIndex];
+    const skillInfo = document.querySelector(".skill-information");
+
     gsap.fromTo(
       ".skill-information",
       { opacity: 0 },
@@ -88,65 +99,38 @@ const Tools = () => {
       }
     );
 
-    // Animate cards to align the current card to the center
     gsap.to(".cards", {
       x: -(
         currentSkillIndex * cardWidth -
         window.innerWidth / 2 +
-        cardWidth / 2
+        cardWidth / 2 +
+        35
       ),
       duration: 0.5,
       ease: "power2.out",
     });
   };
 
-  const activeIndex = wrapIndex(currentSkillIndex, skills.length);
-  const currentSkill = shuffledSkills[activeIndex];
+  if (shuffledSkills.length === 0) return <p>Loading skills...</p>;
 
   return (
     <div
       id="skills-section"
       className="tools-container"
+      ref={containerRef}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
     >
-      <div className=" d-center header">
-        <svg
-          className="star"
-          width="38"
-          height="48"
-          viewBox="0 0 99 99"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g filter="url(#filter0_i_9_2)">
-            <path
-              d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z"
-              // fill={{ fill: "var(--star)" }} // Your custom color
-            />
-          </g>
-        </svg>
+      <div className="d-center header">
         <h1 className="inria-serif-bold sub-heading">SKILLS</h1>
-        <svg
-          className="star"
-          width="38"
-          height="48"
-          viewBox="0 0 99 99"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g filter="url(#filter0_i_9_2)">
-            <path
-              d="M49.5 0L62.8695 36.1305L99 49.5L62.8695 62.8695L49.5 99L36.1305 62.8695L0 49.5L36.1305 36.1305L49.5 0Z"
-              // fill={{ fill: "var(--star)" }} // Your custom color
-            />
-          </g>
-        </svg>
       </div>
       <section className="cards-container">
         <div className="cards">
           {shuffledSkills.map((skill, index) => {
-            const isActive = wrapIndex(index, skills.length) === activeIndex;
+            const isActive =
+              wrapIndex(index, shuffledSkills.length) === activeIndex;
             return (
               <div
                 className={`icon-card ${isActive ? "active-card" : ""}`}
@@ -157,7 +141,7 @@ const Tools = () => {
             );
           })}
         </div>
-        {shuffledSkills.length > 0 && currentSkill ? (
+        {currentSkill ? (
           <div className="skill-information">
             <h2 className="inter-bold">{currentSkill.name}</h2>
             <h4 className="inter-bold">{currentSkill.type}</h4>
@@ -167,7 +151,7 @@ const Tools = () => {
           <p>Loading skills...</p>
         )}
       </section>
-      <button className="resumeBtn shadow-twelve" onClick={openModal}>
+      <button className="resumeBtn" onClick={openModal}>
         RESUME
       </button>
       <Modal isVisible={isModalOpen} onClose={closeModal} />

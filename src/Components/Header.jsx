@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../Assets/CSS/Components/Header.css";
 import { setTheme } from "../utils/themes";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 
@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 const Header = () => {
   const stickyRef = useRef(null);
   const [themeIndex, setThemeIndex] = useState(0);
+  const location = useLocation();
 
   const themeArr = ["theme--dark", "theme--light", "theme--clean"];
 
@@ -54,45 +55,61 @@ const Header = () => {
     };
   }, []);
 
+  const isOnProjectsPage = location.pathname === "/work";
+
   return (
     <navbar ref={stickyRef} className="navbarContainer frosted">
       <ul>
         <li className="inter-semibold">
-          <a
-            data-replace="Journey"
-            onClick={() => handleLinkClick("journey-section")}
-          >
-            <span>Journey</span>
-          </a>
+          <Link data-replace="Home" to="/">
+            <span>Home</span>
+          </Link>
         </li>
+
         <li className="inter-semibold">
-          <Link data-replace="Projects" to="work">
+          <Link
+            data-replace="Projects"
+            to="work"
+            className={isOnProjectsPage ? "inactive" : ""}
+          >
             <span>Projects</span>
           </Link>
         </li>
         <li className="inter-semibold">
-          <a
+          <Link
+            data-replace="Journey"
+            className={isOnProjectsPage ? "inactive" : ""}
+            onClick={() => handleLinkClick("journey-section")}
+          >
+            <span>Journey</span>
+          </Link>
+        </li>
+        <li className="inter-semibold">
+          <Link
             data-replace="Skills"
+            className={isOnProjectsPage ? "inactive" : ""}
             onClick={() => handleLinkClick("skills-section")}
           >
             <span>Skills</span>
-          </a>
+          </Link>
         </li>
         <li className="inter-semibold">
-          <a
+          <Link
             data-replace="About"
+            className={isOnProjectsPage ? "inactive" : ""}
             onClick={() => handleLinkClick("about-section")}
           >
             <span>About</span>
-          </a>
+          </Link>
         </li>
         <li className="inter-semibold">
-          <a
+          <Link
             data-replace="Reach Out"
+            className={isOnProjectsPage ? "inactive" : ""}
             onClick={() => handleLinkClick("contact-section")}
           >
             <span>Reach Out</span>
-          </a>
+          </Link>
         </li>
         <li className="inter-semibold" onClick={handleTheme}>
           <SpriteAnimation />

@@ -1,5 +1,4 @@
 footer {
-  margin: 3%;
   padding: 4%;
   width: 85% !important;
   border-radius: 20px;
@@ -8,6 +7,9 @@ footer {
 .footer {
   background-color: var(--accent-primary);
   color: var(--text-secondary);
+  margin: 3%;
+  position: relative;
+  top: -30px;
 }
 footer main section h1 {
   text-transform: uppercase;

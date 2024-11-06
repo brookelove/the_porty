@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Tools from "../Components/Tools";
 import "../Assets/CSS/Pages/About.css";
-import star from "../Assets/Images/Star 6.svg";
 
 const About = () => {
   const starRef1 = useRef();
