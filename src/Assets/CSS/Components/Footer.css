@@ -11,6 +11,11 @@ footer {
   position: relative;
   top: -30px;
 }
+footer main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 footer main section h1 {
   text-transform: uppercase;
   width: 250px;
@@ -31,4 +36,7 @@ footer main p {
 }
 footer div {
   text-align: center;
+}
+footer .pushPinImg {
+  width: 30%;
 }

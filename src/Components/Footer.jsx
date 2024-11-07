@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../Assets/CSS/Components/Footer.css";
-import HangingCat from "../Assets/Images/Cats/2.png";
+import pushPin from "../Assets/Images/pushPin.png";
 
 const Footer = () => {
   const [copied, setCopied] = useState(false);
@@ -32,12 +32,10 @@ const Footer = () => {
             <u>click above to contact</u>
           </p>
         </section>
-        <section>
-          <div></div>
-        </section>
+        <img src={pushPin} alt="push pin" className="pushPinImg" />
       </main>
       <div>
-        <p className="copyright inter-bold">Hacker Jack 2024</p>
+        <p className="copyright inter-bold">Coding Jack 2024</p>
       </div>
     </footer>
   );

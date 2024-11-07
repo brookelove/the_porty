@@ -50,7 +50,7 @@ const NewHome = () => {
       <Header />
       <section className="newHomeContainer">
         <main>
-          <h1 className="">Hacker Jack</h1>
+          <h1 className="">Coding Jack</h1>
         </main>
       </section>
       <div className="svg-background">

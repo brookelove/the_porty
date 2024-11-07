@@ -1,8 +1,15 @@
 import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
 import { gsap } from "gsap";
+import { DrawSVGPlugin, ScrollTrigger } from "gsap/all";
 import "../Assets/CSS/Components/Tools.css";
 import skills from "../utils/data/skills";
 import Modal from "../Components/Modal";
+
+// SVG import
+import { ReactComponent as StarSVG } from "../Assets/Images/Star 6.svg";
+import { ReactComponent as DragSVG } from "../Assets/Images/DragIt.svg";
+
+gsap.registerPlugin(DrawSVGPlugin);
 
 const Tools = () => {
   const [shuffledSkills, setShuffledSkills] = useState([]);
@@ -12,6 +19,7 @@ const Tools = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const cardWidth = 240;
   const containerRef = useRef(null); // For referencing the carousel container
+  const dragSVGRef = useRef(null);
 
   // Modal management
   const [isModalOpen, setModalOpen] = useState(false);
@@ -111,6 +119,28 @@ const Tools = () => {
     });
   };
 
+  useEffect(() => {
+    // Initialize the shake animation
+    gsap.fromTo(
+      dragSVGRef.current,
+      { rotationZ: -5 }, // starting point
+      {
+        rotateZ: 5,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+      }
+    );
+
+    // // Draw the SVG path initially
+    // gsap.fromTo(
+    //   dragSVGRef.current,
+    //   { drawSVG: "0%" },
+    //   { drawSVG: "100%", duration: 1 }
+    // );
+  }, []);
+
   if (shuffledSkills.length === 0) return <p>Loading skills...</p>;
 
   return (
@@ -124,7 +154,17 @@ const Tools = () => {
       onMouseLeave={handleMouseUp}
     >
       <div className="d-center header">
+        <StarSVG width="50px" height="50px" className="star" />
         <h1 className="inria-serif-bold sub-heading">SKILLS</h1>
+        <StarSVG width="50px" height="50px" className="star" />
+      </div>
+      <div className="svg-container">
+        <DragSVG
+          width="100px"
+          height="100px"
+          className="drag-svg"
+          ref={dragSVGRef}
+        />
       </div>
       <section className="cards-container">
         <div className="cards">

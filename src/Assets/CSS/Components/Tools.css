@@ -11,9 +11,21 @@
   margin: 0 1%;
   color: var(--accent-primary);
 }
+.svg-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: min-content;
+  position: relative;
+  bottom: 50px;
+}
+.drag-svg {
+  padding-right: 50px;
+}
 .tools-container .cards-container {
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .tools-container .cards {
   width: 100%;
