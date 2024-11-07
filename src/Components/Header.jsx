@@ -75,7 +75,7 @@ const Header = () => {
             <span>Projects</span>
           </Link>
         </li>
-        <li className="inter-semibold">
+        {/* <li className="inter-semibold">
           <Link
             data-replace="Journey"
             className={isOnProjectsPage ? "inactive" : ""}
@@ -83,7 +83,7 @@ const Header = () => {
           >
             <span>Journey</span>
           </Link>
-        </li>
+        </li> */}
         <li className="inter-semibold">
           <Link
             data-replace="Skills"

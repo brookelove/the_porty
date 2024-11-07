@@ -35,7 +35,7 @@ const Footer = () => {
         <img src={pushPin} alt="push pin" className="pushPinImg" />
       </main>
       <div>
-        <p className="copyright inter-bold">Coding With Jack 2024</p>
+        <p className="copyright inter-bold">Coding With Brooke 2024</p>
       </div>
     </footer>
   );

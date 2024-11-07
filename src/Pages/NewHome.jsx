@@ -49,10 +49,10 @@ const NewHome = () => {
     <div id="smooth-wrapper">
       <Header />
       <section className="newHomeContainer">
-        <main>
+        <main id="journey">
           <h1 className="">Coding</h1>
           <h2 className="inter-italic-thin">with</h2>
-          <h1>Jack</h1>
+          <h1>Brooke</h1>
         </main>
       </section>
       <div className="svg-background">
