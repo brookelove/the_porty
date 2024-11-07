@@ -1,10 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,16 +12,17 @@ import PageNotFound from "./Pages/PageNotFound";
 import NewHome from "./Pages/NewHome";
 import Project from "./Components/Project";
 import Cursor from "./Components/Cursor";
-import SpriteAnimation from "./Components/Sprite";
+import PageTransition from "./Components/PageTransition";
 
 // Utilities
 import { keepTheme } from "./utils/themes";
+
+gsap.registerPlugin(ScrollSmoother, useGSAP, ScrollTrigger);
 
 function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isLoading, setIsLoading] = useState(true); // Start as loading
   const [loadingProgress, setLoadingProgress] = useState(0); // New state for loading progress
-  const [isFirstLoad, setIsFirstLoad] = useState(true); // Track if it's the first page load
   const main = useRef();
   const smoother = useRef();
   const panelsRef = useRef({
@@ -34,48 +30,22 @@ function App() {
     right: null,
   });
 
-  gsap.registerPlugin(ScrollSmoother, useGSAP, ScrollTrigger);
+  useEffect(() => {
+    if (!isLoading && panelsRef.current.left && panelsRef.current.right) {
+      gsap.to([panelsRef.current.left, panelsRef.current.right], {
+        x: (i) => (i === 0 ? "-100%" : "100%"),
+        duration: 1.2,
+        ease: "power3.inOut",
+      });
+    }
+  }, [isLoading]);
 
-  // Detect route changes inside Routes component
-  const RouteWithTransition = () => {
-    const location = useLocation(); // useLocation hook inside the Route scope
-
-    useEffect(() => {
-      if (!isLoading) {
-        // If it's the first page load, we don't animate
-        if (isFirstLoad) {
-          setIsFirstLoad(false);
-          return; // Skip animation during the first load
-        }
-
-        const timeline = gsap.timeline();
-
-        // Animate fade-out of the old page (we can target a container element)
-        timeline
-          .to("#smooth-content", {
-            opacity: 0,
-            duration: 0.5,
-            ease: "power3.inOut",
-          })
-          .to("#smooth-content", {
-            opacity: 1,
-            duration: 0.5,
-            ease: "power3.inOut",
-          });
-      }
-    }, [location.pathname, isLoading, isFirstLoad]); // Trigger when route changes
-
-    return (
-      <div id="smooth-content">
-        <Routes location={location}>
-          <Route path="/" element={<NewHome />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/project/:index" element={<Project />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </div>
-    );
-  };
+  smoother.current = ScrollSmoother.create({
+    wrapper: "#smooth-wrapper", // Define the wrapper
+    content: "#smooth-content",
+    smooth: 2, // seconds it takes to "catch up" to native scroll position
+    effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
+  });
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -105,13 +75,6 @@ function App() {
     };
   }, []);
 
-  smoother.current = ScrollSmoother.create({
-    wrapper: "#smooth-wrapper", // Define the wrapper
-    content: "#smooth-content",
-    smooth: 2, // seconds it takes to "catch up" to native scroll position
-    effects: true, // look for data-speed and data-lag attributes on elements and animate accordingly
-  });
-
   return (
     <div id="smooth-wrapper" className="App" ref={main}>
       {isLoading && (
@@ -123,9 +86,18 @@ function App() {
       {!isLoading && (
         <>
           <Cursor position={position} />
-          <Router>
-            <RouteWithTransition />
-          </Router>
+          <div id="smooth-content">
+            <Router>
+              <PageTransition>
+                <Routes>
+                  <Route path="/" element={<NewHome />} />
+                  <Route path="/work" element={<Work />} />
+                  <Route path="/project/:index" element={<Project />} />
+                  <Route path="*" element={<PageNotFound />} />
+                </Routes>
+              </PageTransition>
+            </Router>
+          </div>
         </>
       )}
     </div>
