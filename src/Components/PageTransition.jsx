@@ -1,39 +1,66 @@
-import React, { useEffect, useState, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
 
 const PageTransition = ({ children }) => {
-  const location = useLocation(); // Use this to detect route changes
-  const containerRef = useRef(null);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const frameRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [prevPath, setPrevPath] = useState(location.pathname);
+
+  // Paths where we want the transition effect
+  const transitionPaths = ["/", "/project"];
+
+  // Check if the current path is one that should trigger the transition
+  const shouldTransition = (path) => {
+    return transitionPaths.some((transitionPath) =>
+      path.startsWith(transitionPath)
+    );
+  };
 
   useEffect(() => {
-    // Don't run the transition while the page is loading
-    if (isAnimating) return;
+    const playTransition = (targetPath) => {
+      gsap
+        .timeline()
+        .set(frameRef.current, { x: "-100%" }) // Start off-screen
+        .to(frameRef.current, { x: "0%", duration: 0.5, ease: "power4.inOut" })
+        .to(frameRef.current, {
+          x: "100%",
+          duration: 1,
+          ease: "power4.inOut",
+          onComplete: () => {
+            navigate(targetPath);
+            setPrevPath(targetPath); // Update the previous path after transition completes
+          },
+        });
+    };
 
-    setIsAnimating(true);
+    if (location.pathname !== prevPath && shouldTransition(location.pathname)) {
+      playTransition(location.pathname);
+    } else {
+      setPrevPath(location.pathname); // Update the previous path if no transition
+    }
+  }, [location, navigate, prevPath]);
 
-    // Set up animation using GSAP
-    const timeline = gsap.timeline({ paused: true });
-
-    // Fade out the current page
-    timeline.to(containerRef.current, { opacity: 0, duration: 0.5 });
-
-    timeline.to(containerRef.current, {
-      opacity: 1,
-      duration: 1,
-    });
-
-    // Start the animation when the route changes
-    timeline.play();
-
-    // Reset animation state after it's finished
-    timeline.eventCallback("onComplete", () => {
-      setIsAnimating(false);
-    });
-  }, [location]);
-
-  return <div ref={containerRef}>{children}</div>;
+  return (
+    <>
+      {/* Transition overlay */}
+      <div
+        ref={frameRef}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "black",
+          zIndex: 9999,
+          transform: "translateX(-100%)",
+        }}
+      ></div>
+      {children}
+    </>
+  );
 };
 
 export default PageTransition;

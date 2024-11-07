@@ -88,6 +88,7 @@ function App() {
           <Cursor position={position} />
           <div id="smooth-content">
             <Router>
+              {/* page transition only should happen on home and projects  */}
               <PageTransition>
                 <Routes>
                   <Route path="/" element={<NewHome />} />

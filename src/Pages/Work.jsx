@@ -13,8 +13,9 @@ const Work = () => {
   return (
     <div className="workContainer">
       <Header />
+      <h1>Index</h1>
       <div className="allProjects">
-        <div className="projectContainer">
+        <div className="projectsContainer">
           {projects.map((project, index) => (
             <Link to={`/project/${index}`} key={index}>
               <div className="projectCard" key={index}>
