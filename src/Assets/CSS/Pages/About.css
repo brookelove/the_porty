@@ -76,63 +76,13 @@
   font-size: 150%;
   width: 50%;
 }
-@media screen and (min-width: 300px) and (max-width: 500px) {
-  .aboutContainer header {
-    top: 10%;
-    left: -7%;
-    flex-direction: column;
-  }
-  .aboutContainer header .left {
-    position: relative;
-    bottom: 5%;
-  }
-  .aboutContainer header .middle .name {
-    top: 5%;
-    left: 10%;
-  }
-  .aboutContainer header .right {
-    max-width: 70%;
-    font-family: urw-din, sans-serif;
-  }
-  .toolsContainer {
-    margin-bottom: 35%;
-  }
-  .toolsContainer h1 {
-    left: 5%;
-    transform: rotate(0deg);
-  }
-  .toolsContainer .grid {
-    height: 700px;
-  }
-}
-@media screen and (min-width: 500px) and (max-width: 900px) {
-  .aboutContainer header {
-    top: 44%;
-  }
-  .aboutContainer header .middle img {
-    height: 300px;
-    width: auto;
-  }
-}
 
 @media screen and (min-width: 300px) and (max-width: 499px) {
-  .aboutContainer header {
-    top: 24rem;
-    left: 50%;
-    width: 100%;
+  .aboutContainer main h1 {
+    font-size: 2em;
+    width: 90%;
   }
-  .aboutContainer header .left {
-    left: -9rem;
-    top: 5rem;
-  }
-  .aboutContainer header .middle img {
-    height: 200px;
-    width: auto;
-  }
-  .aboutContainer header .right {
-    position: relative;
-    left: 8.5rem;
-    bottom: 1rem;
-    width: 30%;
+  aboutContainer main p {
+    font-size: 15px;
   }
 }

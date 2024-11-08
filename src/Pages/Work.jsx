@@ -13,7 +13,7 @@ const Work = () => {
   return (
     <div className="workContainer">
       <Header />
-      <h1>Index</h1>
+      {/* <h1>Index</h1> */}
       <div className="allProjects">
         <div className="projectsContainer">
           {projects.map((project, index) => (

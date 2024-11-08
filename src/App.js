@@ -29,6 +29,7 @@ function App() {
     left: null,
     right: null,
   });
+  const loadingRef = useRef(); // Reference to the loading screen element
 
   useEffect(() => {
     if (!isLoading && panelsRef.current.left && panelsRef.current.right) {
@@ -75,12 +76,32 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isLoading) {
+      // GSAP animation to slide up the loading screen when done loading
+      gsap.to(loadingRef.current, {
+        y: "-100%", // Move the loading screen up out of view
+        duration: 1, // Duration of the animation
+        ease: "power2.inOut", // Smooth easing
+        onComplete: () => {
+          // Optionally, you can add a delay or further animations once the loading screen is hidden
+        },
+      });
+    }
+  }, [isLoading]);
+
   return (
     <div id="smooth-wrapper" className="App" ref={main}>
       {isLoading && (
-        <div className="loadingContainer">
-          <h1>H</h1>
-          <h1>J</h1>
+        <div className="loadingContainer" ref={loadingRef}>
+          <h1>C</h1>
+          <h1>B</h1>
+          <div className="progressBarContainer">
+            <div
+              className="progressBar"
+              style={{ width: `${loadingProgress}%` }} // Dynamically adjust width
+            />
+          </div>
         </div>
       )}
       {!isLoading && (

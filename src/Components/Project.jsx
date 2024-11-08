@@ -10,9 +10,9 @@ const Project = () => {
   const projectIndex = parseInt(index, 10);
   const { name, type, languages, media, blurb, submedia, video, links } =
     projects[projectIndex];
-  const filteredSubMedia = submedia.filter(
-    (item, index) => index !== 2 && item !== "not working"
-  );
+  // const filteredSubMedia = submedia.filter(
+  //   (item, index) => index !== 2 && item !== "not working"
+  // );
   useEffect(() => {
     // Create the ResizeObserver
     const resizeObserver = new ResizeObserver(() => {

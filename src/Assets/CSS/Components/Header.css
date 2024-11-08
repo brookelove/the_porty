@@ -124,40 +124,34 @@
   -webkit-backdrop-filter: blur(7px);
   background-color: rgba(196, 196, 196, 0.11);
 }
-@media screen and (min-width: 501px) and (max-width: 900px) {
-  .navbarContainer .weatherInfo {
-    width: 30%;
-  }
-}
-@media screen and (min-width: 300px) and (max-width: 500px) {
+
+@media (min-width: 300px) and (max-width: 500px) {
   .navbarContainer {
-    padding: 3% 5%;
-  }
-  /* .frosted {
-    width: 90%;
-  } */
-  /* .navbarContainer ul {
-    display: none;
-  } */
-  /* .navbarContainer .weatherInfo {
-    display: none;
-  } */
-  .navbarContainer .hamburger-menu {
-    position: relative;
-    top: 10px;
-    display: block;
-  }
-  .navbarContainer .hamburger-menu .line {
-    width: 25px;
-    height: 2px;
-    margin: 3px 0;
-    background-color: var(--bright-accent);
+    padding: 2%;
+    height: 80px;
   }
 
-  .navbarContainer ul.show {
+  .navbarContainer ul {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .navbarContainer ul li {
+    font-size: 20px; /* Smaller font size for navigation items */
+    margin-bottom: 10px; /* Add space between items */
+  }
+
+  .navbarContainer ul li a {
+    font-size: 14px; /* Smaller text size for links */
+  }
+
+  .navbarContainer h3 {
+    font-size: 18px; /* Adjust the header size */
+    padding: 1% 5px; /* Adjust padding of the header */
+  }
+
+  .navbarContainer.scrolled {
+    width: 100%; /* Make sure navbar spans full width when scrolled */
   }
 }

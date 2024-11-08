@@ -53,3 +53,28 @@
   text-decoration: none;
   color: inherit;
 }
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .projectsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    margin: 0;
+  }
+  .projectImg {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+  }
+  .index {
+    font-size: 2em;
+    color: var(--accent-primary);
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    left: 70%;
+  }
+  .githubBtn {
+    margin: 0;
+    width: 90%;
+    padding: 10px 20px;
+  }
+}

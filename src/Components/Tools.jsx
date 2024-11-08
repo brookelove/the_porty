@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { DrawSVGPlugin, ScrollTrigger } from "gsap/all";
 import "../Assets/CSS/Components/Tools.css";
 import skills from "../utils/data/skills";
-import Modal from "../Components/Modal";
+import resume from "..//Assets/SWE_Resume.pdf";
 
 // SVG import
 import { ReactComponent as StarSVG } from "../Assets/Images/Star 6.svg";
@@ -132,13 +132,6 @@ const Tools = () => {
         ease: "power1.inOut",
       }
     );
-
-    // // Draw the SVG path initially
-    // gsap.fromTo(
-    //   dragSVGRef.current,
-    //   { drawSVG: "0%" },
-    //   { drawSVG: "100%", duration: 1 }
-    // );
   }, []);
 
   if (shuffledSkills.length === 0) return <p>Loading skills...</p>;
@@ -191,10 +184,9 @@ const Tools = () => {
           <p>Loading skills...</p>
         )}
       </section>
-      <button className="resumeBtn" onClick={openModal}>
-        RESUME
-      </button>
-      <Modal isVisible={isModalOpen} onClose={closeModal} />
+      <a href={resume}>
+        <button className="resumeBtn">RESUME</button>
+      </a>
     </div>
   );
 };
